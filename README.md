@@ -25,8 +25,7 @@ Puedes encontrar mi Curriculum Vitae [aquí](cv/cv.pdf)
 Puedes encontrar mi material en mi canal Fabimath
 
 
-{% include youtube.html id=G1AeE3Q0JyE %}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G1AeE3Q0JyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id=G1AeE3Q0JyE %}<iframe width="560" height="315" src="https://www.youtube.com/embed/G1AeE3Q0JyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Mis Cursos como ICMAT
 
