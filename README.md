@@ -25,3 +25,10 @@ Puedes encontrar mi Curriculum Vitae [aquí](cv/cv.pdf)
 * [Simulación Estocástica, 2020/1](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
 * [Multivariado, 2020/1](https://fabimath.github.io/Multivariado/)
 
+# Para mis estudiantes
+Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudante o profesor en las distintas universidades
+## 2020/2
+### Universidad Técnica Federico Santa María
+* 
+### Universidad Adolfo Ibáñez
+* [Laboratorio de probabilidad y estadística](https://fabimath.github.io/LEC-PYE/)
