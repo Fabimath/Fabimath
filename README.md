@@ -18,11 +18,11 @@ Fui multiples veces ayudante de catedra de cursos como calculo multivariado, inf
 
 ## Curriculum Vitae
 
-- Bulleted
-- List
+Puedes encontrar mi Curriculum Vitae [aquí](cv/cv.pdf)
 
-1. Numbered
-2. List
+# Mis Cursos como ICMAT
+
+* [Simulación Estocástica, 2020/1](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
 
 **Bold** and _Italic_ and `Code` text
 
