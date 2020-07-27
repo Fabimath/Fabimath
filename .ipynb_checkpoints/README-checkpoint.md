@@ -30,5 +30,6 @@ Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudant
 ## 2020/2
 ### Universidad Técnica Federico Santa María
 * 
+
 ### Universidad Adolfo Ibáñez
 * [Laboratorio de probabilidad y estadística](https://fabimath.github.io/LEC-PYE/)
