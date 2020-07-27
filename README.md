@@ -7,16 +7,16 @@ Fui multiples veces ayudante de catedra de cursos como calculo multivariado, inf
 
 ## Proyectos
 * Análisis y proyeciones COVID-19 en Chile
-Programador en el proyecto COVID-19. Página que muestra día a día el avance del Coronavirus en Chile, junto con indicadores estadísticos importantes y novedosos con la finalidad de apoyar al gobierno en la toma de decisiones. Puede encontrar el [visualisador aquí](covid-19vis.cmm.uchile.cl/info)
+(2020) Programador en el proyecto COVID-19. Página que muestra día a día el avance del Coronavirus en Chile, junto con indicadores estadísticos importantes y novedosos con la finalidad de apoyar al gobierno en la toma de decisiones. Puede encontrar el [visualisador aquí](https://covid-19vis.cmm.uchile.cl/info)
 
+## Habilidades
+* Manejo de Github
+* Dominio de R
+* Dominio de Python
+* Dominio de Latex
+* Dominio de Moodle
 
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
+## Curriculum Vitae
 
 - Bulleted
 - List
