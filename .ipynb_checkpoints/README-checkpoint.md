@@ -20,6 +20,11 @@ Fui multiples veces ayudante de catedra de cursos como calculo multivariado, inf
 
 Puedes encontrar mi Curriculum Vitae [aquí](cv/cv.pdf)
 
+## Youtube
+
+Puedes encontrar mi material en mi canal Fabimath
+
+
 # Mis Cursos como ICMAT
 
 * [Simulación Estocástica, 2020/1](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
