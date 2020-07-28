@@ -24,6 +24,10 @@ Puedes encontrar mi Curriculum Vitae [aquí](cv/cv.pdf)
 
 Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabimath/), donde encontraras ejercicios resueltos de diversos tópicos, en particular se puede encontrar abundante contenido para la prueba de selección/transición universitaria.
 
+## Contacto
+
+* Correo: `fabian.ramirez.di@gmail.com`
+
 # Mis Cursos como ICMAT
 
 * [Simulación Estocástica, 2020/1](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
