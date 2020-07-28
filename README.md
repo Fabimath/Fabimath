@@ -34,6 +34,9 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 * [Simulación Estocástica, 2020/1](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
 * [Multivariado, 2020/1](https://fabimath.github.io/Multivariado/)
 
+## Practicas
+* [Practica Industrial, 2020/2](https://fabimath.github.io/Practica/)
+
 # Para mis estudiantes
 Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudante o profesor en las distintas universidades
 ## 2020/2
