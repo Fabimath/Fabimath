@@ -27,6 +27,7 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 ## Contacto
 
 * Correo: `fabian.ramirez.di@gmail.com`
+* Linkedin: Fabián Ramírez Díaz
 
 # Mis Cursos como ICMAT
 
