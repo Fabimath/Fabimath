@@ -31,8 +31,12 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 
 # Mis Cursos como ICMAT
 
-* [Simulación Estocástica, 2020/1](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
-* [Multivariado, 2020/1](https://fabimath.github.io/Multivariado/)
+## Primer Semestre, año 2020
+* [Simulación Estocástica](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
+* [Multivariado](https://fabimath.github.io/Multivariado/)
+
+## Segundo Semestre, año 2019
+* 
 
 ## Practicas
 * [Practica Industrial, 2020/2](https://fabimath.github.io/Practica/)
