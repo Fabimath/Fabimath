@@ -36,7 +36,7 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 * [Multivariado](https://fabimath.github.io/Multivariado/)
 
 ## Segundo Semestre, año 2019
-* 
+* [Análisis de Regresión](https://fabimath.github.io/Regresi-n/)
 
 ## Practicas
 * [Practica Industrial, 2020/2](https://fabimath.github.io/Practica/)
