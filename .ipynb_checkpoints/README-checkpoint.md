@@ -3,7 +3,7 @@
 Mi nombre es Fabián Ramírez, soy estudiante de 5 año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María, soy del área de la estadística y mis temas afines son la inferencia estadística, estadística espacial, estadística espacio-temporal, regresión y ciencia de datos.
 
 ## Experiencia
-Fui multiples veces ayudante de catedra de cursos como calculo multivariado, inferencia estadística, teoría de probabilidades, procesos estocásticos y ecuaciones diferenciales. Por otro lado soy profesor part time en la Universidad Adolfo Ibañez, y he dictado el laboratorio de estadística aplicada y laboratorio de probabilidad y estadística además de ayudante de catedra de inferencia estadística.
+En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multivariado, Inferencia Estadística, Teoría de Probabilidades, Procesos Estocásticos o Ecuaciones diferenciales. Actualmente me desempeño como profesor part-time en la Universidad Adolfo Ibañez, dictando Laboratorio de Estadística Aplicada y de Probabilidad y Estadística.
 
 ## Proyectos
 * Análisis y proyeciones COVID-19 en Chile
