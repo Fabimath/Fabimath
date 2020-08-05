@@ -7,7 +7,7 @@ En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multi
 
 ## Proyectos
 * Análisis y proyeciones COVID-19 en Chile
-(2020) Programador en el proyecto COVID-19. Página que muestra día a día el avance del Coronavirus en Chile, junto con indicadores estadísticos importantes y novedosos con la finalidad de apoyar al gobierno en la toma de decisiones. Puede encontrar el [visualisador aquí](https://covid-19vis.cmm.uchile.cl/info)
+(2020) Programador en el proyecto COVID-19. Página que muestra día a día el avance del Coronavirus en Chile, junto con indicadores estadísticos importantes y novedosos con la finalidad de apoyar al gobierno en la toma de decisiones. Puede encontrar el [visualizador aquí](https://covid-19vis.cmm.uchile.cl/info)
 
 ## Habilidades
 * Manejo de Github
