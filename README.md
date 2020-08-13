@@ -34,26 +34,26 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 
 Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de los cuales se presentan mis evaluaciones y trabajos.
 
-## Primer Semestre, año 2020
+**Primer Semestre, año 2020**
 * [Simulación Estocástica](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
 * [Multivariado](https://fabimath.github.io/Multivariado/)
 
-## Segundo Semestre, año 2019
+**Segundo Semestre, año 2019**
 * [Análisis de Regresión](https://fabimath.github.io/Regresi-n/)
 
-## Practicas
+**Practicas**
 * [Practica Industrial, 2020/2](https://fabimath.github.io/Practica/)
 
 # Para mis estudiantes
 Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudante o profesor en las distintas universidades
-## 2020/2
-### Universidad Técnica Federico Santa María
+## Universidad Técnica Federico Santa María
+**2020/2**
 * 
 
-### Universidad Adolfo Ibáñez
+**2019/1**
+* [Mat023](https://fabimath.github.io/MAT023/)
+
+## Universidad Adolfo Ibáñez
+**2020/2**
 * [Laboratorio de probabilidad y estadística](https://fabimath.github.io/LEC-PYE/)
 * [Estadística II](https://fabimath.github.io/est2_uai_2020_2/)
-
-## 2019/1
-### Universidad Técnica Federico Santa María
-* [Mat023](https://fabimath.github.io/MAT023/)
