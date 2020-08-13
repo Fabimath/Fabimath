@@ -19,7 +19,7 @@ En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multi
 
 **Curriculum Vitae**
 
-Puedes encontrar mi Curriculum Vitae [aquí](cv/cv.pdf)
+Puedes encontrar mi Curriculum Vitae [aquí](cv/main.pdf)
 
 **Youtube**
 

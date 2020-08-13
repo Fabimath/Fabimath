@@ -1,0 +1,328 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdftex 2020.5.20)  13 AUG 2020 16:10
+entering extended mode
+**C:/Users/chime/Web/inicio/cv/altacv.cls
+(C:/Users/chime/Web/inicio/cv/altacv.cls
+! Undefined control sequence.
+l.20 \NeedsTeXFormat
+                    {LaTeX2e}[1995/12/01]
+? 
+! Undefined control sequence.
+l.21 \ProvidesClass
+                   {altacv}[2020/02/11 AltaCV v1.2, yet another alternative ...
+
+? 
+
+Overfull \hbox (14.55043pt too wide) in paragraph at lines 20--22
+[]\tenrm LaTeX2e[1995/12/01] al-tacv[2020/02/11 Al-taCV v1.2, yet an-other al-t
+er-na-tive class for a re-sume/curriculum|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm L
+.\tenrm a
+.\tenrm T
+.\kern-0.83334
+.etc.
+
+! Undefined control sequence.
+l.25 \DeclareOption
+                   {academicons}{\@academiconstrue}
+? 
+! Undefined control sequence.
+l.25 \DeclareOption{academicons}{\@
+                                   academiconstrue}
+? 
+! Undefined control sequence.
+l.28 \DeclareOption
+                   {normalphoto}{\@normalphototrue}
+? 
+! Undefined control sequence.
+l.28 \DeclareOption{normalphoto}{\@
+                                   normalphototrue}
+? 
+! Undefined control sequence.
+l.29 \DeclareOption
+                   *{\PassOptionsToClass{\CurrentOption}{extarticle}}
+? 
+! Undefined control sequence.
+l.29 \DeclareOption*{\PassOptionsToClass
+                                        {\CurrentOption}{extarticle}}
+? 
+! Undefined control sequence.
+l.29 ...Option*{\PassOptionsToClass{\CurrentOption
+                                                  }{extarticle}}
+? 
+! Undefined control sequence.
+l.31 \DeclareOption
+                   {ragged2e}{\@raggedtwoetrue}
+? 
+! Undefined control sequence.
+l.31 \DeclareOption{ragged2e}{\@
+                                raggedtwoetrue}
+? 
+! Undefined control sequence.
+l.32 \ProcessOptions
+                    \relax
+? 
+
+Overfull \hbox (32.55164pt too wide) in paragraph at lines 24--33
+[]\tenrm @academicons aca-demi-con-saca-demi-con-strue @nor-malphoto nor-malpho
+tonor-malpho-totrue *ex-tar-ti-cle @raggedt-|
+
+\hbox(7.5+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm c
+.\tenrm a
+.etc.
+
+! Undefined control sequence.
+l.34 \LoadClass
+               {extarticle}
+? 
+! Undefined control sequence.
+l.36 \RequirePackage
+                    [margin=2cm]{geometry}
+? 
+! Undefined control sequence.
+l.37 \RequirePackage
+                    {fontawesome}
+? 
+! Undefined control sequence.
+l.38 \RequirePackage
+                    {ifxetex,ifluatex}
+? 
+! Undefined control sequence.
+l.39 \RequirePackage
+                    {scrlfile}
+? 
+! Undefined control sequence.
+l.43 \ifxetex
+             
+? 
+! Extra \else.
+l.45 \else
+          
+? 
+! Undefined control sequence.
+l.46   \ifluatex
+                
+? 
+! Extra \else.
+l.48   \else
+            
+? 
+! Extra \fi.
+l.50   \fi
+          
+? 
+! Extra \fi.
+l.51 \fi
+        
+? 
+! Undefined control sequence.
+l.95 \RequirePackage
+                    {xcolor}
+? 
+! Undefined control sequence.
+l.97 \colorlet
+              {accent}{blue!70!black}
+? 
+! Undefined control sequence.
+l.98 \colorlet
+              {heading}{black}
+? 
+! Undefined control sequence.
+l.99 \colorlet
+              {emphasis}{black}
+? 
+! Undefined control sequence.
+l.100 \colorlet
+               {body}{black!80!white}
+? 
+! Undefined control sequence.
+l.101 \newcommand
+                 {\itemmarker}{{\small\textbullet}}
+? 
+! Undefined control sequence.
+l.101 \newcommand{\itemmarker
+                             }{{\small\textbullet}}
+? 
+! Undefined control sequence.
+l.101 \newcommand{\itemmarker}{{\small
+                                      \textbullet}}
+? 
+! Undefined control sequence.
+l.101 \newcommand{\itemmarker}{{\small\textbullet
+                                                 }}
+? 
+! Undefined control sequence.
+l.102 \newcommand
+                 {\ratingmarker}{\faCircle}
+? 
+! Undefined control sequence.
+l.102 \newcommand{\ratingmarker
+                               }{\faCircle}
+? 
+! Undefined control sequence.
+l.102 \newcommand{\ratingmarker}{\faCircle
+                                          }
+? 
+! Undefined control sequence.
+l.104 \RequirePackage
+                     {tikz}
+? 
+! Undefined control sequence.
+l.105 \usetikzlibrary
+                     {arrows}
+? 
+! Undefined control sequence.
+l.106 \RequirePackage
+                     [skins]{tcolorbox}
+? 
+! Undefined control sequence.
+l.107 \RequirePackage
+                     [inline]{enumitem}
+? 
+! Undefined control sequence.
+l.108 \setlist
+              {leftmargin=*,labelsep=0.5em,nosep,itemsep=0.25\baselineskip,a...
+
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   a
+l.108 ...p=0.5em,nosep,itemsep=0.25\baselineskip,a
+                                                  fter=\vspace{0.25\baseline...
+
+? 
+! Undefined control sequence.
+l.108 ...p,itemsep=0.25\baselineskip,after=\vspace
+                                                  {0.25\baselineskip}}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.108 ...lineskip,after=\vspace{0.25\baselineskip}
+                                                  }
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.108 ...lineskip,after=\vspace{0.25\baselineskip}
+                                                  }
+? 
+! Undefined control sequence.
+l.109 \setlist
+              [itemize]{label=\itemmarker}
+? 
+! Undefined control sequence.
+l.109 \setlist[itemize]{label=\itemmarker
+                                         }
+? 
+! Undefined control sequence.
+l.110 \RequirePackage
+                     {graphicx}
+? 
+! Undefined control sequence.
+l.111 \RequirePackage
+                     {etoolbox}
+? 
+! Undefined control sequence.
+l.112 \RequirePackage
+                     {dashrule}
+? 
+! Undefined control sequence.
+l.113 \RequirePackage
+                     {multirow,tabularx}
+? 
+! Undefined control sequence.
+l.114 \RequirePackage
+                     {changepage}
+? 
+
+Overfull \hbox (7.94049pt too wide) in paragraph at lines 104--116
+[]\tenrm tikz ar-rows [skins]tcolorbox [in-line]enumitem left-mar-gin=*,labelse
+p=0.5em,nosep,itemsep=0.25after=0.25|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm t
+.\tenrm i
+.\tenrm k
+.\tenrm z
+.etc.
+
+! Undefined control sequence.
+l.117 \setlength
+                {\parindent}{0pt}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.117 \setlength{\parindent}
+                            {0pt}
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.117 \setlength{\parindent}
+                            {0pt}
+? 
+! Undefined control sequence.
+l.118 \newcommand
+                 {\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt...
+
+? 
+! Undefined control sequence.
+l.118 \newcommand{\divider
+                          }{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt...
+
+? 
+! Undefined control sequence.
+l.118 \newcommand{\divider}{\textcolor
+                                      {body!30}{\hdashrule{\linewidth}{0.6pt...
+
+? 
+! Undefined control sequence.
+l.118 ...{\divider}{\textcolor{body!30}{\hdashrule
+                                                  {\linewidth}{0.6pt}{0.5ex}...
+
+? 
+! Undefined control sequence.
+l.118 ...\textcolor{body!30}{\hdashrule{\linewidth
+                                                  }{0.6pt}{0.5ex}}\medskip}
+? 
+! Undefined control sequence.
+l.120 \newenvironment
+                     {fullwidth}{%
+? 
+! Undefined control sequence.
+l.121   \begin
+              {adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
+? 
+! You can't use `\dimexpr' in horizontal mode.
+l.121   \begin{adjustwidth}{}{\dimexpr
+                                      -\marginparwidth-\marginparsep\relax}}
+? 
+! Undefined control sequence.
+l.121 ...n{adjustwidth}{}{\dimexpr-\marginparwidth
+                                                  -\marginparsep\relax}}
+? 
+! Undefined control sequence.
+l.121 ...{}{\dimexpr-\marginparwidth-\marginparsep
+                                                  \relax}}
+? 
+[1{C:/Users/chime/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 122 ({)
+### bottom level<C:/Users/chime/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb>
+Output written on altacv.pdf (1 page, 21956 bytes).
+PDF statistics:
+ 10 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
