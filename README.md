@@ -48,7 +48,7 @@ Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de
 Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudante o profesor en las distintas universidades
 ## Universidad Técnica Federico Santa María
 **2020/2**
-* 
+* [Probabilidad y Estadística para Ingeniería Civil, Mat044](https://fabimath.github.io/mat044/)
 
 **2019/1**
 * [Mat023](https://fabimath.github.io/MAT023/)
