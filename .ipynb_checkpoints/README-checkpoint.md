@@ -34,6 +34,9 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 
 Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de los cuales se presentan mis evaluaciones y trabajos.
 
+**Segundo Semestre, año 2020**
+* Optimización no lineal - [zoom](https://zoom.us/j/96140856241)
+
 **Primer Semestre, año 2020**
 * [Simulación Estocástica](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
 * [Multivariado](https://fabimath.github.io/Multivariado/)
