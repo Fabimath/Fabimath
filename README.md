@@ -36,8 +36,16 @@ Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de
 
 **Segundo Semestre, año 2020**
 * Optimización no lineal - [zoom](https://zoom.us/j/96140856241)
-* Fisica 140 - [zoom](https://zoom.us/j/99364903652)
+* Fisica 140 - [zoom](https://zoom.us/j/7675366676)
 * Inferencia Estadística - [zoom](https://zoom.us/j/9413215121?pwd=dGVjNDlkM3FjVURwMGlnMTVtN2twZz09)
+
+**Preusm**
+
+* [reunión inicial](https://zoom.us/j/96613900382), clave: 988490
+* [Descartes](https://zoom.us/j/93227872552), clave: 128353
+* [Bitácora](https://docs.google.com/spreadsheets/d/1ljkUVt8_kW943TVDhDc4HfilSzBEKisVEpI7FYwTcXM/edit?usp=sharing_eip&invite=CK3Gu5sD&ts=5ef14668
+* [Drive](https://drive.google.com/drive/folders/1zOLoQnFbSGpFBo56pHWu5Dj46aPjS6G2)
+* [Información](https://sites.google.com/preusm.cl/matemticas-preusm/)
 
 **Primer Semestre, año 2020**
 * [Simulación Estocástica](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
