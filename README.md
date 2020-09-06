@@ -19,7 +19,7 @@ En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multi
 
 **Curriculum Vitae**
 
-Puedes encontrar mi Curriculum Vitae [aquí](cv/main.pdf)
+Puedes encontrar mi Curriculum Vitae ![aquí](cv/main.pdf)
 
 **Youtube**
 
@@ -32,7 +32,7 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 
 **Disponibilidad**
 
-![sim](disponibilidad)
+![sim](disponibilidad.pdf)
 
 # Mis Cursos como ICMAT
 
