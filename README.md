@@ -32,7 +32,7 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 
 **Disponibilidad**
 
-![sim](disponibilidad.pdf)
+![sim](disponibilidad)
 
 # Mis Cursos como ICMAT
 
