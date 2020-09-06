@@ -34,7 +34,7 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 
 Puedes encontrar mi disponibilidad horaria [aquí](disponibilidad.pdf)
 
-[aquí](disponibilidad-1.svg)
+![aquí](disponibilidad-1.svg)
 
 # Mis Cursos como ICMAT
 
