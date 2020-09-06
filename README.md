@@ -34,6 +34,8 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 
 Puedes encontrar mi disponibilidad horaria [aquí](disponibilidad.pdf)
 
+[aquí](disponibilidad-1.svg)
+
 # Mis Cursos como ICMAT
 
 Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de los cuales se presentan mis evaluaciones y trabajos.
