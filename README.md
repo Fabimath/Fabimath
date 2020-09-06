@@ -30,6 +30,10 @@ Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabima
 * Correo: `fabian.ramirez.di@gmail.com`
 * Linkedin: [Fabián Ramírez Díaz](https://www.linkedin.com/in/fabi%C3%A1n-ram%C3%ADrez-d%C3%ADaz-955761189/)
 
+**Disponibilidad**
+
+![disponibilidad](disponibilidad.pdf)
+
 # Mis Cursos como ICMAT
 
 Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de los cuales se presentan mis evaluaciones y trabajos.
