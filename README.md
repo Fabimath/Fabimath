@@ -12,7 +12,7 @@ En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multi
 
 **Habilidades**
 * Manejo de Github
-* Dominio de R <img src="R_logo.svg" alt="drawing" width="200"/>
+* Dominio de R <img src="R_logo.svg" alt="drawing" width="20"/>
 * Dominio de Python
 * Dominio de Latex
 * Dominio de Moodle
