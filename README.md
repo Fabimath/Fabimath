@@ -12,10 +12,10 @@ En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multi
 
 **Habilidades**
 * Manejo de Github
-* Dominio de R <img src="R_logo.svg" alt="drawing" width="20"/>
-* Dominio de Python
-* Dominio de Latex
-* Dominio de Moodle
+* Dominio de <img src="R_logo.svg" alt="drawing" width="20"/>
+* Dominio de Python <img src="py_logo.svg" alt="drawing" width="20"/>
+* Dominio de <img src="latex_logo.svg" alt="drawing" width="20"/>
+* Dominio de Moodle <img src="moodle_logo.svg" alt="drawing" width="20"/>
 
 **Curriculum Vitae**
 
@@ -23,7 +23,7 @@ Puedes encontrar mi Curriculum Vitae [aquí](cv/main.pdf)
 
 **Youtube**
 
-Puedes encontrar mi material en mi canal [Fabimath](https://youtube.com/c/fabimath/), donde encontraras ejercicios resueltos de diversos tópicos, en particular se puede encontrar abundante contenido para la prueba de selección/transición universitaria.
+Puedes encontrar mi material en mi canal <img src="yt_logo.svg" alt="drawing" width="20"/> [Fabimath](https://youtube.com/c/fabimath/), donde encontraras ejercicios resueltos de diversos tópicos, en particular se puede encontrar abundante contenido para la prueba de selección/transición universitaria.
 
 **Contacto**
 
