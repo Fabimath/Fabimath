@@ -14,7 +14,7 @@ En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multi
 * Manejo de Github <img src="git_logo.svg" alt="drawing" width="16"/>
 * Dominio de <img src="R_logo.svg" alt="drawing" width="18"/>
 * Dominio de Python <img src="py_logo.svg" alt="drawing" width="15"/>
-* Dominio de <img src="latex_logo.svg" alt="drawing" width="30"/>
+* Dominio de <img src="latex_logo.svg" alt="drawing" width="35"/>
 * Dominio de <img src="moodle_logo.svg" alt="drawing" width="40"/>
 
 **Curriculum Vitae**
