@@ -11,11 +11,11 @@ En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multi
 (2020) Programador en el proyecto COVID-19. Página que muestra día a día el avance del Coronavirus en Chile, junto con indicadores estadísticos importantes y novedosos con la finalidad de apoyar al gobierno en la toma de decisiones. Puede encontrar el [visualizador aquí](https://covid-19vis.cmm.uchile.cl/info)
 
 **Habilidades**
-* Manejo de Github
+* Manejo de Github <img src="git_logo.svg" alt="drawing" width="20"/>
 * Dominio de <img src="R_logo.svg" alt="drawing" width="20"/>
-* Dominio de Python <img src="py_logo.svg" alt="drawing" width="20"/>
-* Dominio de <img src="latex_logo.svg" alt="drawing" width="20"/>
-* Dominio de Moodle <img src="moodle_logo.svg" alt="drawing" width="20"/>
+* Dominio de Python <img src="py_logo.svg" alt="drawing" width="10"/>
+* Dominio de <img src="latex_logo.svg" alt="drawing" width="40"/>
+* Dominio de <img src="moodle_logo.svg" alt="drawing" width="40"/>
 
 **Curriculum Vitae**
 
