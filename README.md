@@ -12,7 +12,7 @@ En multiples ocasiones he sido Ayudante de Cátedra en cursos como Calculo Multi
 
 **Habilidades**
 * Manejo de Github
-* Dominio de R ![logoR](logo/R_logo.svg){width: 12px;}
+* Dominio de R ![logoR](logo/R_logo.svg = 12x)
 * Dominio de Python
 * Dominio de Latex
 * Dominio de Moodle
