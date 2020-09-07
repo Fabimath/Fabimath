@@ -41,7 +41,7 @@ Puedes encontrar mi disponibilidad horaria [aquí](disponibilidad.pdf)
 Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de los cuales se presentan mis evaluaciones y trabajos.
 
 **Segundo Semestre, año 2020**
-* Optimización no lineal - [zoom](https://zoom.us/j/96140856241)
+* Optimización no lineal - <img src="zoom_logo.svg" alt="drawing" width="12"/> [zoom](https://zoom.us/j/96140856241)
 * Fisica 140 - [zoom](https://zoom.us/j/7675366676)
 * Inferencia Estadística - [zoom](https://zoom.us/j/9413215121?pwd=dGVjNDlkM3FjVURwMGlnMTVtN2twZz09)
 
