@@ -1,3 +1,9 @@
+# Preuniversitario Fabimath
+
+Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encontrar en el siguiente link:
+
+* [Preuniversitario Fabimath](https://fabimath.github.io/preuniversitariofabimath/)
+
 # Sobre mí
 
 Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María y actualmente estoy dentro del programa de Mágister en Ciencias Mensión Matemática, soy del área de la estadística y mis temas afines son la Inferencia Estadística, Estadística Espacial, Estadística Espacio-temporal, Análisis de Regresión y Ciencia de Datos.
@@ -5,6 +11,7 @@ Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civ
 **Experiencia**
 
 En mis años de estudiante en la Universidad Técnica Féderico Santa María, desempeñe como ayudante de catedra en los siguientes cursos:
+
 * Álgebra y Geometria (MATE10)
 * Cálculo en varias variables y Ecuaciones Diferenciales (MAT023)
 * Ecuaciones Diferenciales para Ingeniería Civil Matemática
@@ -13,12 +20,14 @@ En mis años de estudiante en la Universidad Técnica Féderico Santa María, de
 * Probabilidad y Estadística para Ingenieria Civil.
 
 Desde el año 2020 me desempeño como profesor de laboratorio y asistente en la Universidad Adolfo Ibáñez. Desde ese año hasta la fecha he realizado los siguientes cursos:
+
 * Laboratorio de Probabilidad y Estadística para Ingeniería Civil.
 * Laboratorio de Estadística Aplicada.
 * Razonamento cuantitativo con Datos.
 * Estadística II (Inferencia estadística).
 
-Desde el año 2020 me desempeño como profesor asistente en la Universidad Gabriela Mistral, donde he realizado los siguientes cursos:¨
+Desde el año 2020 me desempeño como profesor asistente en la Universidad Gabriela Mistral, donde he realizado los siguientes cursos:
+¨
 * Algebrá Lineal
 * Introducción a la Matemática para la Ingeniería.
 
@@ -27,10 +36,7 @@ Desde el año 2020 me desempeño como profesor asistente en la Universidad Gabri
 * Análisis y proyeciones COVID-19 en Chile (2020) Programador en el proyecto COVID-19. Página que muestra día a día el avance del Coronavirus en Chile, junto con indicadores estadísticos importantes y novedosos con la finalidad de apoyar al gobierno en la toma de decisiones. Puede encontrar el [visualizador aquí](https://covid-19vis.cmm.uchile.cl/info)
 * Investigación sobre estadística espacio temporal aplicada a esferas, junto con el concepto de coherencia entre campos aleatorios sobre esferas.
 
-**Preuniversitario Fabimath**
 
-Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encontrar en el siguiente link:
- 
 
 **Habilidades**
 
