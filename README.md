@@ -6,7 +6,8 @@ Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encon
 
 # Sobre mí
 
-Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María y actualmente estoy dentro del programa de Mágister en Ciencias Mensión Matemática, soy del área de la estadística y mis temas afines son la Inferencia Estadística, Estadística Espacial, Estadística Espacio-temporal, Análisis de Regresión y Ciencia de Datos.
+Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María y actualmente soy estudiante del programa de Mágister en Ciencias Mención Matemática.
+Mis intereses son área de la estadística y mis temas afines son la Inferencia Estadística, Estadística Espacial, Estadística Espacio-temporal, Análisis de Regresión y Ciencia de Datos.
 
 **Experiencia**
 
