@@ -93,7 +93,8 @@ Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudant
 
 ## Universidad Adolfo Ibáñez
 **2021/1**
-* [Laboratorio de probabilidad y estadística](https://fabimath.github.io/LEC2021-1/)
+* [Laboratorio de Probabilidad y Estadística 2021-1](https://fabimath.github.io/LEC2021-1/)
+* [Razonamiento Cuantitativos con Datos 2021-1](https://fabimath.github.io/RCD1-2021-1/)
 
 **2020/2**
-* [Laboratorio de probabilidad y estadística](https://fabimath.github.io/LEC-PYE/)
+* [Laboratorio de probabilidad y estadística 2020-2](https://fabimath.github.io/LEC-PYE/)
