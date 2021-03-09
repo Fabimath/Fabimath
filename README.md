@@ -69,9 +69,7 @@ Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de
 
 
 **Segundo Semestre, año 2020**
-* Optimización no lineal - <img src="zoom_logo.svg" alt="drawing" width="12"/> [zoom](https://zoom.us/j/96140856241)
-* Fisica 140 - <img src="zoom_logo.svg" alt="drawing" width="12"/> [zoom](https://zoom.us/j/7675366676)
-* Inferencia Estadística -<img src="zoom_logo.svg" alt="drawing" width="12"/>  [zoom](https://zoom.us/j/9413215121?pwd=dGVjNDlkM3FjVURwMGlnMTVtN2twZz09)
+* Inferencia Estadística 
 
 **Primer Semestre, año 2020**
 * [Simulación Estocástica](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
