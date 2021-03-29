@@ -100,3 +100,7 @@ Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudant
 
 **2020/2**
 * [Laboratorio de probabilidad y estadística 2020-2](https://fabimath.github.io/LEC-PYE/)
+
+## Universidad Gabriela Mistral
+**2021/1**
+* [Cursos UGM](https://fabimath.github.io/Gabriela-Mistral-2021-1/)
