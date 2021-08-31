@@ -5,30 +5,47 @@
 # Sobre mí
 
 Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María y actualmente soy estudiante del programa de Mágister en Ciencias Mención Matemática.
-Mis intereses son área de la estadística y mis temas afines son la Inferencia Estadística, Estadística Espacial, Estadística Espacio-temporal, Análisis de Regresión y Ciencia de Datos.
 
-**Experiencia**
+**Educación**
+
+* [2016-2021] Ingeniería Civil Matemáticas, Memorista.
+* [2021] Magíster en Ciencias Mención Matemáticas, Memorista.
+* [2019] Programa de Intercambio CRUV en la PUCV.
+* [2018-2019] Técnicas de pedagogía para estudiantes de Ingeniería en PREUSM.
+
+**Experiencia Laboral Educativa**
 
 En mis años de estudiante en la **Universidad Técnica Féderico Santa María**, desempeñe como ayudante de catedra en los siguientes cursos:
 
-* Álgebra y Geometria (MATE10)
-* Cálculo en varias variables y Ecuaciones Diferenciales (MAT023)
-* Ecuaciones Diferenciales para Ingeniería Civil Matemática
+* Álgebra y Geometría (MATE10).
+* Cálculo en varias variables y Ecuaciones Diferenciales (MAT023).
+* Ecuaciones Diferenciales para Ingeniería Civil Matemática.
 * Teoría de Probabilidades y Procesos Estocásticos para Ingeniería Civil Matemática.
 * Inferencia Estadística para Ingeniería Civil Matemática.
 * Probabilidad y Estadística para Ingenieria Civil.
+* Probabilidad y para Ingenieria Civil Electrónica.
 
 Desde el año 2020 me desempeño como profesor de laboratorio y asistente en la **Universidad Adolfo Ibáñez**. Desde ese año hasta la fecha he realizado los siguientes cursos:
 
 * Laboratorio de Probabilidad y Estadística para Ingeniería Civil.
 * Laboratorio de Estadística Aplicada.
 * Razonamento cuantitativo con Datos.
+* Estadística I.
 * Estadística II (Inferencia estadística).
 
 Desde el año 2020 me desempeño como profesor asistente en la **Universidad Gabriela Mistral**, donde he realizado los siguientes cursos:
-¨
-* Algebrá Lineal
+
+* Álgebra Lineal
 * Introducción a la Matemática para la Ingeniería.
+* Estadística Multivariable.
+* Álgebra.
+* Física para Ingeniería Industrial.
+
+Desde el 2017 he trabajado en el voluntariado **Preuniversitario Solidario Santa María** como profesor de matemáticas en:
+
+* Plan Anual para 4° medio y egresados.
+* Plan Intensivo.
+* Plan 3° Medio.
 
 **Proyectos**
 
