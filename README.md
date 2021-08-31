@@ -1,6 +1,6 @@
 [//]: <> (INICIO PAGÍNA DE FABIMATH)
 
-<img src="f4.jpg" alt="drawing" width="16"/>
+<img src="f4.jpg" alt="drawing" />
 
 # Preuniversitario Fabimath
 
