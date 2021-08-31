@@ -1,4 +1,7 @@
 [//]: <> (INICIO PAGÍNA DE FABIMATH)
+
+<img src="f4.jpg" alt="drawing" width="16"/>
+
 # Preuniversitario Fabimath
 
 Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encontrar en el siguiente link:
