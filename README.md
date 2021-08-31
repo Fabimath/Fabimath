@@ -6,14 +6,14 @@
 
 Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María y actualmente soy estudiante del programa de Mágister en Ciencias Mención Matemática.
 
-**Educación**
+## Educación
 
 * [2016-2021] Ingeniería Civil Matemáticas, Memorista.
 * [2021] Magíster en Ciencias Mención Matemáticas, Memorista.
 * [2019] Programa de Intercambio CRUV en la PUCV.
 * [2018-2019] Técnicas de pedagogía para estudiantes de Ingeniería en PREUSM.
 
-**Experiencia Laboral Educativa**
+## Experiencia Laboral Educativa
 
 En mis años de estudiante en la **Universidad Técnica Féderico Santa María**, desempeñe como ayudante de catedra en los siguientes cursos:
 
@@ -47,7 +47,7 @@ Desde el 2017 he trabajado en el voluntariado **Preuniversitario Solidario Santa
 * Plan Intensivo.
 * Plan 3° Medio.
 
-**Proyectos**
+## Proyectos
 
 * **Análisis y proyeciones COVID-19 en Chile (2020)** Programador en el proyecto COVID-19. Página que muestra día a día el avance del Coronavirus en Chile, junto con indicadores estadísticos importantes y novedosos con la finalidad de apoyar al gobierno en la toma de decisiones. Puede encontrar el [visualizador aquí](https://covid-19vis.cmm.uchile.cl/info)
 * **Investigación sobre estadística espacio temporal aplicada a esferas**, junto con el concepto de coherencia entre campos aleatorios sobre esferas.
@@ -55,7 +55,7 @@ Desde el 2017 he trabajado en el voluntariado **Preuniversitario Solidario Santa
 para la prueba de transición universitaria en chile de manera gratuita y publica por la plataforma de streaming Twitch.
 
 
-**Habilidades**
+## Habilidades
 
 * Manejo de Github <img src="git_logo.svg" alt="drawing" width="16"/>
 * Dominio de <img src="R_logo.svg" alt="drawing" width="18"/>
@@ -63,15 +63,18 @@ para la prueba de transición universitaria en chile de manera gratuita y public
 * Dominio de <img src="latex_logo.svg" alt="drawing" width="35"/>
 * Dominio de <img src="moodle_logo.svg" alt="drawing" width="40"/>
 
-**Curriculum Vitae**
+## Curriculum Vitae
 
 Puedes encontrar mi Curriculum Vitae [aquí](cv/main.pdf)
 
-**Youtube**
+## Mi contenido
 
-Puedes encontrar mi material en mi canal <img src="yt_logo.svg" alt="drawing" width="12"/> [Fabimath](https://youtube.com/c/fabimath/), donde encontraras ejercicios resueltos de diversos tópicos, en particular se puede encontrar abundante contenido para la prueba de selección/transición universitaria.
+Puedes encontrar mi material en las siguientes redes donde encontraras ejercicios resueltos de diversos tópicos, en particular se puede encontrar abundante contenido para la prueba de selección/transición universitaria.
 
-**Contacto**
+* <img src="yt_logo.svg" alt="drawing" width="12"/> [Youtube: Fabimath](https://youtube.com/c/fabimath/)
+* <img src='twitch.svg' alt="drawing" width="12"/> [Twitch: Fabimath](https://twitch.tv/fabimath/)
+
+### Contacto
 
 * Correo: `fabian.ramirez.di@gmail.com`
 * Linkedin: [Fabián Ramírez Díaz](https://www.linkedin.com/in/fabi%C3%A1n-ram%C3%ADrez-d%C3%ADaz-955761189/)
