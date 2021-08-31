@@ -2,12 +2,6 @@
 
 <img src="f4.jpg" alt="drawing" />
 
-# Preuniversitario Fabimath
-
-Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encontrar en el siguiente link:
-
-* [Preuniversitario Fabimath](https://fabimath.github.io/preuniversitariofabimath/)
-
 # Sobre mí
 
 Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María y actualmente soy estudiante del programa de Mágister en Ciencias Mención Matemática.
@@ -40,7 +34,8 @@ Desde el año 2020 me desempeño como profesor asistente en la **Universidad Gab
 
 * **Análisis y proyeciones COVID-19 en Chile (2020)** Programador en el proyecto COVID-19. Página que muestra día a día el avance del Coronavirus en Chile, junto con indicadores estadísticos importantes y novedosos con la finalidad de apoyar al gobierno en la toma de decisiones. Puede encontrar el [visualizador aquí](https://covid-19vis.cmm.uchile.cl/info)
 * **Investigación sobre estadística espacio temporal aplicada a esferas**, junto con el concepto de coherencia entre campos aleatorios sobre esferas.
-
+* **Preuniversitario Fabimath**, Fundador y lider del proyecto 'Preuniversitario Fabimath' cuyo objetivo es preparar a los jovenes
+para la prueba de transición universitaria en chile de manera gratuita y publica por la plataforma de streaming Twitch.
 
 
 **Habilidades**
@@ -63,6 +58,12 @@ Puedes encontrar mi material en mi canal <img src="yt_logo.svg" alt="drawing" wi
 
 * Correo: `fabian.ramirez.di@gmail.com`
 * Linkedin: [Fabián Ramírez Díaz](https://www.linkedin.com/in/fabi%C3%A1n-ram%C3%ADrez-d%C3%ADaz-955761189/)
+
+# Preuniversitario Fabimath
+
+Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encontrar en el siguiente link:
+
+* [Preuniversitario Fabimath](https://fabimath.github.io/preuniversitariofabimath/)
 
 # Mis Cursos como ICMAT
 
