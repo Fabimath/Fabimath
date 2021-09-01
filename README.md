@@ -79,52 +79,12 @@ Puedes encontrar mi material en las siguientes redes donde encontraras ejercicio
 * Correo: `fabian.ramirez.di@gmail.com`
 * Linkedin: [Fabián Ramírez Díaz](https://www.linkedin.com/in/fabi%C3%A1n-ram%C3%ADrez-d%C3%ADaz-955761189/)
 
-# Preuniversitario Fabimath
+# Para mis estudiantes
+Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudante o profesor en las distintas universidades
+
+## Preuniversitario Fabimath
 
 Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encontrar en el siguiente link:
 
 * [Preuniversitario Fabimath](https://fabimath.github.io/preuniversitariofabimath/)
 
-# Mis Cursos como ICMAT
-
-Se presentan a continuación los cursos mas destacados de mi pregrado, dentro de los cuales se presentan mis evaluaciones y trabajos.
-
-**Primer Semestre, año 2021**
-
-
-**Segundo Semestre, año 2020**
-* Inferencia Estadística 
-
-**Primer Semestre, año 2020**
-* [Simulación Estocástica](https://fabimath.github.io/Simulaci-n-Estoc-stica/)
-* [Multivariado](https://fabimath.github.io/Multivariado/)
-
-**Segundo Semestre, año 2019**
-* [Análisis de Regresión](https://fabimath.github.io/Regresi-n/)
-
-**Practicas**
-* [Practica Industrial, 2020/2](https://fabimath.github.io/Practica/)
-
-# Para mis estudiantes
-Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudante o profesor en las distintas universidades
-## Universidad Técnica Federico Santa María
-**2021/1**
-* [Probabilidad y Estadística para Ingeniería Comercial, Mat032](https://fabimath.github.io/MAT032-2021-1/)
-
-**2020/2**
-* [Probabilidad y Estadística para Ingeniería Civil, Mat044](https://fabimath.github.io/mat044/)
-
-**2019/1**
-* [Mat023](https://fabimath.github.io/MAT023/)
-
-## Universidad Adolfo Ibáñez
-**2021/1**
-* [Laboratorio de Probabilidad y Estadística 2021-1](https://fabimath.github.io/LEC2021-1/)
-* [Razonamiento Cuantitativos con Datos 2021-1](https://fabimath.github.io/RCD1-2021-1/)
-
-**2020/2**
-* [Laboratorio de probabilidad y estadística 2020-2](https://fabimath.github.io/LEC-PYE/)
-
-## Universidad Gabriela Mistral
-**2021/1**
-* [Cursos UGM](https://fabimath.github.io/Gabriela-Mistral-2021-1/)
