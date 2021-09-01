@@ -93,21 +93,21 @@ Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encon
 
 ## Universidad Santa María
 
-** 2021 - 2 **
+**2021 - 2**
 
 * [Laboratorio de Inferencia Estadística para Ingeniería Civil Matemática](https://drive.google.com/open?id=1_OCJYJ_pNR0KVgshHNwfEmE1CoT-RR8N&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
 * [Teoría de Probabilidad y Aplicaciones](https://drive.google.com/open?id=1_MRt5Q85bhB6HsP6VjKSYevHq4cR5QKP&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
 
 ## Universidad Adolfo Ibáñez
 
-** 2021 - 2 **
+**2021 - 2**
 
 * [Razonamiento Cuantitativo con Datos I](https://drive.google.com/open?id=1ZMhAU90vWtH6zOCi_6vF2DcOJS1bed2c&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
 * [Estadística para Negocios](https://drive.google.com/open?id=1ZOwQCpzeruaIUMV5nIyOczS6eoEViUZ_&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
 
 ## Universidad Gabriela Mistral
 
-** 2021 - 2 **
+**2021 - 2**
 
 * [Álgebra lineal](https://drive.google.com/open?id=1Z5tkXMSfbW1Q0Vv7AhFVhfyPME2CqA7R&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
 * [Estadística Multivariable](https://drive.google.com/open?id=1ZX-ANG3imru6b_cvx1aXLZ642o1sQneF&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
