@@ -74,14 +74,15 @@ Puedes encontrar mi material en las siguientes redes donde encontraras ejercicio
 * <img src="yt_logo.svg" alt="drawing" width="12"/> [Youtube: Fabimath](https://youtube.com/c/fabimath/)
 * <img src='twitch.svg' alt="drawing" width="12"/> [Twitch: Fabimath](https://twitch.tv/fabimath/)
 
-### Contacto
+## Contacto
 
 * Correo: `fabian.ramirez.di@gmail.com`
 * Linkedin: [Fabián Ramírez Díaz](https://www.linkedin.com/in/fabi%C3%A1n-ram%C3%ADrez-d%C3%ADaz-955761189/)
 
+# Para mis estudiantes
+
 <img src="f4.jpg" alt="drawing" />
 
-# Para mis estudiantes
 Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudante o profesor en las distintas universidades
 
 ## Preuniversitario Fabimath
