@@ -1,6 +1,6 @@
 [//]: <> (INICIO PAGÍNA DE FABIMATH)
 
-<img src="f4.jpg" alt="drawing" />
+<img src="UF.png" alt="drawing" />
 
 # Sobre mí
 
@@ -78,6 +78,8 @@ Puedes encontrar mi material en las siguientes redes donde encontraras ejercicio
 
 * Correo: `fabian.ramirez.di@gmail.com`
 * Linkedin: [Fabián Ramírez Díaz](https://www.linkedin.com/in/fabi%C3%A1n-ram%C3%ADrez-d%C3%ADaz-955761189/)
+
+<img src="f4.jpg" alt="drawing" />
 
 # Para mis estudiantes
 Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudante o profesor en las distintas universidades
