@@ -89,7 +89,10 @@ Acá se presentan los cursos sobre los cuales tengo responsabilidad como ayudant
 
 Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encontrar en el siguiente link:
 
-* [Preuniversitario Fabimath](https://fabimath.github.io/preuniversitariofabimath/)
+* [Apunte de Matemática Plan Anual](https://drive.google.com/open?id=1_FNDCyHZ8suysEviSh4x2GZkVgHRy2bB&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
+* [Apunte de Física](https://drive.google.com/open?id=1_O_vVLKDaG1B6lDo6CIyvMqsFH6gPtxw&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
+* [Notas de Química Plan Anual](https://drive.google.com/open?id=1VxEWa22YD-pczw9kKfXQFSu_8fM6wJg7&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs) (Por Iris Barra)
+
 
 ## Universidad Santa María
 
