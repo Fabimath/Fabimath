@@ -79,6 +79,11 @@ Puedes encontrar mi material en las siguientes redes donde encontraras ejercicio
 * Correo: `fabian.ramirez.di@gmail.com`
 * Linkedin: [Fabián Ramírez Díaz](https://www.linkedin.com/in/fabi%C3%A1n-ram%C3%ADrez-d%C3%ADaz-955761189/)
 
+## Podcast
+
+Un Bar a Presión es un espacio para conversar y compartir experiencias crudas, entretenidas y romanticas desde un enfoque de dos estudiantes universitarios. Puedes escucharlo
+de manera gratuita por Spotify en el siguente link: [Podcast Un Bar a Presión](https://open.spotify.com/show/1IZKJW1L4Nih72CJuMOKAd)
+
 # Para mis estudiantes
 
 <img src="f4.jpg" alt="drawing" />
