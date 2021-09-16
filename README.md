@@ -82,7 +82,7 @@ Puedes encontrar mi material en las siguientes redes donde encontraras ejercicio
 ## Podcast
 
 Un Bar a Presión es un espacio para conversar y compartir experiencias crudas, entretenidas y romanticas desde un enfoque de dos estudiantes universitarios. Puedes escucharlo
-de manera gratuita por Spotify en el siguente link: [Podcast Un Bar a Presión](https://open.spotify.com/show/1IZKJW1L4Nih72CJuMOKAd)
+de manera gratuita por Spotify en el siguente link: <img src='spotify.svg' alt="drawing" width="12"/>[Podcast Un Bar a Presión](https://open.spotify.com/show/1IZKJW1L4Nih72CJuMOKAd)
 
 # Para mis estudiantes
 
