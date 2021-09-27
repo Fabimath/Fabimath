@@ -100,6 +100,9 @@ Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encon
 * [Apunte de Física Plan Anual](https://drive.google.com/open?id=1_O_vVLKDaG1B6lDo6CIyvMqsFH6gPtxw&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
 * [Notas de Química Plan Anual](https://drive.google.com/open?id=1VxEWa22YD-pczw9kKfXQFSu_8fM6wJg7&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs) (Por Iris Barra)
 
+Además aquí esta la lista de reproducción de videos:
+
+* [Videos de Intensivo de Geometría](https://www.youtube.com/playlist?list=PLEZl5kuzUiGnb9c53CzfnJ4jwW-H2Gadc)
 
 ## Universidad Santa María
 
