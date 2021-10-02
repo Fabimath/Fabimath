@@ -132,3 +132,4 @@ Además aquí esta la lista de reproducción de videos:
 <img src="fot/2.jpg" alt="drawing" />
 <img src="fot/4.jpg" alt="drawing" />
 <img src="fot/5.jpg" alt="drawing" />
+<img src="fot/6.jpg" alt="drawing" />
