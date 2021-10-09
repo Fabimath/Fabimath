@@ -128,6 +128,8 @@ Además aquí esta la lista de reproducción de videos:
 
 # Galería
 
+Artista [Deariecuervo](https://www.instagram.com/deariecuervo/)
+
 <img src="fot/1.jpg" alt="drawing" />
 <img src="fot/2.jpg" alt="drawing" />
 <img src="fot/4.jpg" alt="drawing" />
