@@ -102,7 +102,8 @@ Toda la información sobre el Preuniversitario Gratuito Fabimath la puedes encon
 
 Además aquí esta la lista de reproducción de videos:
 
-* [Videos de Intensivo de Geometría](https://www.youtube.com/playlist?list=PLEZl5kuzUiGnb9c53CzfnJ4jwW-H2Gadc)
+* Intensivo de Geometría: [Apuntes](https://drive.google.com/open?id=1_yNL6i9vZ1CQUJ9LZjMbkVuvxbOvE4pR&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs) - [Videos](https://www.youtube.com/playlist?list=PLEZl5kuzUiGnb9c53CzfnJ4jwW-H2Gadc)
+* Intensivo de Funciones: [Apuntes](https://drive.google.com/open?id=1abj72B09xEi3E3xVM15yW-FmUf4InWbN&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs) - [Videos](https://www.youtube.com/playlist?list=PLEZl5kuzUiGmL_e0USeNW2AKi_-Skb3Xx)
 
 ## Universidad Santa María
 
