@@ -1,6 +1,6 @@
 [//]: <> (INICIO PAGÍNA DE FABIMATH)
 
-<img src="UF.png" alt="drawing" />
+<img src="rico.png" alt="drawing" />
 
 # Sobre mí
 
