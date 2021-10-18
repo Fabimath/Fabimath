@@ -104,6 +104,12 @@ Además aquí esta la lista de reproducción de videos:
 
 * Intensivo de Geometría: [Apuntes](https://drive.google.com/open?id=1_yNL6i9vZ1CQUJ9LZjMbkVuvxbOvE4pR&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs) - [Videos](https://www.youtube.com/playlist?list=PLEZl5kuzUiGnb9c53CzfnJ4jwW-H2Gadc)
 * Intensivo de Funciones: [Apuntes](https://drive.google.com/open?id=1abj72B09xEi3E3xVM15yW-FmUf4InWbN&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs) - [Videos](https://www.youtube.com/playlist?list=PLEZl5kuzUiGmL_e0USeNW2AKi_-Skb3Xx)
+* Lista de ejercicios resueltos del DEMRE: [Vídeos](https://youtube.com/playlist?list=PLEZl5kuzUiGl7JS9330bb43u757mYIYDl)
+
+Mega-Intensivo de PTU de Matemáticas en 40 días.
+
+* [Apuntes](https://drive.google.com/open?id=1WIucfpuOAY-1NuvI9Gre4nEqCDtIyuuc&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
+* [Vídeos](https://youtube.com/playlist?list=PLEZl5kuzUiGncajtxmDmBAgVGRIqDPCAH)
 
 ## Universidad Santa María
 
