@@ -133,7 +133,7 @@ Mega-Intensivo de PTU de Matemáticas en 40 días.
 * [Estadística Multivariable](https://drive.google.com/open?id=1ZX-ANG3imru6b_cvx1aXLZ642o1sQneF&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
 * [Física ElectroMagnetismo](https://drive.google.com/open?id=1ZxlDMSDUKilD0MulE9kYUpKlc4sh2t07&authuser=fabian.ramirez%40sansano.usm.cl&usp=drive_fs)
 
-# Galería
+# Galería de Fotos
 
 Artista [Deariecuervo](https://www.instagram.com/deariecuervo/)
 
