@@ -24,7 +24,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad conjunta P(Macho ∩ Infeccioso):",
+"ask": "Calcule la probabilidad de que un perro sea macho y tenga un diagnóstico infeccioso.",
 "alts": [
 "$P = 0{,}2700$",
 "$P = 0{,}4500$",
@@ -36,7 +36,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{54}{200}=0{,}2700"
 ],
-"conc": "La probabilidad de Macho y Infeccioso a la vez es 0,2700 (27,00%)."
+"conc": "La probabilidad de que un perro sea macho y tenga un diagnóstico infeccioso es 0,2700 (27,00%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -62,7 +62,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad de la unión P(Macho ∪ Infeccioso):",
+"ask": "Calcule la probabilidad de que un perro sea macho o tenga un diagnóstico infeccioso (o ambas).",
 "alts": [
 "$P = 0{,}7600$",
 "$P = 1{,}0300$",
@@ -75,7 +75,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{120}{200}=0{,}6000\\;;\\quad P(B)=\\dfrac{86}{200}=0{,}4300\\;;\\quad P(A\\cap B)=\\dfrac{54}{200}=0{,}2700",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{120+86-54}{200}=0{,}7600"
 ],
-"conc": "La probabilidad de Macho o Infeccioso (o ambos) es 0,7600 (76,00%)."
+"conc": "La probabilidad de que un perro sea macho o tenga un diagnóstico infeccioso (o ambas) es 0,7600 (76,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -101,7 +101,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad condicional P(Infeccioso | Macho):",
+"ask": "Calcule la probabilidad de que un perro tenga un diagnóstico infeccioso, dado que es macho.",
 "alts": [
 "$P = 0{,}4500$",
 "$P = 0{,}2700$",
@@ -112,9 +112,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=200.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{54}{120}=0{,}4500",
-"\\text{El denominador es el subtotal de }Macho\\ (n=120),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=120),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Macho, la probabilidad de Infeccioso es 0,4500 (45,00%)."
+"conc": "Sabiendo que es macho, la probabilidad de que un perro tenga un diagnóstico infeccioso es 0,4500 (45,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -140,7 +140,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad condicional P(Macho | Infeccioso):",
+"ask": "Calcule la probabilidad de que un perro sea macho, dado que tiene un diagnóstico infeccioso.",
 "alts": [
 "$P = 0{,}6279$",
 "$P = 0{,}2700$",
@@ -151,9 +151,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=200.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{54}{86}=0{,}6279",
-"\\text{El denominador es el subtotal de }Infeccioso\\ (n=86)."
+"\\text{El denominador es el subtotal de la condición }(n=86)."
 ],
-"conc": "Entre los casos de Infeccioso, la probabilidad de Macho es 0,6279 (62,79%)."
+"conc": "Sabiendo que tiene un diagnóstico infeccioso, la probabilidad de que un perro sea macho es 0,6279 (62,79%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -179,7 +179,7 @@ const PC_QUESTIONS = [
 ],
 "N": 150
 },
-"ask": "Calcule la probabilidad conjunta P(Cond. adecuada ∩ Gestante):",
+"ask": "Calcule la probabilidad de que una vaca tenga condición corporal adecuada y esté gestante.",
 "alts": [
 "$P = 0{,}4800$",
 "$P = 0{,}7200$",
@@ -191,7 +191,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{72}{150}=0{,}4800"
 ],
-"conc": "La probabilidad de Cond. adecuada y Gestante a la vez es 0,4800 (48,00%)."
+"conc": "La probabilidad de que una vaca tenga condición corporal adecuada y esté gestante es 0,4800 (48,00%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -217,7 +217,7 @@ const PC_QUESTIONS = [
 ],
 "N": 150
 },
-"ask": "Calcule la probabilidad de la unión P(Cond. adecuada ∪ Gestante):",
+"ask": "Calcule la probabilidad de que una vaca tenga condición corporal adecuada o esté gestante (o ambas).",
 "alts": [
 "$P = 0{,}7867$",
 "$P = 1{,}2667$",
@@ -230,7 +230,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{100}{150}=0{,}6667\\;;\\quad P(B)=\\dfrac{90}{150}=0{,}6000\\;;\\quad P(A\\cap B)=\\dfrac{72}{150}=0{,}4800",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{100+90-72}{150}=0{,}7867"
 ],
-"conc": "La probabilidad de Cond. adecuada o Gestante (o ambos) es 0,7867 (78,67%)."
+"conc": "La probabilidad de que una vaca tenga condición corporal adecuada o esté gestante (o ambas) es 0,7867 (78,67%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -256,7 +256,7 @@ const PC_QUESTIONS = [
 ],
 "N": 150
 },
-"ask": "Calcule la probabilidad condicional P(Gestante | Cond. adecuada):",
+"ask": "Calcule la probabilidad de que una vaca esté gestante, dado que tiene condición corporal adecuada.",
 "alts": [
 "$P = 0{,}7200$",
 "$P = 0{,}4800$",
@@ -267,9 +267,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=150.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{72}{100}=0{,}7200",
-"\\text{El denominador es el subtotal de }Cond. adecuada\\ (n=100),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=100),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Cond. adecuada, la probabilidad de Gestante es 0,7200 (72,00%)."
+"conc": "Sabiendo que tiene condición corporal adecuada, la probabilidad de que una vaca esté gestante es 0,7200 (72,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -295,7 +295,7 @@ const PC_QUESTIONS = [
 ],
 "N": 150
 },
-"ask": "Calcule la probabilidad condicional P(Cond. adecuada | Gestante):",
+"ask": "Calcule la probabilidad de que una vaca tenga condición corporal adecuada, dado que está gestante.",
 "alts": [
 "$P = 0{,}8000$",
 "$P = 0{,}4800$",
@@ -306,9 +306,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=150.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{72}{90}=0{,}8000",
-"\\text{El denominador es el subtotal de }Gestante\\ (n=90)."
+"\\text{El denominador es el subtotal de la condición }(n=90)."
 ],
-"conc": "Entre los casos de Gestante, la probabilidad de Cond. adecuada es 0,8000 (80,00%)."
+"conc": "Sabiendo que está gestante, la probabilidad de que una vaca tenga condición corporal adecuada es 0,8000 (80,00%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -339,7 +339,7 @@ const PC_QUESTIONS = [
 ],
 "N": 240
 },
-"ask": "Calcule la probabilidad conjunta P(Rural ∩ Positivo):",
+"ask": "Calcule la probabilidad de que una muestra provenga de zona rural y resulte positiva al coprológico.",
 "alts": [
 "$P = 0{,}2167$",
 "$P = 0{,}6500$",
@@ -351,7 +351,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{52}{240}=0{,}2167"
 ],
-"conc": "La probabilidad de Rural y Positivo a la vez es 0,2167 (21,67%)."
+"conc": "La probabilidad de que una muestra provenga de zona rural y resulte positiva al coprológico es 0,2167 (21,67%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -382,7 +382,7 @@ const PC_QUESTIONS = [
 ],
 "N": 240
 },
-"ask": "Calcule la probabilidad de la unión P(Rural ∪ Positivo):",
+"ask": "Calcule la probabilidad de que una muestra provenga de zona rural o resulte positiva al coprológico (o ambas).",
 "alts": [
 "$P = 0{,}5917$",
 "$P = 0{,}8083$",
@@ -395,7 +395,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{80}{240}=0{,}3333\\;;\\quad P(B)=\\dfrac{114}{240}=0{,}4750\\;;\\quad P(A\\cap B)=\\dfrac{52}{240}=0{,}2167",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{80+114-52}{240}=0{,}5917"
 ],
-"conc": "La probabilidad de Rural o Positivo (o ambos) es 0,5917 (59,17%)."
+"conc": "La probabilidad de que una muestra provenga de zona rural o resulte positiva al coprológico (o ambas) es 0,5917 (59,17%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -426,7 +426,7 @@ const PC_QUESTIONS = [
 ],
 "N": 240
 },
-"ask": "Calcule la probabilidad condicional P(Positivo | Rural):",
+"ask": "Calcule la probabilidad de que una muestra resulte positiva al coprológico, dado que proviene de zona rural.",
 "alts": [
 "$P = 0{,}6500$",
 "$P = 0{,}2167$",
@@ -437,9 +437,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=240.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{52}{80}=0{,}6500",
-"\\text{El denominador es el subtotal de }Rural\\ (n=80),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=80),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Rural, la probabilidad de Positivo es 0,6500 (65,00%)."
+"conc": "Sabiendo que proviene de zona rural, la probabilidad de que una muestra resulte positiva al coprológico es 0,6500 (65,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -470,7 +470,7 @@ const PC_QUESTIONS = [
 ],
 "N": 240
 },
-"ask": "Calcule la probabilidad condicional P(Rural | Positivo):",
+"ask": "Calcule la probabilidad de que una muestra provenga de zona rural, dado que resultó positiva al coprológico.",
 "alts": [
 "$P = 0{,}4561$",
 "$P = 0{,}2167$",
@@ -481,9 +481,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=240.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{52}{114}=0{,}4561",
-"\\text{El denominador es el subtotal de }Positivo\\ (n=114)."
+"\\text{El denominador es el subtotal de la condición }(n=114)."
 ],
-"conc": "Entre los casos de Positivo, la probabilidad de Rural es 0,4561 (45,61%)."
+"conc": "Sabiendo que resultó positiva al coprológico, la probabilidad de que una muestra provenga de zona rural es 0,4561 (45,61%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -514,7 +514,7 @@ const PC_QUESTIONS = [
 ],
 "N": 320
 },
-"ask": "Calcule la probabilidad conjunta P(Peso normal ∩ Con lesión):",
+"ask": "Calcule la probabilidad de que un pollo tenga peso normal y presente lesiones.",
 "alts": [
 "$P = 0{,}1375$",
 "$P = 0{,}2200$",
@@ -526,7 +526,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{44}{320}=0{,}1375"
 ],
-"conc": "La probabilidad de Peso normal y Con lesión a la vez es 0,1375 (13,75%)."
+"conc": "La probabilidad de que un pollo tenga peso normal y presente lesiones es 0,1375 (13,75%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -557,7 +557,7 @@ const PC_QUESTIONS = [
 ],
 "N": 320
 },
-"ask": "Calcule la probabilidad de la unión P(Peso normal ∪ Con lesión):",
+"ask": "Calcule la probabilidad de que un pollo tenga peso normal o presente lesiones (o ambas).",
 "alts": [
 "$P = 0{,}7812$",
 "$P = 0{,}9187$",
@@ -570,7 +570,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{200}{320}=0{,}6250\\;;\\quad P(B)=\\dfrac{94}{320}=0{,}2938\\;;\\quad P(A\\cap B)=\\dfrac{44}{320}=0{,}1375",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{200+94-44}{320}=0{,}7812"
 ],
-"conc": "La probabilidad de Peso normal o Con lesión (o ambos) es 0,7812 (78,12%)."
+"conc": "La probabilidad de que un pollo tenga peso normal o presente lesiones (o ambas) es 0,7812 (78,12%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -601,7 +601,7 @@ const PC_QUESTIONS = [
 ],
 "N": 320
 },
-"ask": "Calcule la probabilidad condicional P(Con lesión | Peso normal):",
+"ask": "Calcule la probabilidad de que un pollo presente lesiones, dado que tiene peso normal.",
 "alts": [
 "$P = 0{,}2200$",
 "$P = 0{,}1375$",
@@ -612,9 +612,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=320.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{44}{200}=0{,}2200",
-"\\text{El denominador es el subtotal de }Peso normal\\ (n=200),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=200),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Peso normal, la probabilidad de Con lesión es 0,2200 (22,00%)."
+"conc": "Sabiendo que tiene peso normal, la probabilidad de que un pollo presente lesiones es 0,2200 (22,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -645,7 +645,7 @@ const PC_QUESTIONS = [
 ],
 "N": 320
 },
-"ask": "Calcule la probabilidad condicional P(Peso normal | Con lesión):",
+"ask": "Calcule la probabilidad de que un pollo tenga peso normal, dado que presenta lesiones.",
 "alts": [
 "$P = 0{,}4681$",
 "$P = 0{,}1375$",
@@ -656,9 +656,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=320.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{44}{94}=0{,}4681",
-"\\text{El denominador es el subtotal de }Con lesión\\ (n=94)."
+"\\text{El denominador es el subtotal de la condición }(n=94)."
 ],
-"conc": "Entre los casos de Con lesión, la probabilidad de Peso normal es 0,4681 (46,81%)."
+"conc": "Sabiendo que presenta lesiones, la probabilidad de que un pollo tenga peso normal es 0,4681 (46,81%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -684,7 +684,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad conjunta P(Adherente ∩ Controlado):",
+"ask": "Calcule la probabilidad de que un paciente sea adherente al tratamiento y tenga la presión controlada.",
 "alts": [
 "$P = 0{,}5444$",
 "$P = 0{,}8167$",
@@ -696,7 +696,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{98}{180}=0{,}5444"
 ],
-"conc": "La probabilidad de Adherente y Controlado a la vez es 0,5444 (54,44%)."
+"conc": "La probabilidad de que un paciente sea adherente al tratamiento y tenga la presión controlada es 0,5444 (54,44%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -722,7 +722,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad de la unión P(Adherente ∪ Controlado):",
+"ask": "Calcule la probabilidad de que un paciente sea adherente al tratamiento o tenga la presión controlada (o ambas).",
 "alts": [
 "$P = 0{,}7444$",
 "$P = 1{,}2889$",
@@ -735,7 +735,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{120}{180}=0{,}6667\\;;\\quad P(B)=\\dfrac{112}{180}=0{,}6222\\;;\\quad P(A\\cap B)=\\dfrac{98}{180}=0{,}5444",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{120+112-98}{180}=0{,}7444"
 ],
-"conc": "La probabilidad de Adherente o Controlado (o ambos) es 0,7444 (74,44%)."
+"conc": "La probabilidad de que un paciente sea adherente al tratamiento o tenga la presión controlada (o ambas) es 0,7444 (74,44%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -761,7 +761,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad condicional P(Controlado | Adherente):",
+"ask": "Calcule la probabilidad de que un paciente tenga la presión controlada, dado que es adherente al tratamiento.",
 "alts": [
 "$P = 0{,}8167$",
 "$P = 0{,}5444$",
@@ -772,9 +772,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=180.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{98}{120}=0{,}8167",
-"\\text{El denominador es el subtotal de }Adherente\\ (n=120),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=120),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Adherente, la probabilidad de Controlado es 0,8167 (81,67%)."
+"conc": "Sabiendo que es adherente al tratamiento, la probabilidad de que un paciente tenga la presión controlada es 0,8167 (81,67%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -800,7 +800,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad condicional P(Adherente | Controlado):",
+"ask": "Calcule la probabilidad de que un paciente sea adherente al tratamiento, dado que tiene la presión controlada.",
 "alts": [
 "$P = 0{,}8750$",
 "$P = 0{,}5444$",
@@ -811,9 +811,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=180.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{98}{112}=0{,}8750",
-"\\text{El denominador es el subtotal de }Controlado\\ (n=112)."
+"\\text{El denominador es el subtotal de la condición }(n=112)."
 ],
-"conc": "Entre los casos de Controlado, la probabilidad de Adherente es 0,8750 (87,50%)."
+"conc": "Sabiendo que tiene la presión controlada, la probabilidad de que un paciente sea adherente al tratamiento es 0,8750 (87,50%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -839,7 +839,7 @@ const PC_QUESTIONS = [
 ],
 "N": 250
 },
-"ask": "Calcule la probabilidad conjunta P(Turno nocturno ∩ Caída: Sí):",
+"ask": "Calcule la probabilidad de que un paciente esté en turno nocturno y haya sufrido una caída.",
 "alts": [
 "$P = 0{,}1280$",
 "$P = 0{,}3200$",
@@ -851,7 +851,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{32}{250}=0{,}1280"
 ],
-"conc": "La probabilidad de Turno nocturno y Caída: Sí a la vez es 0,1280 (12,80%)."
+"conc": "La probabilidad de que un paciente esté en turno nocturno y haya sufrido una caída es 0,1280 (12,80%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -877,7 +877,7 @@ const PC_QUESTIONS = [
 ],
 "N": 250
 },
-"ask": "Calcule la probabilidad de la unión P(Turno nocturno ∪ Caída: Sí):",
+"ask": "Calcule la probabilidad de que un paciente esté en turno nocturno o haya sufrido una caída (o ambas).",
 "alts": [
 "$P = 0{,}4720$",
 "$P = 0{,}6000$",
@@ -890,7 +890,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{100}{250}=0{,}4000\\;;\\quad P(B)=\\dfrac{50}{250}=0{,}2000\\;;\\quad P(A\\cap B)=\\dfrac{32}{250}=0{,}1280",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{100+50-32}{250}=0{,}4720"
 ],
-"conc": "La probabilidad de Turno nocturno o Caída: Sí (o ambos) es 0,4720 (47,20%)."
+"conc": "La probabilidad de que un paciente esté en turno nocturno o haya sufrido una caída (o ambas) es 0,4720 (47,20%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -916,7 +916,7 @@ const PC_QUESTIONS = [
 ],
 "N": 250
 },
-"ask": "Calcule la probabilidad condicional P(Caída: Sí | Turno nocturno):",
+"ask": "Calcule la probabilidad de que un paciente haya sufrido una caída, dado que está en turno nocturno.",
 "alts": [
 "$P = 0{,}3200$",
 "$P = 0{,}1280$",
@@ -927,9 +927,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=250.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{32}{100}=0{,}3200",
-"\\text{El denominador es el subtotal de }Turno nocturno\\ (n=100),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=100),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Turno nocturno, la probabilidad de Caída: Sí es 0,3200 (32,00%)."
+"conc": "Sabiendo que está en turno nocturno, la probabilidad de que un paciente haya sufrido una caída es 0,3200 (32,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -955,7 +955,7 @@ const PC_QUESTIONS = [
 ],
 "N": 250
 },
-"ask": "Calcule la probabilidad condicional P(Turno nocturno | Caída: Sí):",
+"ask": "Calcule la probabilidad de que un paciente esté en turno nocturno, dado que sufrió una caída.",
 "alts": [
 "$P = 0{,}6400$",
 "$P = 0{,}1280$",
@@ -966,9 +966,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=250.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{32}{50}=0{,}6400",
-"\\text{El denominador es el subtotal de }Caída: Sí\\ (n=50)."
+"\\text{El denominador es el subtotal de la condición }(n=50)."
 ],
-"conc": "Entre los casos de Caída: Sí, la probabilidad de Turno nocturno es 0,6400 (64,00%)."
+"conc": "Sabiendo que sufrió una caída, la probabilidad de que un paciente esté en turno nocturno es 0,6400 (64,00%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -999,7 +999,7 @@ const PC_QUESTIONS = [
 ],
 "N": 160
 },
-"ask": "Calcule la probabilidad conjunta P(Quimioterapia ∩ Náuseas: Sí):",
+"ask": "Calcule la probabilidad de que un paciente reciba quimioterapia y presente náuseas.",
 "alts": [
 "$P = 0{,}2750$",
 "$P = 0{,}7333$",
@@ -1011,7 +1011,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{44}{160}=0{,}2750"
 ],
-"conc": "La probabilidad de Quimioterapia y Náuseas: Sí a la vez es 0,2750 (27,50%)."
+"conc": "La probabilidad de que un paciente reciba quimioterapia y presente náuseas es 0,2750 (27,50%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -1042,7 +1042,7 @@ const PC_QUESTIONS = [
 ],
 "N": 160
 },
-"ask": "Calcule la probabilidad de la unión P(Quimioterapia ∪ Náuseas: Sí):",
+"ask": "Calcule la probabilidad de que un paciente reciba quimioterapia o presente náuseas (o ambas).",
 "alts": [
 "$P = 0{,}6750$",
 "$P = 0{,}9500$",
@@ -1055,7 +1055,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{60}{160}=0{,}3750\\;;\\quad P(B)=\\dfrac{92}{160}=0{,}5750\\;;\\quad P(A\\cap B)=\\dfrac{44}{160}=0{,}2750",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{60+92-44}{160}=0{,}6750"
 ],
-"conc": "La probabilidad de Quimioterapia o Náuseas: Sí (o ambos) es 0,6750 (67,50%)."
+"conc": "La probabilidad de que un paciente reciba quimioterapia o presente náuseas (o ambas) es 0,6750 (67,50%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1086,7 +1086,7 @@ const PC_QUESTIONS = [
 ],
 "N": 160
 },
-"ask": "Calcule la probabilidad condicional P(Náuseas: Sí | Quimioterapia):",
+"ask": "Calcule la probabilidad de que un paciente presente náuseas, dado que recibe quimioterapia.",
 "alts": [
 "$P = 0{,}7333$",
 "$P = 0{,}2750$",
@@ -1097,9 +1097,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=160.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{44}{60}=0{,}7333",
-"\\text{El denominador es el subtotal de }Quimioterapia\\ (n=60),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=60),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Quimioterapia, la probabilidad de Náuseas: Sí es 0,7333 (73,33%)."
+"conc": "Sabiendo que recibe quimioterapia, la probabilidad de que un paciente presente náuseas es 0,7333 (73,33%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1130,7 +1130,7 @@ const PC_QUESTIONS = [
 ],
 "N": 160
 },
-"ask": "Calcule la probabilidad condicional P(Quimioterapia | Náuseas: Sí):",
+"ask": "Calcule la probabilidad de que un paciente reciba quimioterapia, dado que presenta náuseas.",
 "alts": [
 "$P = 0{,}4783$",
 "$P = 0{,}2750$",
@@ -1141,9 +1141,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=160.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{44}{92}=0{,}4783",
-"\\text{El denominador es el subtotal de }Náuseas: Sí\\ (n=92)."
+"\\text{El denominador es el subtotal de la condición }(n=92)."
 ],
-"conc": "Entre los casos de Náuseas: Sí, la probabilidad de Quimioterapia es 0,4783 (47,83%)."
+"conc": "Sabiendo que presenta náuseas, la probabilidad de que un paciente reciba quimioterapia es 0,4783 (47,83%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -1174,7 +1174,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad conjunta P(>60 años ∩ Positivo):",
+"ask": "Calcule la probabilidad de que un paciente sea mayor de 60 años y tenga un tamizaje positivo.",
 "alts": [
 "$P = 0{,}0900$",
 "$P = 0{,}4500$",
@@ -1186,7 +1186,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{18}{200}=0{,}0900"
 ],
-"conc": "La probabilidad de >60 años y Positivo a la vez es 0,0900 (9,00%)."
+"conc": "La probabilidad de que un paciente sea mayor de 60 años y tenga un tamizaje positivo es 0,0900 (9,00%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -1217,7 +1217,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad de la unión P(>60 años ∪ Positivo):",
+"ask": "Calcule la probabilidad de que un paciente sea mayor de 60 años o tenga un tamizaje positivo (o ambas).",
 "alts": [
 "$P = 0{,}5100$",
 "$P = 0{,}6000$",
@@ -1230,7 +1230,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{40}{200}=0{,}2000\\;;\\quad P(B)=\\dfrac{80}{200}=0{,}4000\\;;\\quad P(A\\cap B)=\\dfrac{18}{200}=0{,}0900",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{40+80-18}{200}=0{,}5100"
 ],
-"conc": "La probabilidad de >60 años o Positivo (o ambos) es 0,5100 (51,00%)."
+"conc": "La probabilidad de que un paciente sea mayor de 60 años o tenga un tamizaje positivo (o ambas) es 0,5100 (51,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1261,7 +1261,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad condicional P(Positivo | >60 años):",
+"ask": "Calcule la probabilidad de que un paciente tenga un tamizaje positivo, dado que es mayor de 60 años.",
 "alts": [
 "$P = 0{,}4500$",
 "$P = 0{,}0900$",
@@ -1272,9 +1272,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=200.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{18}{40}=0{,}4500",
-"\\text{El denominador es el subtotal de }>60 años\\ (n=40),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=40),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de >60 años, la probabilidad de Positivo es 0,4500 (45,00%)."
+"conc": "Sabiendo que es mayor de 60 años, la probabilidad de que un paciente tenga un tamizaje positivo es 0,4500 (45,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1305,7 +1305,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad condicional P(>60 años | Positivo):",
+"ask": "Calcule la probabilidad de que un paciente sea mayor de 60 años, dado que tiene un tamizaje positivo.",
 "alts": [
 "$P = 0{,}2250$",
 "$P = 0{,}0900$",
@@ -1316,9 +1316,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=200.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{18}{80}=0{,}2250",
-"\\text{El denominador es el subtotal de }Positivo\\ (n=80)."
+"\\text{El denominador es el subtotal de la condición }(n=80)."
 ],
-"conc": "Entre los casos de Positivo, la probabilidad de >60 años es 0,2250 (22,50%)."
+"conc": "Sabiendo que tiene un tamizaje positivo, la probabilidad de que un paciente sea mayor de 60 años es 0,2250 (22,50%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -1344,7 +1344,7 @@ const PC_QUESTIONS = [
 ],
 "N": 300
 },
-"ask": "Calcule la probabilidad conjunta P(Parto vaginal ∩ Bajo peso):",
+"ask": "Calcule la probabilidad de que un recién nacido haya nacido por parto vaginal y tenga bajo peso al nacer.",
 "alts": [
 "$P = 0{,}0600$",
 "$P = 0{,}1000$",
@@ -1356,7 +1356,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{18}{300}=0{,}0600"
 ],
-"conc": "La probabilidad de Parto vaginal y Bajo peso a la vez es 0,0600 (6,00%)."
+"conc": "La probabilidad de que un recién nacido haya nacido por parto vaginal y tenga bajo peso al nacer es 0,0600 (6,00%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -1382,7 +1382,7 @@ const PC_QUESTIONS = [
 ],
 "N": 300
 },
-"ask": "Calcule la probabilidad de la unión P(Parto vaginal ∪ Bajo peso):",
+"ask": "Calcule la probabilidad de que un recién nacido haya nacido por parto vaginal o tenga bajo peso al nacer (o ambas).",
 "alts": [
 "$P = 0{,}6400$",
 "$P = 0{,}7000$",
@@ -1395,7 +1395,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{180}{300}=0{,}6000\\;;\\quad P(B)=\\dfrac{30}{300}=0{,}1000\\;;\\quad P(A\\cap B)=\\dfrac{18}{300}=0{,}0600",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{180+30-18}{300}=0{,}6400"
 ],
-"conc": "La probabilidad de Parto vaginal o Bajo peso (o ambos) es 0,6400 (64,00%)."
+"conc": "La probabilidad de que un recién nacido haya nacido por parto vaginal o tenga bajo peso al nacer (o ambas) es 0,6400 (64,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1421,7 +1421,7 @@ const PC_QUESTIONS = [
 ],
 "N": 300
 },
-"ask": "Calcule la probabilidad condicional P(Bajo peso | Parto vaginal):",
+"ask": "Calcule la probabilidad de que un recién nacido tenga bajo peso al nacer, dado que nació por parto vaginal.",
 "alts": [
 "$P = 0{,}1000$",
 "$P = 0{,}0600$",
@@ -1432,9 +1432,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=300.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{18}{180}=0{,}1000",
-"\\text{El denominador es el subtotal de }Parto vaginal\\ (n=180),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=180),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Parto vaginal, la probabilidad de Bajo peso es 0,1000 (10,00%)."
+"conc": "Sabiendo que nació por parto vaginal, la probabilidad de que un recién nacido tenga bajo peso al nacer es 0,1000 (10,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1460,7 +1460,7 @@ const PC_QUESTIONS = [
 ],
 "N": 300
 },
-"ask": "Calcule la probabilidad condicional P(Parto vaginal | Bajo peso):",
+"ask": "Calcule la probabilidad de que un recién nacido haya nacido por parto vaginal, dado que tiene bajo peso al nacer.",
 "alts": [
 "$P = 0{,}6000$",
 "$P = 0{,}0600$",
@@ -1471,9 +1471,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=300.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{18}{30}=0{,}6000",
-"\\text{El denominador es el subtotal de }Bajo peso\\ (n=30)."
+"\\text{El denominador es el subtotal de la condición }(n=30)."
 ],
-"conc": "Entre los casos de Bajo peso, la probabilidad de Parto vaginal es 0,6000 (60,00%)."
+"conc": "Sabiendo que tiene bajo peso al nacer, la probabilidad de que un recién nacido haya nacido por parto vaginal es 0,6000 (60,00%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -1504,7 +1504,7 @@ const PC_QUESTIONS = [
 ],
 "N": 220
 },
-"ask": "Calcule la probabilidad conjunta P(Parto vaginal ∩ Exclusiva):",
+"ask": "Calcule la probabilidad de que una madre haya tenido parto vaginal y dé lactancia exclusiva.",
 "alts": [
 "$P = 0{,}4000$",
 "$P = 0{,}7333$",
@@ -1516,7 +1516,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{88}{220}=0{,}4000"
 ],
-"conc": "La probabilidad de Parto vaginal y Exclusiva a la vez es 0,4000 (40,00%)."
+"conc": "La probabilidad de que una madre haya tenido parto vaginal y dé lactancia exclusiva es 0,4000 (40,00%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -1547,7 +1547,7 @@ const PC_QUESTIONS = [
 ],
 "N": 220
 },
-"ask": "Calcule la probabilidad de la unión P(Parto vaginal ∪ Exclusiva):",
+"ask": "Calcule la probabilidad de que una madre haya tenido parto vaginal o dé lactancia exclusiva (o ambas).",
 "alts": [
 "$P = 0{,}8091$",
 "$P = 1{,}2091$",
@@ -1560,7 +1560,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{120}{220}=0{,}5455\\;;\\quad P(B)=\\dfrac{146}{220}=0{,}6636\\;;\\quad P(A\\cap B)=\\dfrac{88}{220}=0{,}4000",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{120+146-88}{220}=0{,}8091"
 ],
-"conc": "La probabilidad de Parto vaginal o Exclusiva (o ambos) es 0,8091 (80,91%)."
+"conc": "La probabilidad de que una madre haya tenido parto vaginal o dé lactancia exclusiva (o ambas) es 0,8091 (80,91%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1591,7 +1591,7 @@ const PC_QUESTIONS = [
 ],
 "N": 220
 },
-"ask": "Calcule la probabilidad condicional P(Exclusiva | Parto vaginal):",
+"ask": "Calcule la probabilidad de que una madre dé lactancia exclusiva, dado que tuvo parto vaginal.",
 "alts": [
 "$P = 0{,}7333$",
 "$P = 0{,}4000$",
@@ -1602,9 +1602,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=220.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{88}{120}=0{,}7333",
-"\\text{El denominador es el subtotal de }Parto vaginal\\ (n=120),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=120),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Parto vaginal, la probabilidad de Exclusiva es 0,7333 (73,33%)."
+"conc": "Sabiendo que tuvo parto vaginal, la probabilidad de que una madre dé lactancia exclusiva es 0,7333 (73,33%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1635,7 +1635,7 @@ const PC_QUESTIONS = [
 ],
 "N": 220
 },
-"ask": "Calcule la probabilidad condicional P(Parto vaginal | Exclusiva):",
+"ask": "Calcule la probabilidad de que una madre haya tenido parto vaginal, dado que da lactancia exclusiva.",
 "alts": [
 "$P = 0{,}6027$",
 "$P = 0{,}4000$",
@@ -1646,9 +1646,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=220.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{88}{146}=0{,}6027",
-"\\text{El denominador es el subtotal de }Exclusiva\\ (n=146)."
+"\\text{El denominador es el subtotal de la condición }(n=146)."
 ],
-"conc": "Entre los casos de Exclusiva, la probabilidad de Parto vaginal es 0,6027 (60,27%)."
+"conc": "Sabiendo que da lactancia exclusiva, la probabilidad de que una madre haya tenido parto vaginal es 0,6027 (60,27%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -1674,7 +1674,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad conjunta P(Diabetes: Sí ∩ Con compl.):",
+"ask": "Calcule la probabilidad de que una embarazada tenga diabetes gestacional y presente complicaciones neonatales.",
 "alts": [
 "$P = 0{,}2111$",
 "$P = 0{,}4750$",
@@ -1686,7 +1686,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{38}{180}=0{,}2111"
 ],
-"conc": "La probabilidad de Diabetes: Sí y Con compl. a la vez es 0,2111 (21,11%)."
+"conc": "La probabilidad de que una embarazada tenga diabetes gestacional y presente complicaciones neonatales es 0,2111 (21,11%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -1712,7 +1712,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad de la unión P(Diabetes: Sí ∪ Con compl.):",
+"ask": "Calcule la probabilidad de que una embarazada tenga diabetes gestacional o presente complicaciones neonatales (o ambas).",
 "alts": [
 "$P = 0{,}5111$",
 "$P = 0{,}7222$",
@@ -1725,7 +1725,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{80}{180}=0{,}4444\\;;\\quad P(B)=\\dfrac{50}{180}=0{,}2778\\;;\\quad P(A\\cap B)=\\dfrac{38}{180}=0{,}2111",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{80+50-38}{180}=0{,}5111"
 ],
-"conc": "La probabilidad de Diabetes: Sí o Con compl. (o ambos) es 0,5111 (51,11%)."
+"conc": "La probabilidad de que una embarazada tenga diabetes gestacional o presente complicaciones neonatales (o ambas) es 0,5111 (51,11%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1751,7 +1751,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad condicional P(Con compl. | Diabetes: Sí):",
+"ask": "Calcule la probabilidad de que una embarazada presente complicaciones neonatales, dado que tiene diabetes gestacional.",
 "alts": [
 "$P = 0{,}4750$",
 "$P = 0{,}2111$",
@@ -1762,9 +1762,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=180.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{38}{80}=0{,}4750",
-"\\text{El denominador es el subtotal de }Diabetes: Sí\\ (n=80),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=80),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Diabetes: Sí, la probabilidad de Con compl. es 0,4750 (47,50%)."
+"conc": "Sabiendo que tiene diabetes gestacional, la probabilidad de que una embarazada presente complicaciones neonatales es 0,4750 (47,50%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1790,7 +1790,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad condicional P(Diabetes: Sí | Con compl.):",
+"ask": "Calcule la probabilidad de que una embarazada tenga diabetes gestacional, dado que presentó complicaciones neonatales.",
 "alts": [
 "$P = 0{,}7600$",
 "$P = 0{,}2111$",
@@ -1801,9 +1801,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=180.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{38}{50}=0{,}7600",
-"\\text{El denominador es el subtotal de }Con compl.\\ (n=50)."
+"\\text{El denominador es el subtotal de la condición }(n=50)."
 ],
-"conc": "Entre los casos de Con compl., la probabilidad de Diabetes: Sí es 0,7600 (76,00%)."
+"conc": "Sabiendo que presentó complicaciones neonatales, la probabilidad de que una embarazada tenga diabetes gestacional es 0,7600 (76,00%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -1829,7 +1829,7 @@ const PC_QUESTIONS = [
 ],
 "N": 240
 },
-"ask": "Calcule la probabilidad conjunta P(Primípara ∩ Positivo):",
+"ask": "Calcule la probabilidad de que una puérpera sea primípara y tenga un tamizaje positivo.",
 "alts": [
 "$P = 0{,}2250$",
 "$P = 0{,}4500$",
@@ -1841,7 +1841,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{54}{240}=0{,}2250"
 ],
-"conc": "La probabilidad de Primípara y Positivo a la vez es 0,2250 (22,50%)."
+"conc": "La probabilidad de que una puérpera sea primípara y tenga un tamizaje positivo es 0,2250 (22,50%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -1867,7 +1867,7 @@ const PC_QUESTIONS = [
 ],
 "N": 240
 },
-"ask": "Calcule la probabilidad de la unión P(Primípara ∪ Positivo):",
+"ask": "Calcule la probabilidad de que una puérpera sea primípara o tenga un tamizaje positivo (o ambas).",
 "alts": [
 "$P = 0{,}6167$",
 "$P = 0{,}8417$",
@@ -1880,7 +1880,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{120}{240}=0{,}5000\\;;\\quad P(B)=\\dfrac{82}{240}=0{,}3417\\;;\\quad P(A\\cap B)=\\dfrac{54}{240}=0{,}2250",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{120+82-54}{240}=0{,}6167"
 ],
-"conc": "La probabilidad de Primípara o Positivo (o ambos) es 0,6167 (61,67%)."
+"conc": "La probabilidad de que una puérpera sea primípara o tenga un tamizaje positivo (o ambas) es 0,6167 (61,67%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1906,7 +1906,7 @@ const PC_QUESTIONS = [
 ],
 "N": 240
 },
-"ask": "Calcule la probabilidad condicional P(Positivo | Primípara):",
+"ask": "Calcule la probabilidad de que una puérpera tenga un tamizaje positivo, dado que es primípara.",
 "alts": [
 "$P = 0{,}4500$",
 "$P = 0{,}2250$",
@@ -1917,9 +1917,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=240.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{54}{120}=0{,}4500",
-"\\text{El denominador es el subtotal de }Primípara\\ (n=120),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=120),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Primípara, la probabilidad de Positivo es 0,4500 (45,00%)."
+"conc": "Sabiendo que es primípara, la probabilidad de que una puérpera tenga un tamizaje positivo es 0,4500 (45,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -1945,7 +1945,7 @@ const PC_QUESTIONS = [
 ],
 "N": 240
 },
-"ask": "Calcule la probabilidad condicional P(Primípara | Positivo):",
+"ask": "Calcule la probabilidad de que una puérpera sea primípara, dado que tiene un tamizaje positivo.",
 "alts": [
 "$P = 0{,}6585$",
 "$P = 0{,}2250$",
@@ -1956,9 +1956,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=240.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{54}{82}=0{,}6585",
-"\\text{El denominador es el subtotal de }Positivo\\ (n=82)."
+"\\text{El denominador es el subtotal de la condición }(n=82)."
 ],
-"conc": "Entre los casos de Positivo, la probabilidad de Primípara es 0,6585 (65,85%)."
+"conc": "Sabiendo que tiene un tamizaje positivo, la probabilidad de que una puérpera sea primípara es 0,6585 (65,85%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -1989,7 +1989,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad conjunta P(Cumpl. alto ∩ Satisfactorio):",
+"ask": "Calcule la probabilidad de que un paciente tenga cumplimiento alto del programa y tenga un resultado satisfactorio.",
 "alts": [
 "$P = 0{,}3900$",
 "$P = 0{,}8667$",
@@ -2001,7 +2001,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{78}{200}=0{,}3900"
 ],
-"conc": "La probabilidad de Cumpl. alto y Satisfactorio a la vez es 0,3900 (39,00%)."
+"conc": "La probabilidad de que un paciente tenga cumplimiento alto del programa y tenga un resultado satisfactorio es 0,3900 (39,00%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -2032,7 +2032,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad de la unión P(Cumpl. alto ∪ Satisfactorio):",
+"ask": "Calcule la probabilidad de que un paciente tenga cumplimiento alto del programa o tenga un resultado satisfactorio (o ambas).",
 "alts": [
 "$P = 0{,}7600$",
 "$P = 1{,}1500$",
@@ -2045,7 +2045,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{90}{200}=0{,}4500\\;;\\quad P(B)=\\dfrac{140}{200}=0{,}7000\\;;\\quad P(A\\cap B)=\\dfrac{78}{200}=0{,}3900",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{90+140-78}{200}=0{,}7600"
 ],
-"conc": "La probabilidad de Cumpl. alto o Satisfactorio (o ambos) es 0,7600 (76,00%)."
+"conc": "La probabilidad de que un paciente tenga cumplimiento alto del programa o tenga un resultado satisfactorio (o ambas) es 0,7600 (76,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -2076,7 +2076,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad condicional P(Satisfactorio | Cumpl. alto):",
+"ask": "Calcule la probabilidad de que un paciente tenga un resultado satisfactorio, dado que tiene cumplimiento alto del programa.",
 "alts": [
 "$P = 0{,}8667$",
 "$P = 0{,}3900$",
@@ -2087,9 +2087,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=200.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{78}{90}=0{,}8667",
-"\\text{El denominador es el subtotal de }Cumpl. alto\\ (n=90),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=90),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Cumpl. alto, la probabilidad de Satisfactorio es 0,8667 (86,67%)."
+"conc": "Sabiendo que tiene cumplimiento alto del programa, la probabilidad de que un paciente tenga un resultado satisfactorio es 0,8667 (86,67%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -2120,7 +2120,7 @@ const PC_QUESTIONS = [
 ],
 "N": 200
 },
-"ask": "Calcule la probabilidad condicional P(Cumpl. alto | Satisfactorio):",
+"ask": "Calcule la probabilidad de que un paciente tenga cumplimiento alto del programa, dado que tiene un resultado satisfactorio.",
 "alts": [
 "$P = 0{,}5571$",
 "$P = 0{,}3900$",
@@ -2131,9 +2131,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=200.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{78}{140}=0{,}5571",
-"\\text{El denominador es el subtotal de }Satisfactorio\\ (n=140)."
+"\\text{El denominador es el subtotal de la condición }(n=140)."
 ],
-"conc": "Entre los casos de Satisfactorio, la probabilidad de Cumpl. alto es 0,5571 (55,71%)."
+"conc": "Sabiendo que tiene un resultado satisfactorio, la probabilidad de que un paciente tenga cumplimiento alto del programa es 0,5571 (55,71%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -2164,7 +2164,7 @@ const PC_QUESTIONS = [
 ],
 "N": 160
 },
-"ask": "Calcule la probabilidad conjunta P(Planta ∩ Dolor: Sí):",
+"ask": "Calcule la probabilidad de que un trabajador trabaje en planta y presente dolor lumbar.",
 "alts": [
 "$P = 0{,}2000$",
 "$P = 0{,}5333$",
@@ -2176,7 +2176,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{32}{160}=0{,}2000"
 ],
-"conc": "La probabilidad de Planta y Dolor: Sí a la vez es 0,2000 (20,00%)."
+"conc": "La probabilidad de que un trabajador trabaje en planta y presente dolor lumbar es 0,2000 (20,00%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -2207,7 +2207,7 @@ const PC_QUESTIONS = [
 ],
 "N": 160
 },
-"ask": "Calcule la probabilidad de la unión P(Planta ∪ Dolor: Sí):",
+"ask": "Calcule la probabilidad de que un trabajador trabaje en planta o presente dolor lumbar (o ambas).",
 "alts": [
 "$P = 0{,}6500$",
 "$P = 0{,}8500$",
@@ -2220,7 +2220,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{60}{160}=0{,}3750\\;;\\quad P(B)=\\dfrac{76}{160}=0{,}4750\\;;\\quad P(A\\cap B)=\\dfrac{32}{160}=0{,}2000",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{60+76-32}{160}=0{,}6500"
 ],
-"conc": "La probabilidad de Planta o Dolor: Sí (o ambos) es 0,6500 (65,00%)."
+"conc": "La probabilidad de que un trabajador trabaje en planta o presente dolor lumbar (o ambas) es 0,6500 (65,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -2251,7 +2251,7 @@ const PC_QUESTIONS = [
 ],
 "N": 160
 },
-"ask": "Calcule la probabilidad condicional P(Dolor: Sí | Planta):",
+"ask": "Calcule la probabilidad de que un trabajador presente dolor lumbar, dado que trabaja en planta.",
 "alts": [
 "$P = 0{,}5333$",
 "$P = 0{,}2000$",
@@ -2262,9 +2262,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=160.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{32}{60}=0{,}5333",
-"\\text{El denominador es el subtotal de }Planta\\ (n=60),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=60),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Planta, la probabilidad de Dolor: Sí es 0,5333 (53,33%)."
+"conc": "Sabiendo que trabaja en planta, la probabilidad de que un trabajador presente dolor lumbar es 0,5333 (53,33%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -2295,7 +2295,7 @@ const PC_QUESTIONS = [
 ],
 "N": 160
 },
-"ask": "Calcule la probabilidad condicional P(Planta | Dolor: Sí):",
+"ask": "Calcule la probabilidad de que un trabajador trabaje en planta, dado que presenta dolor lumbar.",
 "alts": [
 "$P = 0{,}4211$",
 "$P = 0{,}2000$",
@@ -2306,9 +2306,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=160.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{32}{76}=0{,}4211",
-"\\text{El denominador es el subtotal de }Dolor: Sí\\ (n=76)."
+"\\text{El denominador es el subtotal de la condición }(n=76)."
 ],
-"conc": "Entre los casos de Dolor: Sí, la probabilidad de Planta es 0,4211 (42,11%)."
+"conc": "Sabiendo que presenta dolor lumbar, la probabilidad de que un trabajador trabaje en planta es 0,4211 (42,11%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -2344,7 +2344,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad conjunta P(Fútbol ∩ Con lesión):",
+"ask": "Calcule la probabilidad de que un deportista practique fútbol y haya tenido una lesión en el último año.",
 "alts": [
 "$P = 0{,}1556$",
 "$P = 0{,}6222$",
@@ -2356,7 +2356,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{28}{180}=0{,}1556"
 ],
-"conc": "La probabilidad de Fútbol y Con lesión a la vez es 0,1556 (15,56%)."
+"conc": "La probabilidad de que un deportista practique fútbol y haya tenido una lesión en el último año es 0,1556 (15,56%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -2392,7 +2392,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad de la unión P(Fútbol ∪ Con lesión):",
+"ask": "Calcule la probabilidad de que un deportista practique fútbol o haya tenido una lesión en el último año (o ambas).",
 "alts": [
 "$P = 0{,}4944$",
 "$P = 0{,}6500$",
@@ -2405,7 +2405,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{45}{180}=0{,}2500\\;;\\quad P(B)=\\dfrac{72}{180}=0{,}4000\\;;\\quad P(A\\cap B)=\\dfrac{28}{180}=0{,}1556",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{45+72-28}{180}=0{,}4944"
 ],
-"conc": "La probabilidad de Fútbol o Con lesión (o ambos) es 0,4944 (49,44%)."
+"conc": "La probabilidad de que un deportista practique fútbol o haya tenido una lesión en el último año (o ambas) es 0,4944 (49,44%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -2441,7 +2441,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad condicional P(Con lesión | Fútbol):",
+"ask": "Calcule la probabilidad de que un deportista haya tenido una lesión en el último año, dado que practica fútbol.",
 "alts": [
 "$P = 0{,}6222$",
 "$P = 0{,}1556$",
@@ -2452,9 +2452,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=180.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{28}{45}=0{,}6222",
-"\\text{El denominador es el subtotal de }Fútbol\\ (n=45),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=45),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Fútbol, la probabilidad de Con lesión es 0,6222 (62,22%)."
+"conc": "Sabiendo que practica fútbol, la probabilidad de que un deportista haya tenido una lesión en el último año es 0,6222 (62,22%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -2490,7 +2490,7 @@ const PC_QUESTIONS = [
 ],
 "N": 180
 },
-"ask": "Calcule la probabilidad condicional P(Fútbol | Con lesión):",
+"ask": "Calcule la probabilidad de que un deportista practique fútbol, dado que tuvo una lesión en el último año.",
 "alts": [
 "$P = 0{,}3889$",
 "$P = 0{,}1556$",
@@ -2501,9 +2501,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=180.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{28}{72}=0{,}3889",
-"\\text{El denominador es el subtotal de }Con lesión\\ (n=72)."
+"\\text{El denominador es el subtotal de la condición }(n=72)."
 ],
-"conc": "Entre los casos de Con lesión, la probabilidad de Fútbol es 0,3889 (38,89%)."
+"conc": "Sabiendo que tuvo una lesión en el último año, la probabilidad de que un deportista practique fútbol es 0,3889 (38,89%)."
 },
 {
 "tipo": "Probabilidad conjunta P(A∩B)",
@@ -2534,7 +2534,7 @@ const PC_QUESTIONS = [
 ],
 "N": 120
 },
-"ask": "Calcule la probabilidad conjunta P(Dep. total ∩ Caída: Sí):",
+"ask": "Calcule la probabilidad de que un residente sea dependiente total y haya sufrido una caída.",
 "alts": [
 "$P = 0{,}2000$",
 "$P = 0{,}6000$",
@@ -2546,7 +2546,7 @@ const PC_QUESTIONS = [
 "pautaSteps": [
 "P(A\\cap B)=\\dfrac{n(A\\cap B)}{N}=\\dfrac{24}{120}=0{,}2000"
 ],
-"conc": "La probabilidad de Dep. total y Caída: Sí a la vez es 0,2000 (20,00%)."
+"conc": "La probabilidad de que un residente sea dependiente total y haya sufrido una caída es 0,2000 (20,00%)."
 },
 {
 "tipo": "Probabilidad de la unión P(A∪B)",
@@ -2577,7 +2577,7 @@ const PC_QUESTIONS = [
 ],
 "N": 120
 },
-"ask": "Calcule la probabilidad de la unión P(Dep. total ∪ Caída: Sí):",
+"ask": "Calcule la probabilidad de que un residente sea dependiente total o haya sufrido una caída (o ambas).",
 "alts": [
 "$P = 0{,}5500$",
 "$P = 0{,}7500$",
@@ -2590,7 +2590,7 @@ const PC_QUESTIONS = [
 "P(A)=\\dfrac{40}{120}=0{,}3333\\;;\\quad P(B)=\\dfrac{50}{120}=0{,}4167\\;;\\quad P(A\\cap B)=\\dfrac{24}{120}=0{,}2000",
 "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)=\\dfrac{40+50-24}{120}=0{,}5500"
 ],
-"conc": "La probabilidad de Dep. total o Caída: Sí (o ambos) es 0,5500 (55,00%)."
+"conc": "La probabilidad de que un residente sea dependiente total o haya sufrido una caída (o ambas) es 0,5500 (55,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -2621,7 +2621,7 @@ const PC_QUESTIONS = [
 ],
 "N": 120
 },
-"ask": "Calcule la probabilidad condicional P(Caída: Sí | Dep. total):",
+"ask": "Calcule la probabilidad de que un residente haya sufrido una caída, dado que es dependiente total.",
 "alts": [
 "$P = 0{,}6000$",
 "$P = 0{,}2000$",
@@ -2632,9 +2632,9 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=120.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(B\\mid A)=\\dfrac{n(A\\cap B)}{n(A)}=\\dfrac{24}{40}=0{,}6000",
-"\\text{El denominador es el subtotal de }Dep. total\\ (n=40),\\ \\text{no el total }N."
+"\\text{El denominador es el subtotal de la condición }(n=40),\\ \\text{no el total }N."
 ],
-"conc": "Entre los casos de Dep. total, la probabilidad de Caída: Sí es 0,6000 (60,00%)."
+"conc": "Sabiendo que es dependiente total, la probabilidad de que un residente haya sufrido una caída es 0,6000 (60,00%)."
 },
 {
 "tipo": "Probabilidad condicional P(A|B)",
@@ -2665,7 +2665,7 @@ const PC_QUESTIONS = [
 ],
 "N": 120
 },
-"ask": "Calcule la probabilidad condicional P(Dep. total | Caída: Sí):",
+"ask": "Calcule la probabilidad de que un residente sea dependiente total, dado que sufrió una caída.",
 "alts": [
 "$P = 0{,}4800$",
 "$P = 0{,}2000$",
@@ -2676,8 +2676,8 @@ const PC_QUESTIONS = [
 "pautaHead": "\\textbf{Total } N=120.\\ \\text{Frecuencias de la tabla.}",
 "pautaSteps": [
 "P(A\\mid B)=\\dfrac{n(A\\cap B)}{n(B)}=\\dfrac{24}{50}=0{,}4800",
-"\\text{El denominador es el subtotal de }Caída: Sí\\ (n=50)."
+"\\text{El denominador es el subtotal de la condición }(n=50)."
 ],
-"conc": "Entre los casos de Caída: Sí, la probabilidad de Dep. total es 0,4800 (48,00%)."
+"conc": "Sabiendo que sufrió una caída, la probabilidad de que un residente sea dependiente total es 0,4800 (48,00%)."
 }
 ];
