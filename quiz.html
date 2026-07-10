@@ -11,6 +11,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script src="ic_questions.js"></script>
 <script src="th_questions.js"></script>
+<script src="nm_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -258,6 +259,13 @@ const TOPICS = [
     bank: (typeof TH_QUESTIONS!=='undefined') ? TH_QUESTIONS : [],
     body:'#f0883e', shade:'#d96f22', accent:'#ffb066',
     guide:'Guía 6 — Test de Hipótesis'
+  },
+  {
+    id:'nm', title:'Gato de la Normal', name:'Probabilidades con la Normal',
+    desc:'Estandariza X ~ N(μ,σ) y calcula P(X<x), P(X>x) o P(x₁<X<x₂) con la tabla Φ(z).',
+    bank: (typeof NM_QUESTIONS!=='undefined') ? NM_QUESTIONS : [],
+    body:'#a78bfa', shade:'#7c5cf0', accent:'#c4b5fd',
+    guide:'Guía 4 — Distribución Normal'
   }
 ];
 
