@@ -13,6 +13,7 @@
 <script src="th_questions.js"></script>
 <script src="nm_questions.js"></script>
 <script src="pc_questions.js"></script>
+<script src="bt_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -281,6 +282,13 @@ const TOPICS = [
     bank: (typeof PC_QUESTIONS!=='undefined') ? PC_QUESTIONS : [],
     body:'#f472b6', shade:'#db2f8f', accent:'#f9a8d4',
     guide:'Guía de Probabilidad Condicional'
+  },
+  {
+    id:'bt', title:'Gato de Bayes', name:'Probabilidad Total y Bayes',
+    desc:'Diagramas de árbol: calcula la probabilidad total de un resultado y actualiza la causa con Bayes.',
+    bank: (typeof BT_QUESTIONS!=='undefined') ? BT_QUESTIONS : [],
+    body:'#34d399', shade:'#0ea371', accent:'#6ee7b7',
+    guide:'Guía de Probabilidad Total y Bayes'
   }
 ];
 
