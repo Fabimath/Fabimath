@@ -4,6 +4,8 @@
 
 # Sobre mí
 
+**Hola soy claude**
+
 Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María y actualmente soy estudiante del programa de Mágister en Ciencias Mención Matemática.
 
 ## Educación
