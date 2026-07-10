@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gatito AES — Fabimath</title>
+<meta name="description" content="Minijuego 8-bits: un gatito te ayuda a calcular tu eximición y nota de examen en AES.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0a6cff;
+    --blue-light: #38b6ff;
+    --bg: #0b1020;
+    --panel: #141b34;
+    --border: #38b6ff;
+    --text: #e8ecff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Press Start 2P', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    image-rendering: pixelated;
+    padding: 20px;
+  }
+  /* stars background */
+  .stars {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 70% 15%, #9ecbff 50%, transparent 51%),
+      radial-gradient(2px 2px at 85% 60%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 40% 80%, #9ecbff 50%, transparent 51%),
+      radial-gradient(1px 1px at 10% 65%, #fff 50%, transparent 51%),
+      radial-gradient(2px 2px at 55% 45%, #6ea8ff 50%, transparent 51%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .7;
+  }
+  a.back {
+    align-self: flex-start;
+    color: var(--blue-light);
+    font-size: 10px;
+    text-decoration: none;
+    margin-bottom: 18px;
+    z-index: 1;
+  }
+  a.back:hover { color: #fff; }
+  h1 {
+    font-size: clamp(14px, 3.5vw, 24px);
+    color: var(--blue-light);
+    text-shadow: 3px 3px 0 #06327a;
+    margin: 10px 0 24px;
+    text-align: center;
+    z-index: 1;
+  }
+  .game {
+    z-index: 1;
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  /* ---------- PIXEL CAT ---------- */
+  .cat-wrap { position: relative; height: 130px; display: flex; align-items: flex-end; }
+  #cat {
+    display: grid;
+    grid-template-columns: repeat(16, 7px);
+    grid-auto-rows: 7px;
+  }
+  #cat div { width: 7px; height: 7px; }
+  .cat-wrap.talking { animation: bounce .45s steps(2) infinite; }
+  @keyframes bounce { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-4px);} }
+  .zzz {
+    position: absolute; right: -34px; top: -6px;
+    color: var(--blue-light); font-size: 10px;
+    animation: blink 1.2s steps(2) infinite;
+    display: none;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ---------- DIALOG BOX ---------- */
+  .dialog {
+    width: 100%;
+    background: var(--panel);
+    border: 4px solid var(--border);
+    box-shadow: 0 0 0 4px var(--bg), 0 0 0 8px #0947c4, 8px 8px 0 8px #06215e;
+    padding: 22px 20px;
+    min-height: 120px;
+    position: relative;
+  }
+  .dialog .speaker {
+    position: absolute; top: -14px; left: 14px;
+    background: var(--blue); color: #fff;
+    font-size: 9px; padding: 5px 10px;
+    border: 3px solid #06327a;
+  }
+  #text { font-size: 11px; line-height: 2; white-space: pre-wrap; word-wrap: break-word; }
+  .cursor::after { content: "▌"; animation: blink .8s steps(2) infinite; color: var(--blue-light); }
+
+  /* ---------- INPUT ---------- */
+  .input-row { width: 100%; display: flex; gap: 10px; }
+  #answer {
+    flex: 1;
+    background: #0a0f22;
+    border: 4px solid var(--blue);
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    padding: 14px 12px;
+    outline: none;
+    caret-color: var(--blue-light);
+  }
+  #answer:focus { border-color: var(--blue-light); box-shadow: 0 0 12px rgba(56,182,255,.4); }
+  #enterBtn {
+    background: var(--blue);
+    border: 4px solid #06327a;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+  }
+  #enterBtn:active { transform: translate(2px,2px); }
+  .hint { font-size: 8px; color: #6ea8ff; text-align: center; line-height: 1.8; }
+
+  /* ---------- RESULT PANEL ---------- */
+  .result {
+    display: none;
+    width: 100%;
+    background: var(--panel);
+    border: 4px solid var(--blue-light);
+    padding: 18px;
+    font-size: 9px;
+    line-height: 2.2;
+  }
+  .result .ok { color: #4ade80; }
+  .result .bad { color: #f87171; }
+  .result .hl { color: var(--blue-light); }
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<a class="back" href="index.html">◀ VOLVER A FABIMATH.IO</a>
+<h1>🐾 GATITO AES 🐾</h1>
+
+<div class="game">
+  <div class="cat-wrap" id="catWrap">
+    <div id="cat"></div>
+    <div class="zzz" id="zzz">Z z z</div>
+  </div>
+
+  <div class="dialog">
+    <div class="speaker">GATITO</div>
+    <div id="text" class="cursor"></div>
+  </div>
+
+  <div class="input-row">
+    <input id="answer" autocomplete="off" placeholder="escribe aquí..." />
+    <button id="enterBtn">ENTER ►</button>
+  </div>
+  <div class="hint">Responde con el teclado y presiona ENTER.<br>Notas de 1,0 a 7,0 (sirve coma o punto).</div>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+/* ---------- pixel cat sprite ---------- */
+const P = {
+  '.': null,
+  'K': '#0b1020',   // outline
+  'B': '#2f81f7',   // body blue
+  'D': '#1b5fd0',   // shade
+  'W': '#ffffff',   // chest / eye shine
+  'E': '#0b1020',   // eye
+  'P': '#ff9ecb',   // nose
+  'Y': '#ffd75e'    // collar star
+};
+const SPRITE = [
+"..K..........K..",
+".KBK........KBK.",
+".KBBK......KBBK.",
+".KBBBKKKKKKBBBK.",
+".KBBBBBBBBBBBBK.",
+".KBBBBBBBBBBBBK.",
+".KBWEBBBBBWEBBK.",
+".KBBBBBPBBBBBBK.",
+".KBBBBPPPBBBBBK.",
+".KDBBBBBBBBBBDK.",
+".KDBWWWWWWWWBDK.",
+".KDBWWWWWWWWBDK.",
+".KDBBBYBBYBBBDK.",
+"..KDBBBBBBBBDK..",
+"...KKKKKKKKKK...",
+"..KK..KK..KK.KK."
+];
+const cat = document.getElementById('cat');
+SPRITE.forEach(row => {
+  for (const ch of row) {
+    const d = document.createElement('div');
+    if (P[ch]) d.style.background = P[ch];
+    cat.appendChild(d);
+  }
+});
+
+/* ---------- typewriter ---------- */
+const textEl = document.getElementById('text');
+const catWrap = document.getElementById('catWrap');
+let typing = false;
+function say(msg) {
+  return new Promise(res => {
+    typing = true;
+    catWrap.classList.add('talking');
+    textEl.textContent = '';
+    let i = 0;
+    const t = setInterval(() => {
+      textEl.textContent += msg[i++];
+      if (i >= msg.length) {
+        clearInterval(t);
+        typing = false;
+        catWrap.classList.remove('talking');
+        res();
+      }
+    }, 28);
+  });
+}
+
+/* ---------- game logic ---------- */
+const input = document.getElementById('answer');
+const btn = document.getElementById('enterBtn');
+const resultEl = document.getElementById('result');
+const zzz = document.getElementById('zzz');
+
+const fmt = n => n.toFixed(2).replace('.', ',');
+function parseNota(s) {
+  const v = parseFloat(s.trim().replace(',', '.'));
+  if (isNaN(v) || v < 1.0 || v > 7.0) return null;
+  return v;
+}
+
+let state = 'aes';
+const notas = { e: [], c: [] , rec: null };
+
+async function start() {
+  await say("miau~ hola! soy el gatito de\nFabimath (◕ᴥ◕)\n\n¿Estás dando AES? (si/no)");
+}
+
+async function handle(raw) {
+  const val = raw.trim().toLowerCase();
+
+  switch (state) {
+
+    case 'aes':
+      if (['si','sí','s','yes'].includes(val)) {
+        state = 'e1';
+        await say("purrfecto!! entonces te ayudo\ncon tus notas (=^･ω･^=)\n\n¿Qué nota sacaste en el\nEJERCICIO 1?");
+      } else if (['no','n'].includes(val)) {
+        state = 'done';
+        zzz.style.display = 'block';
+        await say("miau... entonces me vuelvo a\ndormir (=˘ω˘=) zZz\n\nvuelve cuando estés en AES!");
+        input.disabled = true; btn.disabled = true;
+      } else {
+        await say("miau? responde 'si' o 'no'\n(◕ᴥ◕)ノ");
+      }
+      break;
+
+    case 'e1': case 'e2': case 'e3': {
+      const n = parseNota(val);
+      if (n === null) { await say("esa nota no existe miau!\ndebe estar entre 1,0 y 7,0"); break; }
+      notas.e.push(n);
+      if (state === 'e1') { state = 'e2'; await say("anotado: " + fmt(n) + " ✓\n\n¿Y en el EJERCICIO 2?"); }
+      else if (state === 'e2') { state = 'e3'; await say("anotado: " + fmt(n) + " ✓\n\n¿Y en el EJERCICIO 3?"); }
+      else { state = 'c1'; await say("miau, ejercicios listos ✓\n\nahora... ¿qué nota sacaste\nen la CÁTEDRA 1?"); }
+      break;
+    }
+
+    case 'c1': case 'c2': {
+      const n = parseNota(val);
+      if (n === null) { await say("esa nota no existe miau!\ndebe estar entre 1,0 y 7,0"); break; }
+      notas.c.push(n);
+      if (state === 'c1') { state = 'c2'; await say("anotado: " + fmt(n) + " ✓\n\n¿Y en la CÁTEDRA 2?"); }
+      else { state = 'rec'; await say("¿Diste la RECUPERATIVA?\n\nescribe la nota, o 'no' si\nno la diste"); }
+      break;
+    }
+
+    case 'rec': {
+      if (['no','n',''].includes(val)) {
+        notas.rec = null;
+        state = 'done';
+        await finish();
+      } else {
+        const n = parseNota(val);
+        if (n === null) { await say("miau?? escribe una nota entre\n1,0 y 7,0... o 'no'"); break; }
+        notas.rec = n;
+        state = 'done';
+        await finish();
+      }
+      break;
+    }
+
+    case 'done':
+      break;
+  }
+}
+
+async function finish() {
+  input.disabled = true; btn.disabled = true;
+
+  let [c1, c2] = notas.c;
+  let recMsg = '';
+  if (notas.rec !== null) {
+    const worst = Math.min(c1, c2);
+    if (notas.rec > worst) {
+      if (c1 <= c2) c1 = notas.rec; else c2 = notas.rec;
+      recMsg = "la recuperativa (" + fmt(notas.rec) + ") reemplazó tu peor cátedra (" + fmt(worst) + ") miau!";
+    } else {
+      recMsg = "la recuperativa (" + fmt(notas.rec) + ") no supera tu peor cátedra (" + fmt(worst) + "), así que no cambia nada miau.";
+    }
+  }
+
+  const PE = notas.e.reduce((a,b)=>a+b,0) / notas.e.length;
+  const PC = (c1 + c2) / 2;
+  const presentacion = (0.2*PE + 0.5*PC) / 0.7;
+  const exime = presentacion >= 5.45;
+
+  let html = '';
+  if (recMsg) html += '» ' + recMsg + '<br><br>';
+  html += 'PROMEDIO EJERCICIOS (PE): <span class="hl">' + fmt(PE) + '</span><br>';
+  html += 'PROMEDIO CÁTEDRAS (PC): <span class="hl">' + fmt(PC) + '</span><br>';
+  html += 'NOTA PRESENTACIÓN: <span class="hl">' + fmt(presentacion) + '</span> (necesitas ≥ 5,45)<br><br>';
+
+  if (exime) {
+    html += '<span class="ok">★★★ TE EXIMES DEL EXAMEN ★★★</span><br>';
+    html += 'nota final: <span class="ok">' + fmt(presentacion) + '</span> — miau felicidades!! ᕕ(=^･ω･^=)ᕗ';
+    await say("miré tus notas con mis ojitos\nde gato...\n\nMIAAAU!! TE EXIMES!! ★\n\nnota final: " + fmt(presentacion) + "\nfelicidades!! (=^･ω･^=)ノ彡☆");
+  } else {
+    const necesaria = (3.95 - 0.2*PE - 0.5*PC) / 0.3;
+    if (necesaria <= 1.0) {
+      html += '<span class="bad">no te eximes</span>, pero con un <span class="ok">1,0</span> en el examen ya apruebas (nota final ≥ 3,95) miau!';
+      await say("no te eximes miau... PERO\ntranqui: incluso con un 1,0\nen el examen apruebas!\n\n(=^-ω-^=) relájate");
+    } else if (necesaria > 7.0) {
+      html += '<span class="bad">no te eximes</span>, y necesitarías un <span class="bad">' + fmt(necesaria) + '</span>... más que un 7,0. no es posible aprobar miau... (╥﹏╥)';
+      await say("miau... no te eximes y\nnecesitarías más de un 7,0\nen el examen...\n\nno se puede aprobar (╥﹏╥)\nlo siento michi...");
+    } else {
+      html += '<span class="bad">no te eximes</span>. para aprobar (final ≥ 3,95) necesitas en el examen: <span class="hl">' + fmt(necesaria) + '</span> o más. tú puedes miau!';
+      await say("no te eximes miau...\n\npara aprobar necesitas un\n" + fmt(necesaria) + " o más en el examen.\n\ntú puedes!! ᕙ(=^･ω･^=)ᕗ");
+    }
+  }
+  html += '<br><br><span class="hl">» presiona F5 para jugar de nuevo</span>';
+  resultEl.innerHTML = html;
+  resultEl.style.display = 'block';
+}
+
+btn.addEventListener('click', async () => {
+  if (typing || input.disabled) return;
+  const v = input.value;
+  input.value = '';
+  await handle(v);
+  input.focus();
+});
+input.addEventListener('keydown', async e => {
+  if (e.key === 'Enter' && !typing && !input.disabled) {
+    const v = input.value;
+    input.value = '';
+    await handle(v);
+  }
+});
+
+start().then(() => input.focus());
+</script>
+</body>
+</html>
