@@ -3,7 +3,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Veterinaria · Medicina preventiva",
-"enun": "El 70% de los perros de una clínica están vacunados y el 30% no. De los vacunados, el 5% contrae parvovirus en el año; de los no vacunados, el 40% lo contrae. Se elige un perro al azar.",
+"enun": "En una clínica veterinaria se atiende a perros de la comunidad. El 70% de los perros que llegan a la clínica están vacunados y el 30% no lo están. De los perros vacunados, el 5% contrae parvovirus durante el año. De los perros no vacunados, el 40% lo contrae. Se selecciona un perro al azar de la clínica.",
 "ask": "Determine la probabilidad de que un perro contraiga parvovirus.",
 "alts": [
 "$P = 0{,}1550$",
@@ -22,7 +22,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Veterinaria · Medicina preventiva",
-"enun": "El 70% de los perros de una clínica están vacunados y el 30% no. De los vacunados, el 5% contrae parvovirus en el año; de los no vacunados, el 40% lo contrae. Se elige un perro al azar.",
+"enun": "En una clínica veterinaria se atiende a perros de la comunidad. El 70% de los perros que llegan a la clínica están vacunados y el 30% no lo están. De los perros vacunados, el 5% contrae parvovirus durante el año. De los perros no vacunados, el 40% lo contrae. Se selecciona un perro al azar de la clínica.",
 "ask": "Determine la probabilidad de que un perro no estuviese vacunado, dado que contrajo parvovirus.",
 "alts": [
 "$P = 0{,}7742$",
@@ -41,7 +41,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Veterinaria · Producción ovina",
-"enun": "En un rebaño ovino, el 60% de los animales proviene de zona húmeda y el 40% de zona seca. La prevalencia de fasciola hepática es 35% en zona húmeda y 8% en zona seca. Se elige un animal al azar.",
+"enun": "En un rebaño ovino del sur de Chile, el 60% de los animales proviene de zona húmeda y el 40% proviene de zona seca. La prevalencia de fasciola hepática es del 35% en los animales de zona húmeda y del 8% en los de zona seca. Se selecciona un animal al azar del rebaño.",
 "ask": "Determine la probabilidad de que un animal tenga fasciola.",
 "alts": [
 "$P = 0{,}2420$",
@@ -60,7 +60,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Veterinaria · Producción ovina",
-"enun": "En un rebaño ovino, el 60% de los animales proviene de zona húmeda y el 40% de zona seca. La prevalencia de fasciola hepática es 35% en zona húmeda y 8% en zona seca. Se elige un animal al azar.",
+"enun": "En un rebaño ovino del sur de Chile, el 60% de los animales proviene de zona húmeda y el 40% proviene de zona seca. La prevalencia de fasciola hepática es del 35% en los animales de zona húmeda y del 8% en los de zona seca. Se selecciona un animal al azar del rebaño.",
 "ask": "Determine la probabilidad de que un animal provenga de zona húmeda, dado que tiene fasciola.",
 "alts": [
 "$P = 0{,}8678$",
@@ -79,7 +79,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Veterinaria · Avicultura",
-"enun": "En una empresa avícola, el 50% de las aves es de Línea A, el 30% de Línea B y el 20% de Línea C. La proporción con mala conversión alimenticia es 10% en A, 20% en B y 35% en C. Se elige un ave al azar.",
+"enun": "En una empresa avícola se crían aves de tres líneas genéticas. El 50% de las aves proviene de la Línea A, el 30% de la Línea B y el 20% de la Línea C. La proporción de aves con mala conversión alimenticia es del 10% en la Línea A, del 20% en la Línea B y del 35% en la Línea C. Se selecciona un ave al azar.",
 "ask": "Determine la probabilidad de que un ave tenga mala conversión alimenticia.",
 "alts": [
 "$P = 0{,}1800$",
@@ -98,7 +98,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Veterinaria · Avicultura",
-"enun": "En una empresa avícola, el 50% de las aves es de Línea A, el 30% de Línea B y el 20% de Línea C. La proporción con mala conversión alimenticia es 10% en A, 20% en B y 35% en C. Se elige un ave al azar.",
+"enun": "En una empresa avícola se crían aves de tres líneas genéticas. El 50% de las aves proviene de la Línea A, el 30% de la Línea B y el 20% de la Línea C. La proporción de aves con mala conversión alimenticia es del 10% en la Línea A, del 20% en la Línea B y del 35% en la Línea C. Se selecciona un ave al azar.",
 "ask": "Determine la probabilidad de que un ave sea de la Línea C, dado que tiene mala conversión alimenticia.",
 "alts": [
 "$P = 0{,}3889$",
@@ -117,7 +117,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Veterinaria · Felinos",
-"enun": "El 55% de los gatos de una región son de interior y el 45% de exterior. La probabilidad de contraer leucemia felina (FeLV) es 4% en gatos de interior y 18% en gatos de exterior. Se elige un gato al azar.",
+"enun": "En una región se estudia la población felina. El 55% de los gatos son de interior y el 45% son de exterior. La probabilidad de contraer leucemia felina (FeLV) es del 4% en los gatos de interior y del 18% en los gatos de exterior. Se selecciona un gato al azar de la región.",
 "ask": "Determine la probabilidad de que un gato contraiga leucemia felina (FeLV).",
 "alts": [
 "$P = 0{,}1030$",
@@ -136,7 +136,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Veterinaria · Felinos",
-"enun": "El 55% de los gatos de una región son de interior y el 45% de exterior. La probabilidad de contraer leucemia felina (FeLV) es 4% en gatos de interior y 18% en gatos de exterior. Se elige un gato al azar.",
+"enun": "En una región se estudia la población felina. El 55% de los gatos son de interior y el 45% son de exterior. La probabilidad de contraer leucemia felina (FeLV) es del 4% en los gatos de interior y del 18% en los gatos de exterior. Se selecciona un gato al azar de la región.",
 "ask": "Determine la probabilidad de que un gato sea de exterior, dado que tiene FeLV.",
 "alts": [
 "$P = 0{,}7864$",
@@ -155,7 +155,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Enfermería · Tamizaje HTA",
-"enun": "La prevalencia de hipertensión no diagnosticada es del 20%. Un test rápido tiene sensibilidad del 90% y especificidad del 85%. Se evalúa a una persona al azar.",
+"enun": "La prevalencia de hipertensión no diagnosticada en una población adulta es del 20%. Una enfermera aplica un test rápido de presión arterial con sensibilidad del 90% (detecta correctamente a los hipertensos) y especificidad del 85% (identifica correctamente a los normotensos). Se evalúa a una persona al azar de esa población.",
 "ask": "Determine la probabilidad de que una persona obtenga un test positivo.",
 "alts": [
 "$P = 0{,}3000$",
@@ -174,7 +174,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Enfermería · Tamizaje HTA",
-"enun": "La prevalencia de hipertensión no diagnosticada es del 20%. Un test rápido tiene sensibilidad del 90% y especificidad del 85%. Se evalúa a una persona al azar.",
+"enun": "La prevalencia de hipertensión no diagnosticada en una población adulta es del 20%. Una enfermera aplica un test rápido de presión arterial con sensibilidad del 90% (detecta correctamente a los hipertensos) y especificidad del 85% (identifica correctamente a los normotensos). Se evalúa a una persona al azar de esa población.",
 "ask": "Determine la probabilidad de que una persona sea realmente hipertensa, dado que obtuvo un test positivo.",
 "alts": [
 "$P = 0{,}6000$",
@@ -193,7 +193,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Enfermería · Endocrinología",
-"enun": "En un tamizaje de diabetes tipo 2, la prevalencia es del 12%. El test rápido de glucemia capilar tiene sensibilidad del 88% y especificidad del 80%. Se evalúa a una persona al azar.",
+"enun": "En una campaña de tamizaje de diabetes tipo 2, la prevalencia de la enfermedad en la población estudiada es del 12%. El test rápido de glucemia capilar utilizado tiene una sensibilidad del 88% y una especificidad del 80%. Se evalúa a una persona al azar de la población.",
 "ask": "Determine la probabilidad de que una persona obtenga un test positivo.",
 "alts": [
 "$P = 0{,}2816$",
@@ -212,7 +212,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Enfermería · Endocrinología",
-"enun": "En un tamizaje de diabetes tipo 2, la prevalencia es del 12%. El test rápido de glucemia capilar tiene sensibilidad del 88% y especificidad del 80%. Se evalúa a una persona al azar.",
+"enun": "En una campaña de tamizaje de diabetes tipo 2, la prevalencia de la enfermedad en la población estudiada es del 12%. El test rápido de glucemia capilar utilizado tiene una sensibilidad del 88% y una especificidad del 80%. Se evalúa a una persona al azar de la población.",
 "ask": "Determine la probabilidad de que una persona tenga diabetes, dado que obtuvo un test positivo.",
 "alts": [
 "$P = 0{,}3750$",
@@ -231,7 +231,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Enfermería · Neumología",
-"enun": "En urgencias, el 45% de los pacientes con disnea tiene EPOC, el 35% asma y el 20% otra causa. La probabilidad de saturación baja (<92%) es 60% en EPOC, 30% en asma y 15% en otras causas.",
+"enun": "En una unidad de urgencias se atiende a pacientes que consultan por disnea. El 45% de estos pacientes tiene EPOC, el 35% tiene asma y el 20% tiene otra causa. La probabilidad de presentar saturación baja (menor a 92%) es del 60% en los pacientes con EPOC, del 30% en los pacientes con asma y del 15% en los de otras causas.",
 "ask": "Determine la probabilidad de que un paciente con disnea tenga saturación baja.",
 "alts": [
 "$P = 0{,}4050$",
@@ -250,7 +250,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Enfermería · Neumología",
-"enun": "En urgencias, el 45% de los pacientes con disnea tiene EPOC, el 35% asma y el 20% otra causa. La probabilidad de saturación baja (<92%) es 60% en EPOC, 30% en asma y 15% en otras causas.",
+"enun": "En una unidad de urgencias se atiende a pacientes que consultan por disnea. El 45% de estos pacientes tiene EPOC, el 35% tiene asma y el 20% tiene otra causa. La probabilidad de presentar saturación baja (menor a 92%) es del 60% en los pacientes con EPOC, del 30% en los pacientes con asma y del 15% en los de otras causas.",
 "ask": "Determine la probabilidad de que un paciente con disnea tenga EPOC, dado que tiene saturación baja.",
 "alts": [
 "$P = 0{,}6667$",
@@ -269,7 +269,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Enfermería · Adulto mayor",
-"enun": "El 65% de los adultos mayores de un hogar tiene deterioro cognitivo. De los que tienen deterioro, el 70% presenta caídas en el año; de los que no, el 25% también cae. Se elige un residente al azar.",
+"enun": "En un hogar de larga estadía, el 65% de los adultos mayores tiene deterioro cognitivo leve o mayor. De los residentes que tienen deterioro cognitivo, el 70% presenta al menos una caída durante el año. De los que no tienen deterioro, el 25% también presenta al menos una caída. Se elige un residente al azar.",
 "ask": "Determine la probabilidad de que un residente tenga al menos una caída.",
 "alts": [
 "$P = 0{,}5425$",
@@ -288,7 +288,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Enfermería · Adulto mayor",
-"enun": "El 65% de los adultos mayores de un hogar tiene deterioro cognitivo. De los que tienen deterioro, el 70% presenta caídas en el año; de los que no, el 25% también cae. Se elige un residente al azar.",
+"enun": "En un hogar de larga estadía, el 65% de los adultos mayores tiene deterioro cognitivo leve o mayor. De los residentes que tienen deterioro cognitivo, el 70% presenta al menos una caída durante el año. De los que no tienen deterioro, el 25% también presenta al menos una caída. Se elige un residente al azar.",
 "ask": "Determine la probabilidad de que un residente tenga deterioro cognitivo, dado que tuvo una caída.",
 "alts": [
 "$P = 0{,}8387$",
@@ -307,7 +307,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Obstetricia · Tamizaje prenatal",
-"enun": "La prevalencia de diabetes gestacional (DG) es del 15%. El test de O'Sullivan tiene sensibilidad del 80% y especificidad del 78%. Se realiza el test a una embarazada al azar.",
+"enun": "La prevalencia de diabetes gestacional (DG) en la población atendida en una maternidad es del 15%. El test de O'Sullivan utilizado para el tamizaje tiene una sensibilidad del 80% y una especificidad del 78%. Se realiza el test a una embarazada al azar de esa población.",
 "ask": "Determine la probabilidad de que una embarazada obtenga un test de O'Sullivan positivo.",
 "alts": [
 "$P = 0{,}3070$",
@@ -326,7 +326,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Obstetricia · Tamizaje prenatal",
-"enun": "La prevalencia de diabetes gestacional (DG) es del 15%. El test de O'Sullivan tiene sensibilidad del 80% y especificidad del 78%. Se realiza el test a una embarazada al azar.",
+"enun": "La prevalencia de diabetes gestacional (DG) en la población atendida en una maternidad es del 15%. El test de O'Sullivan utilizado para el tamizaje tiene una sensibilidad del 80% y una especificidad del 78%. Se realiza el test a una embarazada al azar de esa población.",
 "ask": "Determine la probabilidad de que una embarazada tenga diabetes gestacional, dado que obtuvo un test positivo.",
 "alts": [
 "$P = 0{,}3909$",
@@ -345,7 +345,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Obstetricia · Parto prematuro",
-"enun": "El 12% de los partos de un hospital son prematuros. De los prematuros, el 65% presenta ruptura prematura de membranas (RPM); de los de término, el 10% también. Se elige un parto al azar.",
+"enun": "En un hospital regional, el 12% de los partos son prematuros. De los partos prematuros, el 65% presenta ruptura prematura de membranas (RPM) antes del parto. De los partos de término, el 10% también presenta RPM. Se elige un parto al azar de los registros del hospital.",
 "ask": "Determine la probabilidad de que un parto presente ruptura prematura de membranas (RPM).",
 "alts": [
 "$P = 0{,}1660$",
@@ -364,7 +364,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Obstetricia · Parto prematuro",
-"enun": "El 12% de los partos de un hospital son prematuros. De los prematuros, el 65% presenta ruptura prematura de membranas (RPM); de los de término, el 10% también. Se elige un parto al azar.",
+"enun": "En un hospital regional, el 12% de los partos son prematuros. De los partos prematuros, el 65% presenta ruptura prematura de membranas (RPM) antes del parto. De los partos de término, el 10% también presenta RPM. Se elige un parto al azar de los registros del hospital.",
 "ask": "Determine la probabilidad de que un parto sea prematuro, dado que presenta RPM.",
 "alts": [
 "$P = 0{,}4699$",
@@ -383,7 +383,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Obstetricia · Tipo de parto",
-"enun": "En una clínica, el 55% de los partos son vaginales, el 25% cesáreas electivas y el 20% cesáreas de urgencia. La probabilidad de ingreso a UCI neonatal es 4% en vaginal, 6% en cesárea electiva y 22% en cesárea de urgencia.",
+"enun": "En una clínica, el 55% de los partos son vaginales espontáneos, el 25% son cesáreas electivas y el 20% son cesáreas de urgencia. La probabilidad de que el recién nacido requiera ingreso a la UCI neonatal es del 4% en los partos vaginales, del 6% en las cesáreas electivas y del 22% en las cesáreas de urgencia. Se elige un recién nacido al azar.",
 "ask": "Determine la probabilidad de que un recién nacido ingrese a la UCI neonatal.",
 "alts": [
 "$P = 0{,}0810$",
@@ -402,7 +402,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Obstetricia · Tipo de parto",
-"enun": "En una clínica, el 55% de los partos son vaginales, el 25% cesáreas electivas y el 20% cesáreas de urgencia. La probabilidad de ingreso a UCI neonatal es 4% en vaginal, 6% en cesárea electiva y 22% en cesárea de urgencia.",
+"enun": "En una clínica, el 55% de los partos son vaginales espontáneos, el 25% son cesáreas electivas y el 20% son cesáreas de urgencia. La probabilidad de que el recién nacido requiera ingreso a la UCI neonatal es del 4% en los partos vaginales, del 6% en las cesáreas electivas y del 22% en las cesáreas de urgencia. Se elige un recién nacido al azar.",
 "ask": "Determine la probabilidad de que un recién nacido haya nacido por cesárea de urgencia, dado que ingresó a la UCI.",
 "alts": [
 "$P = 0{,}5432$",
@@ -421,7 +421,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Obstetricia · Depresión postparto",
-"enun": "El 30% de las puérperas son primíparas. La probabilidad de depresión postparto es 35% en primíparas y 18% en multíparas. Se elige una puérpera al azar.",
+"enun": "En el seguimiento de puérperas de un centro de salud, el 30% de las puérperas son primíparas y el 70% son multíparas. La probabilidad de desarrollar depresión postparto es del 35% en las primíparas y del 18% en las multíparas. Se elige una puérpera al azar.",
 "ask": "Determine la probabilidad de que una puérpera desarrolle depresión postparto.",
 "alts": [
 "$P = 0{,}2310$",
@@ -440,7 +440,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Obstetricia · Depresión postparto",
-"enun": "El 30% de las puérperas son primíparas. La probabilidad de depresión postparto es 35% en primíparas y 18% en multíparas. Se elige una puérpera al azar.",
+"enun": "En el seguimiento de puérperas de un centro de salud, el 30% de las puérperas son primíparas y el 70% son multíparas. La probabilidad de desarrollar depresión postparto es del 35% en las primíparas y del 18% en las multíparas. Se elige una puérpera al azar.",
 "ask": "Determine la probabilidad de que una puérpera sea primípara, dado que tiene depresión postparto.",
 "alts": [
 "$P = 0{,}4545$",
@@ -459,7 +459,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Kinesiología · Rehabilitación",
-"enun": "El 40% de los pacientes de rehabilitación tiene adherencia alta y el 60% adherencia baja. La probabilidad de alcanzar los objetivos funcionales es 85% con adherencia alta y 30% con adherencia baja.",
+"enun": "En un servicio de rehabilitación, el 40% de los pacientes tiene adherencia alta al programa y el 60% tiene adherencia baja. La probabilidad de alcanzar los objetivos funcionales es del 85% en los pacientes con adherencia alta y del 30% en los pacientes con adherencia baja. Se elige un paciente al azar del servicio.",
 "ask": "Determine la probabilidad de que un paciente alcance los objetivos funcionales.",
 "alts": [
 "$P = 0{,}5200$",
@@ -478,7 +478,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Kinesiología · Rehabilitación",
-"enun": "El 40% de los pacientes de rehabilitación tiene adherencia alta y el 60% adherencia baja. La probabilidad de alcanzar los objetivos funcionales es 85% con adherencia alta y 30% con adherencia baja.",
+"enun": "En un servicio de rehabilitación, el 40% de los pacientes tiene adherencia alta al programa y el 60% tiene adherencia baja. La probabilidad de alcanzar los objetivos funcionales es del 85% en los pacientes con adherencia alta y del 30% en los pacientes con adherencia baja. Se elige un paciente al azar del servicio.",
 "ask": "Determine la probabilidad de que un paciente tuviese adherencia alta, dado que alcanzó los objetivos.",
 "alts": [
 "$P = 0{,}6538$",
@@ -497,7 +497,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Kinesiología · Deportiva",
-"enun": "El 50% de los deportistas de élite son de fútbol, el 30% de atletismo y el 20% de natación. La probabilidad de lesión musculoesquelética en la temporada es 45% en fútbol, 28% en atletismo y 12% en natación.",
+"enun": "En un centro de alto rendimiento, el 50% de los deportistas de élite son de fútbol, el 30% de atletismo y el 20% de natación. La probabilidad de sufrir una lesión musculoesquelética durante la temporada es del 45% en los futbolistas, del 28% en los atletas y del 12% en los nadadores. Se elige un deportista al azar.",
 "ask": "Determine la probabilidad de que un deportista de élite se lesione en la temporada.",
 "alts": [
 "$P = 0{,}3330$",
@@ -516,7 +516,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Kinesiología · Deportiva",
-"enun": "El 50% de los deportistas de élite son de fútbol, el 30% de atletismo y el 20% de natación. La probabilidad de lesión musculoesquelética en la temporada es 45% en fútbol, 28% en atletismo y 12% en natación.",
+"enun": "En un centro de alto rendimiento, el 50% de los deportistas de élite son de fútbol, el 30% de atletismo y el 20% de natación. La probabilidad de sufrir una lesión musculoesquelética durante la temporada es del 45% en los futbolistas, del 28% en los atletas y del 12% en los nadadores. Se elige un deportista al azar.",
 "ask": "Determine la probabilidad de que un deportista de élite sea futbolista, dado que se lesionó.",
 "alts": [
 "$P = 0{,}6757$",
@@ -535,7 +535,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Kinesiología · Neurología",
-"enun": "El 25% de los pacientes neurológicos de un servicio tiene esclerosis múltiple (EM) y el 75% otra patología. La probabilidad de requerir ayuda técnica para la marcha es 60% en EM y 20% en otras patologías.",
+"enun": "En un servicio de neurología, el 25% de los pacientes tiene esclerosis múltiple (EM) y el 75% tiene otra patología neurológica. La probabilidad de requerir ayuda técnica para la marcha es del 60% en los pacientes con EM y del 20% en los pacientes con otras patologías. Se elige un paciente al azar del servicio.",
 "ask": "Determine la probabilidad de que un paciente neurológico requiera ayuda técnica para la marcha.",
 "alts": [
 "$P = 0{,}3000$",
@@ -554,7 +554,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Kinesiología · Neurología",
-"enun": "El 25% de los pacientes neurológicos de un servicio tiene esclerosis múltiple (EM) y el 75% otra patología. La probabilidad de requerir ayuda técnica para la marcha es 60% en EM y 20% en otras patologías.",
+"enun": "En un servicio de neurología, el 25% de los pacientes tiene esclerosis múltiple (EM) y el 75% tiene otra patología neurológica. La probabilidad de requerir ayuda técnica para la marcha es del 60% en los pacientes con EM y del 20% en los pacientes con otras patologías. Se elige un paciente al azar del servicio.",
 "ask": "Determine la probabilidad de que un paciente neurológico tenga esclerosis múltiple, dado que requiere ayuda técnica.",
 "alts": [
 "$P = 0{,}5000$",
@@ -573,7 +573,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Probabilidad total",
 "ctx": "Kinesiología · Gerontología",
-"enun": "El 35% de los adultos mayores tiene sarcopenia. De los que tienen sarcopenia, el 70% presenta déficit de equilibrio; de los que no, el 25% también. Se elige un adulto mayor al azar.",
+"enun": "En una evaluación de adultos mayores de la comunidad, el 35% tiene sarcopenia y el 65% no la tiene. De los adultos mayores que tienen sarcopenia, el 70% presenta déficit de equilibrio. De los que no tienen sarcopenia, el 25% también presenta déficit de equilibrio. Se elige un adulto mayor al azar.",
 "ask": "Determine la probabilidad de que un adulto mayor presente déficit de equilibrio.",
 "alts": [
 "$P = 0{,}4075$",
@@ -592,7 +592,7 @@ const BT_QUESTIONS = [
 {
 "tipo": "Teorema de Bayes",
 "ctx": "Kinesiología · Gerontología",
-"enun": "El 35% de los adultos mayores tiene sarcopenia. De los que tienen sarcopenia, el 70% presenta déficit de equilibrio; de los que no, el 25% también. Se elige un adulto mayor al azar.",
+"enun": "En una evaluación de adultos mayores de la comunidad, el 35% tiene sarcopenia y el 65% no la tiene. De los adultos mayores que tienen sarcopenia, el 70% presenta déficit de equilibrio. De los que no tienen sarcopenia, el 25% también presenta déficit de equilibrio. Se elige un adulto mayor al azar.",
 "ask": "Determine la probabilidad de que un adulto mayor tenga sarcopenia, dado que presenta déficit de equilibrio.",
 "alts": [
 "$P = 0{,}6012$",
