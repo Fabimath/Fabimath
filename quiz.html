@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gatos Quiz — Fabimath</title>
-<meta name="description" content="Quiz 8-bits de probabilidad y estadística: elige tu gato y tu tema, responde alternativas y revisa la pauta.">
+<title>Gato IC — Intervalos de Confianza · Fabimath</title>
+<meta name="description" content="Quiz interactivo de intervalos de confianza: 5 ejercicios al azar con alternativas y pauta completa en LaTeX.">
 <link rel="icon" type="image/png" href="logo/fabimath_logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<!-- KaTeX for crisp math -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script src="ic_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -21,6 +23,7 @@
     --gold: #ffd75e;
     --mint: #4ade80;
     --coral: #ff6b61;
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -28,11 +31,13 @@
       radial-gradient(900px 500px at 50% -10%, #16295e 0%, transparent 60%),
       var(--ink);
     color: var(--text);
-    font-family: 'Press Start 2P', monospace;
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     display: flex; flex-direction: column; align-items: center;
-    padding: 18px 16px 50px;
+    padding: 18px 16px 60px;
     overflow-x: hidden;
+    line-height: 1.5;
   }
   .mosaic { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
   .mosaic i {
@@ -40,154 +45,148 @@
     animation: drift 16s ease-in-out infinite;
   }
   @keyframes drift { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-18px);} }
-  @media (prefers-reduced-motion: reduce) { .mosaic i, .cat-box, .cursor::after { animation: none !important; } }
+  @media (prefers-reduced-motion: reduce) { .mosaic i, .cat-box { animation: none !important; } }
 
   .topbar {
-    width: 100%; max-width: 760px; z-index: 1;
+    width: 100%; max-width: 780px; z-index: 1;
     display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
   .topbar a {
-    color: var(--sky); font-size: 9px; text-decoration: none;
+    color: var(--sky); font-size: 13px; font-weight: 600; text-decoration: none;
     display: flex; align-items: center; gap: 8px;
   }
-  .topbar a img { width: 26px; height: 26px; border-radius: 7px; }
+  .topbar a img { width: 28px; height: 28px; border-radius: 8px; }
   .topbar a:hover { color: #fff; }
 
-  h1 {
-    z-index: 1;
-    font-family: 'Baloo 2', sans-serif;
-    font-size: clamp(28px, 6vw, 42px); font-weight: 800;
+  .header { z-index: 1; text-align: center; margin-bottom: 22px; }
+  .header h1 {
+    font-size: clamp(26px, 5vw, 40px); font-weight: 800; letter-spacing: -0.02em;
     background: linear-gradient(100deg, var(--sky), #9ecbff);
     -webkit-background-clip: text; background-clip: text; color: transparent;
-    text-align: center;
   }
-  .subtitle { z-index: 1; font-size: 8px; color: #7fa4d9; margin: 6px 0 26px; letter-spacing: .12em; text-align: center; }
+  .header .sub { font-size: 13px; color: #7fa4d9; margin-top: 6px; letter-spacing: .02em; }
 
-  .screen { z-index: 1; width: 100%; max-width: 760px; }
+  .screen { z-index: 1; width: 100%; max-width: 780px; }
   .hidden { display: none !important; }
 
-  /* ---------- TOPIC MENU ---------- */
-  .menu-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
-  }
-  .topic-card {
-    background: linear-gradient(180deg, var(--panel), var(--panel-2));
-    border: 3px solid #27407a;
-    border-radius: 14px;
-    padding: 18px 14px 16px;
-    cursor: pointer;
-    text-align: center;
-    transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
-    color: var(--text);
-    font-family: 'Press Start 2P', monospace;
-  }
-  .topic-card:hover, .topic-card:focus-visible {
-    transform: translateY(-4px);
-    border-color: var(--sky);
-    box-shadow: 0 0 20px rgba(99,179,255,.25);
-  }
-  .topic-card .mini-cat { display: inline-grid; grid-template-columns: repeat(20, 4px); grid-auto-rows: 4px; margin-bottom: 12px; }
-  .topic-card .mini-cat div { width: 4px; height: 4px; }
-  .topic-card .t-name { font-size: 9px; line-height: 1.8; color: var(--sky); }
-  .topic-card .t-count { font-size: 7px; color: #5f7fb4; margin-top: 6px; }
-
-  /* ---------- QUIZ ---------- */
-  .quiz-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; font-size: 8px; color: #7fa4d9; }
-  .quiz-head .score { color: var(--gold); }
-  .quiz-body { display: flex; gap: 18px; align-items: flex-start; }
-  @media (max-width: 620px) { .quiz-body { flex-direction: column; align-items: center; } }
-
-  .cat-box { flex-shrink: 0; position: relative; animation: idle 3.2s ease-in-out infinite; }
+  /* ---------- CAT ---------- */
+  .cat-box { position: relative; display: flex; justify-content: center; margin-bottom: 18px; animation: idle 3.4s ease-in-out infinite; }
   @keyframes idle { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-5px);} }
   .cat-box.talking { animation: hop .4s steps(2) infinite; }
   @keyframes hop { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-6px);} }
   #catGrid { display: grid; grid-template-columns: repeat(20, 7px); grid-auto-rows: 7px; }
   #catGrid div { width: 7px; height: 7px; }
 
-  .q-panel { flex: 1; width: 100%; }
-  .dialog {
+  /* ---------- INTRO ---------- */
+  .intro-card {
     background: linear-gradient(180deg, var(--panel), var(--panel-2));
-    border: 3px solid var(--azure);
-    border-radius: 14px;
-    box-shadow: 0 0 24px rgba(47,129,247,.2);
-    padding: 18px 16px;
-    min-height: 90px;
-    position: relative;
-    margin-bottom: 14px;
+    border: 1px solid #27407a; border-radius: 18px;
+    padding: 30px 26px; text-align: center;
+    box-shadow: 0 10px 34px rgba(0,0,0,.34);
   }
-  .dialog .speaker {
-    position: absolute; top: -14px; left: 14px;
-    background: linear-gradient(100deg, var(--royal), var(--azure));
-    color: #fff; font-size: 8px; letter-spacing: .08em;
-    padding: 5px 11px; border-radius: 8px;
-    border: 2px solid #0a2d7a;
+  .intro-card p { font-size: 15.5px; color: #c7d6f2; max-width: 560px; margin: 0 auto 10px; }
+  .intro-card .speak { color: var(--sky); font-weight: 600; margin-bottom: 16px; }
+  .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 18px 0 22px; }
+  .badge {
+    background: rgba(99,179,255,.1); color: var(--sky);
+    border: 1px solid rgba(99,179,255,.3);
+    border-radius: 100px; padding: 7px 15px; font-size: 12.5px; font-weight: 600;
   }
-  #qText { font-size: 9.5px; line-height: 2.1; white-space: pre-wrap; }
-
-  .alts { display: flex; flex-direction: column; gap: 10px; }
-  .alt-btn {
-    background: #0a1430;
-    border: 3px solid #27407a;
-    border-radius: 12px;
-    color: var(--text);
-    font-family: 'Press Start 2P', monospace;
-    font-size: 8.5px;
-    line-height: 1.9;
-    padding: 13px 14px;
-    cursor: pointer;
-    text-align: left;
-    display: flex; gap: 10px; align-items: baseline;
-    transition: border-color .15s, background .15s;
-  }
-  .alt-btn:hover:not(:disabled), .alt-btn:focus-visible { border-color: var(--sky); background: #0e1c42; }
-  .alt-btn:disabled { cursor: default; }
-  .alt-btn .key { color: var(--gold); flex-shrink: 0; }
-  .alt-btn.correct { border-color: var(--mint); background: rgba(74,222,128,.12); }
-  .alt-btn.wrong { border-color: var(--coral); background: rgba(255,107,97,.12); }
-
-  .pauta {
-    display: none;
-    margin-top: 14px;
-    background: rgba(99,179,255,.07);
-    border: 3px solid var(--sky);
-    border-radius: 12px;
-    padding: 14px;
-    font-size: 8.5px;
-    line-height: 2.2;
-  }
-  .pauta .p-title { color: var(--gold); margin-bottom: 6px; }
-  .pauta.good { border-color: var(--mint); }
-  .pauta.bad { border-color: var(--coral); }
-
-  .next-row { margin-top: 14px; display: flex; gap: 10px; justify-content: flex-end; }
-  .px-btn {
+  .btn {
     background: linear-gradient(180deg, var(--azure), var(--royal));
-    border: 3px solid #0a2d7a;
-    border-radius: 12px;
-    color: #fff;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 9px;
-    padding: 13px 18px;
-    cursor: pointer;
+    border: none; border-radius: 13px; color: #fff;
+    font-family: var(--sans); font-size: 16px; font-weight: 700;
+    padding: 15px 30px; cursor: pointer;
+    box-shadow: 0 6px 18px rgba(21,80,224,.34);
+    transition: transform .15s ease, filter .2s;
   }
-  .px-btn:hover { filter: brightness(1.15); }
-  .px-btn.ghost { background: transparent; color: var(--sky); border-color: var(--royal); }
-  .px-btn.ghost:hover { background: var(--royal); color: #fff; }
+  .btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+  .btn.ghost { background: transparent; color: var(--sky); border: 2px solid var(--royal); box-shadow: none; }
+  .btn.ghost:hover { background: var(--royal); color: #fff; }
 
-  /* ---------- RESULT ---------- */
-  .final {
-    text-align: center;
+  /* ---------- QUIZ ---------- */
+  .progress-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; font-size: 13px; color: #8fa9d6; }
+  .progress-row .score { color: var(--gold); font-weight: 700; }
+  .pbar { height: 6px; background: #1a2c58; border-radius: 100px; overflow: hidden; margin-bottom: 20px; }
+  .pbar > div { height: 100%; background: linear-gradient(90deg, var(--azure), var(--sky)); transition: width .3s ease; }
+
+  .card {
     background: linear-gradient(180deg, var(--panel), var(--panel-2));
-    border: 3px solid var(--sky);
-    border-radius: 14px;
-    padding: 30px 20px;
+    border: 1px solid #27407a; border-radius: 18px;
+    padding: 22px 22px 24px; box-shadow: 0 10px 30px rgba(0,0,0,.3);
   }
-  .final .big { font-size: 15px; line-height: 2.2; color: var(--gold); margin: 12px 0; }
-  .final p { font-size: 9px; line-height: 2.2; color: #9fb8e8; }
-  .hint { font-size: 7.5px; color: #5f7fb4; text-align: center; margin-top: 16px; line-height: 2; }
+  .qtype {
+    display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em;
+    color: var(--royal); background: #dbe9ff; padding: 5px 12px; border-radius: 100px;
+    margin-bottom: 6px;
+  }
+  .qctx { font-size: 12.5px; color: #8fa9d6; margin-bottom: 12px; }
+  .qenun { font-size: 15.5px; color: #eaf2ff; line-height: 1.65; margin-bottom: 16px; }
+  .qask { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 14px; }
+
+  .alts { display: flex; flex-direction: column; gap: 11px; }
+  .alt-btn {
+    background: #0c1836; border: 2px solid #27407a; border-radius: 13px;
+    color: var(--text); font-family: var(--sans); font-size: 15px;
+    padding: 15px 16px; cursor: pointer; text-align: left;
+    display: flex; gap: 13px; align-items: center;
+    transition: border-color .15s, background .15s, transform .1s;
+  }
+  .alt-btn:hover:not(:disabled) { border-color: var(--sky); background: #0f1f44; transform: translateX(2px); }
+  .alt-btn:disabled { cursor: default; }
+  .alt-btn .key {
+    flex-shrink: 0; width: 30px; height: 30px; border-radius: 8px;
+    background: #1a2c58; color: var(--sky); font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .alt-btn.correct { border-color: var(--mint); background: rgba(74,222,128,.13); }
+  .alt-btn.correct .key { background: var(--mint); color: #06331b; }
+  .alt-btn.wrong { border-color: var(--coral); background: rgba(255,107,97,.12); }
+  .alt-btn.wrong .key { background: var(--coral); color: #3a0806; }
+
+  /* ---------- PAUTA (white box) ---------- */
+  .pauta {
+    display: none; margin-top: 18px;
+    background: #ffffff; color: #14203a;
+    border-radius: 14px; padding: 20px 20px 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.28);
+  }
+  .pauta .p-flag { font-size: 14px; font-weight: 800; margin-bottom: 12px; }
+  .pauta.good .p-flag { color: #10893e; }
+  .pauta.bad .p-flag { color: #d33328; }
+  .pauta .p-head { font-size: 14px; color: #2a3a5c; margin-bottom: 12px; line-height: 1.7; }
+  .pauta .p-steps { display: flex; flex-direction: column; gap: 10px; margin: 8px 0 14px; }
+  .pauta .p-step {
+    background: #f4f7ff; border-left: 3px solid var(--royal);
+    border-radius: 8px; padding: 11px 14px; overflow-x: auto;
+  }
+  .pauta .p-conc {
+    font-size: 13.5px; color: #14203a; background: #eef5ff;
+    border-radius: 8px; padding: 12px 14px; line-height: 1.6;
+  }
+  .pauta .p-conc b { color: var(--royal); }
+
+  .nav-row { margin-top: 18px; display: flex; gap: 10px; justify-content: space-between; }
+
+  /* ---------- FINAL ---------- */
+  .final { text-align: center; }
+  .final .ring {
+    width: 130px; height: 130px; border-radius: 50%; margin: 6px auto 16px;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    background: conic-gradient(var(--sky) var(--deg,0deg), #1a2c58 0deg);
+  }
+  .final .ring .inner {
+    width: 106px; height: 106px; border-radius: 50%; background: var(--panel-2);
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+  }
+  .final .ring .big { font-size: 30px; font-weight: 800; color: #fff; }
+  .final .ring .lbl { font-size: 11px; color: #8fa9d6; }
+  .final h2 { font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+  .final p { font-size: 15px; color: #c7d6f2; max-width: 520px; margin: 0 auto 6px; }
+  .hint { font-size: 12.5px; color: #6f8bbc; text-align: center; margin-top: 16px; }
   :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .katex { font-size: 1.05em; }
 </style>
 </head>
 <body>
@@ -201,403 +200,261 @@
 </div>
 
 <div class="topbar">
-  <a href="index.html"><img src="logo/fabimath_logo.png" alt="">◀ FABIMATH</a>
-  <a href="aes.html">GATITO AES ▶</a>
+  <a href="index.html"><img src="logo/fabimath_logo.png" alt="">Fabimath</a>
+  <a href="aes.html">Gatito AES →</a>
 </div>
 
-<h1>Gatos Quiz</h1>
-<div class="subtitle">PROBABILIDAD Y ESTADÍSTICA · ELIGE TU GATO · 8-BIT EDITION</div>
+<div class="header">
+  <h1>Gato de los Intervalos</h1>
+  <div class="sub">Intervalos de Confianza · 5 ejercicios al azar de 60 · con pauta completa</div>
+</div>
 
-<!-- MENU -->
-<div class="screen" id="menuScreen">
-  <div class="menu-grid" id="menuGrid"></div>
-  <div class="hint">Cada gato domina un tema. Responde con clic o teclas A-B-C-D.<br>Tras responder verás la pauta. ENTER para continuar.</div>
+<!-- INTRO -->
+<div class="screen" id="introScreen">
+  <div class="cat-box" id="introCatBox"><div id="catGrid"></div></div>
+  <div class="intro-card">
+    <div class="speak" id="introSpeak">miau~ soy el Gato de los Intervalos (=^･ω･^=)</div>
+    <p>Te voy a mostrar <b>5 ejercicios al azar</b> de intervalos de confianza. En cada uno eliges el intervalo correcto entre 4 alternativas.</p>
+    <p>Después de responder verás la <b>pauta completa</b> con el desarrollo paso a paso.</p>
+    <div class="badges">
+      <span class="badge">Media · σ conocida (z)</span>
+      <span class="badge">Media · σ desconocida (t)</span>
+      <span class="badge">Proporción</span>
+    </div>
+    <button class="btn" id="startBtn">Comenzar quiz ▶</button>
+  </div>
+  <div class="hint">Responde con clic o teclas A · B · C · D — Enter para continuar.</div>
 </div>
 
 <!-- QUIZ -->
 <div class="screen hidden" id="quizScreen">
-  <div class="quiz-head">
-    <span id="topicLabel"></span>
-    <span><span id="qNum"></span> · <span class="score" id="scoreLabel">0 ✓</span></span>
+  <div class="progress-row">
+    <span id="qCounter">Pregunta 1 de 5</span>
+    <span class="score" id="scoreLabel">0 correctas</span>
   </div>
-  <div class="quiz-body">
-    <div class="cat-box" id="catBox"><div id="catGrid"></div></div>
-    <div class="q-panel">
-      <div class="dialog">
-        <div class="speaker" id="catName">GATO</div>
-        <div id="qText"></div>
-      </div>
-      <div class="alts" id="alts"></div>
-      <div class="pauta" id="pauta"></div>
-      <div class="next-row">
-        <button class="px-btn ghost" id="menuBtn">◀ TEMAS</button>
-        <button class="px-btn hidden" id="nextBtn">SIGUIENTE ►</button>
-      </div>
+  <div class="pbar"><div id="pbarFill" style="width:20%"></div></div>
+  <div class="card">
+    <span class="qtype" id="qType"></span>
+    <div class="qctx" id="qCtx"></div>
+    <div class="qenun" id="qEnun"></div>
+    <div class="qask" id="qAsk"></div>
+    <div class="alts" id="alts"></div>
+    <div class="pauta" id="pauta">
+      <div class="p-flag" id="pFlag"></div>
+      <div class="p-head" id="pHead"></div>
+      <div class="p-steps" id="pSteps"></div>
+      <div class="p-conc" id="pConc"></div>
+    </div>
+    <div class="nav-row">
+      <button class="btn ghost" id="quitBtn">Salir</button>
+      <button class="btn hidden" id="nextBtn">Siguiente ▶</button>
     </div>
   </div>
 </div>
 
 <!-- FINAL -->
 <div class="screen hidden" id="finalScreen">
-  <div class="final">
-    <div class="cat-box" style="display:inline-block" id="finalCatBox"><div id="finalCatGrid" style="display:grid;grid-template-columns:repeat(20,7px);grid-auto-rows:7px"></div></div>
-    <div class="big" id="finalScore"></div>
+  <div class="card final">
+    <div class="cat-box" style="margin-bottom:6px"><div id="finalCatGrid" style="display:grid;grid-template-columns:repeat(20,6px);grid-auto-rows:6px"></div></div>
+    <div class="ring" id="ring"><div class="inner"><span class="big" id="finalScore">0/5</span><span class="lbl">correctas</span></div></div>
+    <h2 id="finalTitle"></h2>
     <p id="finalMsg"></p>
-    <div class="next-row" style="justify-content:center; margin-top:20px;">
-      <button class="px-btn ghost" id="finalMenuBtn">◀ ELEGIR OTRO TEMA</button>
-      <button class="px-btn" id="retryBtn">↻ REPETIR</button>
+    <div class="nav-row" style="justify-content:center; margin-top:22px;">
+      <button class="btn ghost" id="homeBtn">◀ Inicio</button>
+      <button class="btn" id="retryBtn">↻ Otras 5 preguntas</button>
     </div>
   </div>
 </div>
 
 <script>
-/* ============ PIXEL CATS ============ */
-/* palette codes: K outline, B body, b shade, W white, E eye, G shine, P pink, Y collar, A accessory 1, C accessory 2 */
-function makeSprite(body, shade, acc1, acc2, accessory) {
-  const P = {
-    '.': null, 'K': '#0a1226', 'B': body, 'b': shade,
-    'W': '#ffffff', 'E': '#0a1226', 'G': '#cfe8ff', 'P': '#ff9ecb',
-    'Y': '#ffd75e', 'A': acc1, 'C': acc2
-  };
-  /* base cat 20x16 (head+body) — 4 hat rows prepended per accessory */
-  const base = [
-    "...KK..........KK...",
-    "..KBBK........KBBK..",
-    ".KBPPBK......KBPPBK.",
-    ".KBPPBBKKKKKKBBPPBK.",
-    ".KBBBBBBBBBBBBBBBBK.",
-    "KBBBBBBBBBBBBBBBBBBK",
-    "KBBKEGKBBBBBBKEGKBBK",
-    "KBBKEEKBbBBbBKEEKBBK",
-    "KBBBBBBBWWWWBBBBBBBK",
-    "KBbBBBBWWPPWWBBBBbBK",
-    ".KBBBBBBWWWWBBBBBBK.",
-    ".KBBYYYYYYYYYYYYBBK.",
-    ".KBBBBBBBBBBBBBBBBK.",
-    ".KBbBBBBBBBBBBBBbBK.",
-    "..KBBKKBBBBBBKKBBK..",
-    "...KK..KKKKKK..KK..."
-  ];
-  let rows = base.slice();
-  if (accessory === 'glasses') {
-    rows[6] = "KBBAAAABBBBBBAAAABBK";
-    rows[7] = "KBBAEEABbBBbBAEEABBK";
-  } else if (accessory === 'bowtie') {
-    rows[11] = ".KBBYYYAACAAYYYYBBK.";
-    rows[12] = ".KBBBBBAACAABBBBBBK.";
-  } else if (accessory === 'wizard') {
-    rows = [
-      ".........AA.........",
-      "........AACA........",
-      ".......AAAAAA.......",
-      "....AAAAAACAAAAA....",
-      ...rows
-    ];
-  } else if (accessory === 'headphones') {
-    rows[4] = ".KAABBBBBBBBBBBBAAK.";
-    rows[5] = "KAABBBBBBBBBBBBBBAAK";
-    rows[6] = "KAAKEGKBBBBBBKEGKAAK";
-    rows[0] = "...KKAAAAAAAAAAKK...";
-    rows[1] = "..KBBKAAAAAAAAKBBK..";
-  } else if (accessory === 'gradcap') {
-    rows = [
-      "....AAAAAAAAAAAA....",
-      ".AAAAAAAAAAAAAAAAAC.",
-      "......AAAAAAA....C..",
-      "......AAAAAAA....C..",
-      ...rows
-    ];
-  } else if (accessory === 'star') {
-    rows[11] = ".KBBYYYYYACAYYYYBBK.";
-  }
-  return { rows, P };
-}
-
-const TOPICS = [
-  {
-    id: 'uni', name: 'Estadística Univariada', cat: 'AZULEJO',
-    sprite: makeSprite('#3b8bff', '#2f6fe0', '#ffd75e', '#e8342a', 'star'),
-    msg: 'miau! yo domino tablas,\nmedias y percentiles'
-  },
-  {
-    id: 'biv', name: 'Estadística Bivariada', cat: 'PROFE MICHI',
-    sprite: makeSprite('#34d399', '#0ea371', '#0a1226', '#0a1226', 'glasses'),
-    msg: 'correlación no es\ncausalidad, miau~'
-  },
-  {
-    id: 'cla', name: 'Probabilidad Clásica', cat: 'DON BIGOTES',
-    sprite: makeSprite('#fb923c', '#ea6a12', '#e8342a', '#ffd75e', 'bowtie'),
-    msg: 'casos favorables sobre\ncasos totales, miau'
-  },
-  {
-    id: 'con', name: 'Prob. Condicional y Bayes', cat: 'MERLÍN',
-    sprite: makeSprite('#a78bfa', '#7c5cf0', '#4c2ea8', '#ffd75e', 'wizard'),
-    msg: 'la magia de actualizar\ncreencias, miau ✦'
-  },
-  {
-    id: 'nor', name: 'Distribución Normal', cat: 'DJ CAMPANA',
-    sprite: makeSprite('#22d3ee', '#0aa8c4', '#0a1226', '#ffd75e', 'headphones'),
-    msg: 'todo converge a la\ncampana, miau~'
-  },
-  {
-    id: 'tes', name: 'Test de Hipótesis', cat: 'DR. GATUNO',
-    sprite: makeSprite('#fbbf24', '#e09112', '#0a1226', '#ffd75e', 'gradcap'),
-    msg: 'rechazar o no rechazar,\nesa es la cuestión miau'
-  }
-];
-
-const QUESTIONS = {
-  uni: [
-    { q: "Porciones diarias y frecuencias:\n3→5, 5→11, 7→16, 9→8, 11→4.\n\n¿Cuál es la MODA?",
-      alts: ["5 porciones", "7 porciones", "9 porciones", "16 porciones"], ok: 1,
-      pauta: "La moda es el VALOR con mayor frecuencia. La frecuencia más alta es 16, que corresponde al valor 7 porciones. Ojo: 16 es la frecuencia, no la moda." },
-    { q: "Facultad AURORA: promedio 5,8 y desviación estándar 1,4.\n\n¿Coeficiente de variación?",
-      alts: ["24,14%", "12,90%", "41,43%", "8,12%"], ok: 0,
-      pauta: "CV = s/x̄ ×100 = 1,4/5,8 ×100 ≈ 24,14%. Mide dispersión relativa: permite comparar variabilidad entre grupos con distintas escalas." },
-    { q: "Datos: 45,50,60,60,70,75,75,75,85,95 (suma 690, n=10).\n\n¿Promedio y mediana?",
-      alts: ["x̄=69 ; Me=72,5", "x̄=72,5 ; Me=69", "x̄=69 ; Me=75", "x̄=75 ; Me=72,5"], ok: 0,
-      pauta: "x̄ = 690/10 = 69. Mediana: con n=10 par, promedio de los valores 5° y 6° ordenados: (70+75)/2 = 72,5." },
-    { q: "Pesos al nacer agrupados, n=40.\nIntervalo P80: [3,5–4,0), F_ant=30, f=7, a=0,5.\n\n¿Percentil 80?",
-      alts: ["3,20 kg", "3,50 kg", "3,64 kg", "3,86 kg"], ok: 2,
-      pauta: "P80 = 3,5 + ((0,8·40 − 30)/7)·0,5 = 3,5 + (2/7)·0,5 ≈ 3,64 kg. El 20% más pesado pesa al menos 3,64 kg." },
-    { q: "Tipos de lesión (cualitativa nominal).\n\n¿Se puede calcular la MEDIANA?",
-      alts: ["Sí, ordenando frecuencias", "Sí, si n es impar", "No, no hay orden natural", "Solo si hay pocas categorías"], ok: 2,
-      pauta: "La mediana requiere ordenar los datos. En una variable cualitativa NOMINAL las categorías no tienen orden natural, por lo que la mediana no está definida." }
-  ],
-  biv: [
-    { q: "Resumen: Cov(X,Y)=6, s²x=4, s²y=10.\n\n¿Pendiente de la recta de regresión?",
-      alts: ["β₁ = 0,60", "β₁ = 1,50", "β₁ = 2,40", "β₁ = 0,95"], ok: 1,
-      pauta: "β₁ = Cov(X,Y)/s²x = 6/4 = 1,5. Cuidado: el denominador es la VARIANZA de X (s²x), no la desviación estándar." },
-    { q: "Con Cov=6, sx=2, sy=√10≈3,1623.\n\n¿Coeficiente de correlación r?",
-      alts: ["r ≈ 0,60", "r ≈ 0,79", "r ≈ 0,9487", "r ≈ 1,20"], ok: 2,
-      pauta: "r = Cov/(sx·sy) = 6/(2·3,1623) ≈ 0,9487. Asociación lineal positiva muy fuerte. r siempre está entre −1 y 1." },
-    { q: "Modelo en R: R² = 0,0103,\np-value del test F = 0,719.\n\n¿Qué se concluye (α=0,05)?",
-      alts: ["Modelo excelente", "X es buen predictor", "Modelo no significativo", "Falta información"], ok: 2,
-      pauta: "p=0,719 > 0,05: no se rechaza H₀:β₁=0. Además R²=1,03% de variabilidad explicada. El modelo NO es significativo: X no predice a Y." },
-    { q: "Recta ajustada: ŷ = 3 + 1,5x\n(sueldo en cientos de miles).\n\n¿Predicción para x=10 años?",
-      alts: ["$1.500.000", "$1.800.000", "$1.300.000", "$3.000.000"], ok: 1,
-      pauta: "ŷ(10) = 3 + 1,5·10 = 18 cientos de miles = $1.800.000. Siempre reemplaza en la ecuación ajustada y cuida las unidades." },
-    { q: "Modelo A: ln(Y)=1,6094+0,2231X.\n\n¿Predicción de Y para X=10?",
-      alts: ["Y ≈ 3,84", "Y ≈ 18,0", "Y ≈ 46,5", "Y ≈ 2,23"], ok: 2,
-      pauta: "ln(Y)=1,6094+2,231=3,8404. Hay que DESTRANSFORMAR: Y = e^3,8404 ≈ 46,5. Error típico: dejar 3,84 como respuesta final." }
-  ],
-  cla: [
-    { q: "400 pacientes: 150 fumadores,\n100 hipertensos, 60 ambos.\n\n¿P(Fumador)?",
-      alts: ["0,375", "0,25", "0,15", "0,60"], ok: 0,
-      pauta: "P(F) = 150/400 = 0,375. Probabilidad clásica: casos favorables sobre casos totales." },
-    { q: "Mismos datos.\n\n¿P(Hipertenso ∪ Fumador)?",
-      alts: ["0,625", "0,475", "0,525", "0,375"], ok: 1,
-      pauta: "P(H∪F) = P(H)+P(F)−P(H∩F) = 0,25+0,375−0,15 = 0,475. No olvides restar la intersección (se cuenta dos veces)." },
-    { q: "P(H)=0,25, P(F)=0,375,\nP(H∩F)=0,15.\n\n¿Son independientes H y F?",
-      alts: ["Sí, porque P(H∩F)>0", "Sí, P(H)·P(F)=P(H∩F)", "No: 0,25·0,375≠0,15", "No se puede saber"], ok: 2,
-      pauta: "Independencia ⟺ P(H∩F)=P(H)·P(F). Aquí 0,25·0,375=0,09375 ≠ 0,15 → NO son independientes: fumar y ser hipertenso están asociados." },
-    { q: "Vacunas: L1 50% (2% fallas),\nL2 30% (3%), L3 20% (5%).\n\n¿P(dosis con falla)?",
-      alts: ["0,10", "0,033", "0,029", "0,05"], ok: 2,
-      pauta: "Probabilidad total: P(D) = 0,5·0,02 + 0,3·0,03 + 0,2·0,05 = 0,010+0,009+0,010 = 0,029." }
-  ],
-  con: [
-    { q: "Urgencias: P(Ped)=0,58, P(Neu)=0,42.\nP(H|Ped)=0,18, P(H|Neu)=0,63.\n\n¿P(Hospitalización)?",
-      alts: ["0,405", "0,369", "0,81", "0,246"], ok: 1,
-      pauta: "Probabilidad total: P(H) = 0,58·0,18 + 0,42·0,63 = 0,1044 + 0,2646 = 0,369." },
-    { q: "Con P(H)=0,369.\n\n¿P(Pediatría | NO hospitalizado)?",
-      alts: ["0,58", "0,4756", "0,7537", "0,82"], ok: 2,
-      pauta: "Bayes: P(Ped|H̄) = P(Ped)·P(H̄|Ped)/P(H̄) = (0,58·0,82)/0,631 ≈ 0,7537. Nota: P(H̄|Ped)=1−0,18=0,82 y P(H̄)=1−0,369=0,631." },
-    { q: "Test diabetes (conjuntas):\nP(+ ∩ D)=0,16, P(D)=0,20.\n\n¿Sensibilidad P(+|D)?",
-      alts: ["0,16", "0,64", "0,80", "0,20"], ok: 2,
-      pauta: "P(+|D) = P(+∩D)/P(D) = 0,16/0,20 = 0,80. La condicional divide la conjunta por la probabilidad del suceso condicionante." },
-    { q: "P(− ∩ NoD)=0,71, P(−)=0,75.\n\n¿Valor predictivo negativo P(NoD|−)?",
-      alts: ["0,71", "0,8875", "0,9467", "0,75"], ok: 2,
-      pauta: "VPN = P(NoD|−) = 0,71/0,75 ≈ 0,9467 (94,67%). Cuidado con el denominador: es el total del test negativo, no el total de sanos." },
-    { q: "P(D)=0,029; L3 aporta 0,2·0,05=0,010.\n\n¿P(L3 | falla)?",
-      alts: ["0,05", "0,20", "0,3448", "0,50"], ok: 2,
-      pauta: "Bayes: P(L3|D) = 0,010/0,029 ≈ 0,3448. Aunque L3 tiene la mayor tasa de fallas (5%), aporta pocas dosis, por eso no domina." }
-  ],
-  nor: [
-    { q: "X ~ N(45, 8).\n\n¿P(X < 50)?",
-      alts: ["0,7340", "0,625", "0,2660", "0,8944"], ok: 0,
-      pauta: "Z = (50−45)/8 = 0,625 → P = Φ(0,625) ≈ 0,7340. Primero estandariza, luego busca en la tabla. 0,625 es el valor z, no la probabilidad." },
-    { q: "X ~ N(45, 8).\n\n¿P(40 < X < 55)?",
-      alts: ["0,8944", "0,6284", "0,2660", "0,7340"], ok: 1,
-      pauta: "z₁=(40−45)/8=−0,625, z₂=(55−45)/8=1,25. P = Φ(1,25)−Φ(−0,625) = 0,8944−0,2660 ≈ 0,6284." },
-    { q: "Presión ~ N(128, 10).\n\n¿P(X > 148)?",
-      alts: ["0,9772", "0,4772", "0,0228", "0,0456"], ok: 2,
-      pauta: "Z = (148−128)/10 = 2. P(X>148) = 1−Φ(2) = 1−0,9772 = 0,0228. Para 'mayor que' usa el complemento." },
-    { q: "Colesterol ~ N(190, 20).\n\n¿Percentil 90? (z₀,₉₀≈1,28)",
-      alts: ["215,6 mg/dL", "190 mg/dL", "210 mg/dL", "164,4 mg/dL"], ok: 0,
-      pauta: "Transformación inversa: x = μ + z·σ = 190 + 1,28·20 = 215,6. El 10% con valores más altos supera 215,6 mg/dL." }
-  ],
-  tes: [
-    { q: "Se sospecha que la espera es\nMAYOR a 30 min declarados.\n\n¿Hipótesis correctas?",
-      alts: ["H₀:μ=30 vs H₁:μ≠30", "H₀:μ=30 vs H₁:μ>30", "H₀:μ>30 vs H₁:μ=30", "H₀:μ≤30 vs H₁:μ<30"], ok: 1,
-      pauta: "La sospecha ('mayor que') va en H₁: test unilateral derecho. H₀ siempre lleva la igualdad de referencia (μ=30)." },
-    { q: "n=64, x̄=33,2, s=8,1, μ₀=30.\n\n¿Estadístico Z?",
-      alts: ["Z ≈ 1,58", "Z ≈ 0,40", "Z ≈ 3,16", "Z ≈ 25,3"], ok: 2,
-      pauta: "SE = 8,1/√64 = 1,0125. Z = (33,2−30)/1,0125 ≈ 3,16. Como 3,16 > 1,645, se rechaza H₀: la espera supera los 30 min." },
-    { q: "Envases: H₀:μ=500 vs H₁:μ≠500.\nZ calc = −3,0 y α=0,05.\n\n¿Decisión?",
-      alts: ["No rechazar H₀", "Rechazar H₀", "Aceptar H₁ sin test", "Aumentar α"], ok: 1,
-      pauta: "Test bilateral: críticos ±1,96. |−3,0| > 1,96 (p≈0,0027 < 0,05) → se rechaza H₀: el contenido difiere de 500 ml." },
-    { q: "Campaña: H₀:p=0,60 vs H₁:p>0,60.\nn=200, 132 éxitos.\n\n¿Z y conclusión (α=0,05)?",
-      alts: ["Z≈1,73: rechaza H₀", "Z≈1,73: no rechaza", "Z≈0,06: no rechaza", "Z≈6,0: rechaza H₀"], ok: 0,
-      pauta: "p̂=0,66. SE₀=√(0,6·0,4/200)≈0,0346. Z=(0,66−0,60)/0,0346≈1,73 > 1,645 → se rechaza H₀: la campaña fue exitosa. OJO: el SE usa p₀=0,6." }
-  ]
+/* ---------------- pixel cat (IC scholar with glasses) ---------------- */
+const CP = {
+  '.': null, 'K':'#0a1226','B':'#3b8bff','b':'#2f6fe0','W':'#ffffff','w':'#dbe9ff',
+  'E':'#0a1226','G':'#cfe8ff','P':'#ff9ecb','Y':'#ffd75e','A':'#12203c','R':'#e8342a'
 };
+const CAT = [
+"...KK..........KK...",
+"..KBBK........KBBK..",
+".KBPPBK......KBPPBK.",
+".KBPPBBKKKKKKBBPPBK.",
+".KBBBBBBBBBBBBBBBBK.",
+"KBBBBBBBBBBBBBBBBBBK",
+"KBAAAAABBBBAAAAAABK",
+"KBAEGAABbBBAAEGAABK",
+"KBAAAABWWWWBAAAAABK",
+"KBbBBBWWPPWWBBBBbBK",
+".KBBBBBWWWWBBBBBBK.",
+".KBBYYYYYRYYYYYBBK.",
+".KBBBBBBBBBBBBBBBBK.",
+".KBbBBBBBBBBBBBBbBK.",
+"..KBBKKBBBBBBKKBBK..",
+"...KK..KKKKKK..KK..."
+];
+function drawCat(el, cell) {
+  el.innerHTML = '';
+  el.style.gridTemplateColumns = `repeat(20, ${cell}px)`;
+  el.style.gridAutoRows = `${cell}px`;
+  CAT.forEach(row => { for (const ch of row) {
+    const d = document.createElement('div');
+    d.style.width = cell+'px'; d.style.height = cell+'px';
+    if (CP[ch]) d.style.background = CP[ch];
+    el.appendChild(d);
+  }});
+}
+drawCat(document.getElementById('catGrid'), 7);
 
-/* ============ RENDER HELPERS ============ */
-function renderSprite(container, sprite, blink) {
-  container.innerHTML = '';
-  sprite.rows.forEach((row, ri) => {
-    for (const ch of row) {
-      const d = document.createElement('div');
-      let c = sprite.P[ch];
-      if (blink && (ch === 'E' || ch === 'G')) c = sprite.P['B'];
-      if (c) d.style.background = c;
-      container.appendChild(d);
-    }
-  });
+/* ---------------- KaTeX helper ---------------- */
+function renderMath(el) {
+  if (window.renderMathInElement) {
+    renderMathInElement(el, {
+      delimiters: [
+        {left:'$', right:'$', display:false},
+        {left:'\\(', right:'\\)', display:false}
+      ],
+      throwOnError: false
+    });
+  }
 }
 
-/* ============ MENU ============ */
-const menuGrid = document.getElementById('menuGrid');
-TOPICS.forEach((t, i) => {
-  const card = document.createElement('button');
-  card.className = 'topic-card';
-  card.innerHTML = '<span class="mini-cat"></span><div class="t-name">' + t.cat + '</div><div class="t-count">' + t.name + ' · ' + QUESTIONS[t.id].length + ' preguntas</div>';
-  const mini = card.querySelector('.mini-cat');
-  mini.style.gridTemplateColumns = 'repeat(20, 4px)';
-  renderSprite(mini, t.sprite, false);
-  card.addEventListener('click', () => startTopic(i));
-  menuGrid.appendChild(card);
-});
-
-/* ============ QUIZ STATE ============ */
-const menuScreen = document.getElementById('menuScreen');
-const quizScreen = document.getElementById('quizScreen');
+/* ---------------- game ---------------- */
+const introScreen = document.getElementById('introScreen');
+const quizScreen  = document.getElementById('quizScreen');
 const finalScreen = document.getElementById('finalScreen');
-const catGrid = document.getElementById('catGrid');
-const catBox = document.getElementById('catBox');
-const qText = document.getElementById('qText');
 const altsEl = document.getElementById('alts');
-const pautaEl = document.getElementById('pauta');
+const pauta  = document.getElementById('pauta');
 const nextBtn = document.getElementById('nextBtn');
-const scoreLabel = document.getElementById('scoreLabel');
+const catBox = document.getElementById('introCatBox');
 
-let topic = null, qIdx = 0, score = 0, answered = false, blinkTimer = null;
+const N_QUIZ = 5;
+let round = [], idx = 0, score = 0, answered = false, order = [];
 
-function startTopic(i) {
-  topic = TOPICS[i];
-  qIdx = 0; score = 0;
-  document.getElementById('topicLabel').textContent = topic.name.toUpperCase();
-  document.getElementById('catName').textContent = topic.cat;
-  menuScreen.classList.add('hidden');
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+function pickRound() {
+  const pool = shuffle([...Array(IC_QUESTIONS.length).keys()]);
+  return pool.slice(0, N_QUIZ).map(i => IC_QUESTIONS[i]);
+}
+
+function start() {
+  round = pickRound(); idx = 0; score = 0;
+  introScreen.classList.add('hidden');
   finalScreen.classList.add('hidden');
   quizScreen.classList.remove('hidden');
-  renderSprite(catGrid, topic.sprite, false);
-  clearInterval(blinkTimer);
-  blinkTimer = setInterval(() => {
-    renderSprite(catGrid, topic.sprite, true);
-    setTimeout(() => renderSprite(catGrid, topic.sprite, false), 150);
-  }, 3800);
-  showIntroThenQuestion();
-}
-
-function showIntroThenQuestion() {
-  typeText(topic.msg + '\n\n¡vamos con la pregunta 1!', () => setTimeout(showQuestion, 600));
-}
-
-function typeText(msg, done) {
-  catBox.classList.add('talking');
-  qText.textContent = '';
-  let i = 0;
-  const t = setInterval(() => {
-    qText.textContent += msg[i++];
-    if (i >= msg.length) { clearInterval(t); catBox.classList.remove('talking'); if (done) done(); }
-  }, 22);
+  showQuestion();
 }
 
 function showQuestion() {
-  const Q = QUESTIONS[topic.id][qIdx];
+  const q = round[idx];
   answered = false;
-  pautaEl.style.display = 'none';
-  pautaEl.className = 'pauta';
+  pauta.style.display = 'none';
+  pauta.className = 'pauta';
   nextBtn.classList.add('hidden');
-  document.getElementById('qNum').textContent = 'PREGUNTA ' + (qIdx + 1) + '/' + QUESTIONS[topic.id].length;
-  scoreLabel.textContent = score + ' ✓';
-  qText.textContent = Q.q;
+  document.getElementById('qCounter').textContent = `Pregunta ${idx+1} de ${N_QUIZ}`;
+  document.getElementById('scoreLabel').textContent = `${score} correctas`;
+  document.getElementById('pbarFill').style.width = `${(idx)/N_QUIZ*100}%`;
+  document.getElementById('qType').textContent = q.tipo;
+  document.getElementById('qCtx').textContent = q.ctx;
+  document.getElementById('qEnun').textContent = q.enun;
+  document.getElementById('qAsk').textContent = q.ask;
+
+  // shuffle alternatives, track correct
+  order = shuffle([0,1,2,3]);
+  const letters = ['A','B','C','D'];
   altsEl.innerHTML = '';
-  const letters = ['A', 'B', 'C', 'D'];
-  Q.alts.forEach((a, i) => {
+  order.forEach((origIdx, pos) => {
     const b = document.createElement('button');
     b.className = 'alt-btn';
-    b.innerHTML = '<span class="key">' + letters[i] + ')</span><span>' + a + '</span>';
-    b.addEventListener('click', () => answer(i));
+    b.dataset.orig = origIdx;
+    b.innerHTML = `<span class="key">${letters[pos]}</span><span class="alt-tex">${q.alts[origIdx]}</span>`;
+    b.addEventListener('click', () => answer(pos));
     altsEl.appendChild(b);
   });
+  renderMath(altsEl);
 }
 
-function answer(i) {
+function answer(pos) {
   if (answered) return;
   answered = true;
-  const Q = QUESTIONS[topic.id][qIdx];
-  const btns = altsEl.querySelectorAll('.alt-btn');
+  const q = round[idx];
+  const btns = [...altsEl.querySelectorAll('.alt-btn')];
   btns.forEach(b => b.disabled = true);
-  btns[Q.ok].classList.add('correct');
-  const good = i === Q.ok;
-  if (good) { score++; scoreLabel.textContent = score + ' ✓'; }
-  else btns[i].classList.add('wrong');
-  pautaEl.innerHTML = '<div class="p-title">' + (good ? '✓ ¡CORRECTO, MIAU!' : '✗ INCORRECTO... LA PAUTA:') + '</div>' + Q.pauta;
-  pautaEl.classList.add(good ? 'good' : 'bad');
-  pautaEl.style.display = 'block';
+  const chosenOrig = parseInt(btns[pos].dataset.orig, 10);
+  const correctPos = order.indexOf(q.correct);
+  btns[correctPos].classList.add('correct');
+  const good = chosenOrig === q.correct;
+  if (good) { score++; document.getElementById('scoreLabel').textContent = `${score} correctas`; }
+  else btns[pos].classList.add('wrong');
+
+  // build pauta
+  pauta.classList.add(good ? 'good' : 'bad');
+  document.getElementById('pFlag').textContent = good ? '✓ ¡Correcto, miau!' : '✗ Incorrecto — revisa la pauta:';
+  document.getElementById('pHead').innerHTML = `$${q.pautaHead}$`;
+  const steps = document.getElementById('pSteps');
+  steps.innerHTML = '';
+  q.pautaSteps.forEach(s => {
+    const d = document.createElement('div');
+    d.className = 'p-step';
+    d.innerHTML = `\\(${s}\\)`;
+    steps.appendChild(d);
+  });
+  document.getElementById('pConc').innerHTML = q.conc;
+  renderMath(pauta);
+  pauta.style.display = 'block';
   nextBtn.classList.remove('hidden');
-  nextBtn.textContent = (qIdx + 1 < QUESTIONS[topic.id].length) ? 'SIGUIENTE ►' : 'VER RESULTADO ★';
+  nextBtn.textContent = (idx+1 < N_QUIZ) ? 'Siguiente ▶' : 'Ver resultado ★';
+  document.getElementById('pbarFill').style.width = `${(idx+1)/N_QUIZ*100}%`;
   nextBtn.focus();
 }
 
 function next() {
-  qIdx++;
-  if (qIdx < QUESTIONS[topic.id].length) showQuestion();
+  idx++;
+  if (idx < N_QUIZ) showQuestion();
   else showFinal();
 }
 
 function showFinal() {
   quizScreen.classList.add('hidden');
   finalScreen.classList.remove('hidden');
-  const total = QUESTIONS[topic.id].length;
-  renderSprite(document.getElementById('finalCatGrid'), topic.sprite, false);
-  document.getElementById('finalScore').textContent = score + ' / ' + total;
-  const pct = score / total;
-  let msg;
-  if (pct === 1) msg = '¡PURRFECTO! ' + topic.cat + ' está orgulloso de ti. Dominas ' + topic.name + '. ᕕ(=^･ω･^=)ᕗ';
-  else if (pct >= 0.7) msg = '¡Muy bien, miau! Repasa la pauta de las que fallaste y quedas listo para la prueba.';
-  else if (pct >= 0.4) msg = 'Vas a mitad de camino, miau. Revisa la guía de ' + topic.name + ' en la sección Material y vuelve a intentarlo.';
-  else msg = 'Miau... este tema necesita más práctica. Descarga la guía en el sitio, estudia la pauta y vuelve: ' + topic.cat + ' te espera. (=^-ω-^=)';
-  document.getElementById('finalMsg').textContent = msg;
+  drawCat(document.getElementById('finalCatGrid'), 6);
+  document.getElementById('finalScore').textContent = `${score}/${N_QUIZ}`;
+  document.getElementById('ring').style.setProperty('--deg', `${score/N_QUIZ*360}deg`);
+  const pct = score / N_QUIZ;
+  let t, m;
+  if (pct === 1) { t = '¡Purrfecto! ✦'; m = 'Dominas los intervalos de confianza: identificas z vs t, calculas el margen de error y armas el intervalo sin errores. ᕕ(=^･ω･^=)ᕗ'; }
+  else if (pct >= 0.6) { t = '¡Muy bien, miau!'; m = 'Buen manejo. Repasa la pauta de las que fallaste — ojo con el valor crítico (z o t) y con dividir por √n.'; }
+  else if (pct >= 0.4) { t = 'Vas por buen camino'; m = 'A mitad de camino, miau. Descarga la Guía 5 — Intervalos de Confianza en la sección Material del sitio y vuelve a intentarlo.'; }
+  else { t = 'A practicar, michi'; m = 'Este tema necesita más repaso. Estudia la Guía 5 — Intervalos de Confianza en el sitio, revisa cada pauta y vuelve: yo te espero. (=^-ω-^=)'; }
+  document.getElementById('finalTitle').textContent = t;
+  document.getElementById('finalMsg').textContent = m;
 }
 
-nextBtn.addEventListener('click', next);
-document.getElementById('menuBtn').addEventListener('click', backToMenu);
-document.getElementById('finalMenuBtn').addEventListener('click', backToMenu);
-document.getElementById('retryBtn').addEventListener('click', () => startTopic(TOPICS.indexOf(topic)));
-
-function backToMenu() {
-  clearInterval(blinkTimer);
+document.getElementById('startBtn').addEventListener('click', start);
+document.getElementById('retryBtn').addEventListener('click', start);
+document.getElementById('nextBtn').addEventListener('click', next);
+document.getElementById('quitBtn').addEventListener('click', backHome);
+document.getElementById('homeBtn').addEventListener('click', backHome);
+function backHome() {
   quizScreen.classList.add('hidden');
   finalScreen.classList.add('hidden');
-  menuScreen.classList.remove('hidden');
+  introScreen.classList.remove('hidden');
 }
 
-/* keyboard: A-D answer, Enter next */
+/* keyboard */
 document.addEventListener('keydown', e => {
-  if (quizScreen.classList.contains('hidden')) return;
-  const k = e.key.toLowerCase();
-  const idx = ['a', 'b', 'c', 'd'].indexOf(k);
-  const num = ['1', '2', '3', '4'].indexOf(e.key);
-  if (!answered && (idx >= 0 || num >= 0)) {
-    const btns = altsEl.querySelectorAll('.alt-btn');
-    const i = idx >= 0 ? idx : num;
-    if (btns[i]) answer(i);
-  } else if (answered && e.key === 'Enter') {
-    next();
+  if (!quizScreen.classList.contains('hidden')) {
+    const i = ['a','b','c','d'].indexOf(e.key.toLowerCase());
+    const n = ['1','2','3','4'].indexOf(e.key);
+    if (!answered && (i>=0 || n>=0)) answer(i>=0 ? i : n);
+    else if (answered && e.key === 'Enter') next();
+  } else if (!introScreen.classList.contains('hidden') && e.key === 'Enter') {
+    start();
   }
+});
+
+/* cat talk animation on load */
+window.addEventListener('load', () => {
+  catBox.classList.add('talking');
+  setTimeout(() => catBox.classList.remove('talking'), 1600);
 });
 </script>
 </body>
