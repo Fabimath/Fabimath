@@ -1,0 +1,126 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage[top=0.8cm, bottom=0.6cm, left=1.2cm, right=1.2cm, includeheadfoot]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\tcbuselibrary{skins,breakable}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{0.9}
+
+\definecolor{applelightgray}{RGB}{180,180,180}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{\sffamily Ejercicios de Pr\'actica \textendash\ Probabilidad y Estad\'istica}}
+\fancyhead[R]{\small\sffamily Gu\'ia 4 \textendash\ Distribuci\'on Normal}
+\fancyfoot[C]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\textcolor{applelightgray}{\rule{\textwidth}{0.4pt}}}
+
+\newcommand{\seccion}[1]{%
+  \vspace{2pt}%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0pt,
+    leftrule=2pt,left=6pt,right=6pt,top=1pt,bottom=1pt]
+    {\normalsize\bfseries\sffamily #1}
+  \end{tcolorbox}%
+  \vspace{1pt}%
+}
+
+\newcommand{\reglacaja}[1]{%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0.5pt,
+    left=6pt,right=6pt,top=2pt,bottom=2pt,breakable]
+  \small\sffamily #1
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\fontsize{15}{17}\selectfont\bfseries\sffamily Gu\'ia 4 \textendash\ Distribuci\'on Normal\par}
+  \vspace{0.05cm}
+  {\small\sffamily Estandarizaci\'on \textperiodcentered\ C\'alculo de Probabilidades \textperiodcentered\ Percentiles\par}
+  {\rule{3cm}{0.6pt}}
+\end{center}
+
+\vspace{0.15cm}
+
+%% ===== PROBLEMA 1 =====
+\seccion{Problema 1 \textendash\ Tiempo de Espera en Urgencias}
+
+\noindent\sffamily\small El tiempo de espera de los pacientes en una unidad de urgencias sigue una distribuci\'on normal con media de $45$ minutos y desviaci\'on est\'andar de $8$ minutos. Utilizando la distribuci\'on normal est\'andar, calcule:
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item La probabilidad de que un paciente espere menos de $50$ minutos.
+  \item La probabilidad de que un paciente espere entre $40$ y $55$ minutos.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} Si $X\sim N(\mu,\sigma)$, entonces $Z=\dfrac{X-\mu}{\sigma}\sim N(0,1)$ y las probabilidades se obtienen de la tabla normal est\'andar: $P(X<x)=\Phi\!\left(\frac{x-\mu}{\sigma}\right)$.%
+}
+
+%% ===== PROBLEMA 2 =====
+\seccion{Problema 2 \textendash\ Presi\'on Arterial Sist\'olica}
+
+\noindent\sffamily\small La presi\'on arterial sist\'olica de los pacientes adultos de un consultorio se distribuye normal con media $128$ mmHg y desviaci\'on est\'andar $10$ mmHg.
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Calcule la probabilidad de que un paciente tenga una presi\'on inferior a $118$ mmHg.
+  \item Calcule la probabilidad de que un paciente supere los $148$ mmHg.
+  \item Calcule la probabilidad de que la presi\'on est\'e entre $118$ y $143$ mmHg.
+\end{enumerate}
+
+%% ===== PROBLEMA 3 =====
+\seccion{Problema 3 \textendash\ Colesterol Total y Percentiles}
+
+\noindent\sffamily\small El nivel de colesterol total de una poblaci\'on de pacientes se distribuye normal con media $190$ mg/dL y desviaci\'on est\'andar $20$ mg/dL.
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Calcule la probabilidad de que un paciente supere los $215$ mg/dL.
+  \item Calcule la probabilidad de que el nivel est\'e entre $170$ y $210$ mg/dL.
+  \item Determine el nivel de colesterol que separa al $10\%$ de pacientes con valores m\'as altos (percentil 90).
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} Para percentiles se usa la transformaci\'on inversa: $x = \mu + z_k\,\sigma$, donde $z_k$ es el valor de la tabla que acumula la probabilidad deseada (por ejemplo $z_{0{,}90}\approx1{,}28$).%
+}
+
+\newpage
+
+%% ================= RESPUESTAS =================
+\seccion{Respuestas}
+
+\small\sffamily
+\textbf{Problema 1.}
+\textbf{a)} $Z=\frac{50-45}{8}=0{,}625$; $P(X<50)=\Phi(0{,}625)\approx\mathbf{0{,}7340}$.
+\textbf{b)} $Z_1=\frac{40-45}{8}=-0{,}625$; $Z_2=\frac{55-45}{8}=1{,}25$; $P(40<X<55)=\Phi(1{,}25)-\Phi(-0{,}625)=0{,}8944-0{,}2660\approx\mathbf{0{,}6284}$.
+
+\medskip
+\textbf{Problema 2.}
+\textbf{a)} $Z=\frac{118-128}{10}=-1$; $P(X<118)=\Phi(-1)\approx\mathbf{0{,}1587}$.
+\textbf{b)} $Z=\frac{148-128}{10}=2$; $P(X>148)=1-\Phi(2)=1-0{,}9772=\mathbf{0{,}0228}$.
+\textbf{c)} $Z_1=-1$; $Z_2=\frac{143-128}{10}=1{,}5$; $P=\Phi(1{,}5)-\Phi(-1)=0{,}9332-0{,}1587=\mathbf{0{,}7745}$.
+
+\medskip
+\textbf{Problema 3.}
+\textbf{a)} $Z=\frac{215-190}{20}=1{,}25$; $P(X>215)=1-0{,}8944=\mathbf{0{,}1056}$.
+\textbf{b)} $Z_1=\frac{170-190}{20}=-1$; $Z_2=\frac{210-190}{20}=1$; $P=\Phi(1)-\Phi(-1)=0{,}8413-0{,}1587=\mathbf{0{,}6826}$.
+\textbf{c)} $P_{90}=190+1{,}28\cdot20\approx\mathbf{215{,}6}$ mg/dL: el $10\%$ con valores m\'as altos supera los $215{,}6$ mg/dL.
+
+\medskip
+\textit{Nota: peque\~nas diferencias en el \'ultimo decimal son aceptables seg\'un la tabla $Z$ utilizada.}
+
+\end{document}

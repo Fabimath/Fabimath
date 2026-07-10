@@ -1,0 +1,214 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage[top=0.8cm, bottom=0.6cm, left=1.2cm, right=1.2cm, includeheadfoot]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\tcbuselibrary{skins,breakable}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{0.9}
+
+\definecolor{applelightgray}{RGB}{180,180,180}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{\sffamily Ejercicios de Pr\'actica \textendash\ Probabilidad y Estad\'istica}}
+\fancyhead[R]{\small\sffamily Gu\'ia 2 \textendash\ Estad\'istica Bivariada y Regresi\'on}
+\fancyfoot[C]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\textcolor{applelightgray}{\rule{\textwidth}{0.4pt}}}
+
+\newcommand{\seccion}[1]{%
+  \vspace{2pt}%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0pt,
+    leftrule=2pt,left=6pt,right=6pt,top=1pt,bottom=1pt]
+    {\normalsize\bfseries\sffamily #1}
+  \end{tcolorbox}%
+  \vspace{1pt}%
+}
+
+\newcommand{\reglacaja}[1]{%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0.5pt,
+    left=6pt,right=6pt,top=2pt,bottom=2pt,breakable]
+  \small\sffamily #1
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\fontsize{15}{17}\selectfont\bfseries\sffamily Gu\'ia 2 \textendash\ Estad\'istica Bivariada y Regresi\'on\par}
+  \vspace{0.05cm}
+  {\small\sffamily Correlaci\'on \textperiodcentered\ Recta de Regresi\'on \textperiodcentered\ $R^2$ \textperiodcentered\ Modelo Exponencial \textperiodcentered\ Salidas de \textsf{R}\par}
+  {\rule{3cm}{0.6pt}}
+\end{center}
+
+\vspace{0.15cm}
+
+%% ===== PROBLEMA 1 =====
+\seccion{Problema 1 \textendash\ Correlaci\'on y Predicci\'on}
+
+\noindent\sffamily\small En un programa de intervenci\'on nutricional se estudi\'o la relaci\'on entre el \textbf{n\'umero de meses de seguimiento} (variable independiente) y el \textbf{porcentaje de reducci\'on del colesterol LDL} (variable dependiente):
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Meses ($x$)} & 1 & 3 & 5 & 7 & 9 & 11 \\
+\hline
+\textbf{Reducci\'on LDL \% ($y$)} & 5 & 12 & 18 & 26 & 33 & 40 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item ?`Existe evidencia de asociaci\'on lineal entre ambas variables? Justifique utilizando un estad\'istico adecuado.
+  \item Determine la recta de regresi\'on ajustada.
+  \item Si un paciente completara \textbf{13 meses} de seguimiento, ?`cu\'al ser\'ia una estimaci\'on de su porcentaje de reducci\'on del colesterol?
+\end{enumerate}
+
+%% ===== PROBLEMA 2 =====
+\seccion{Problema 2 \textendash\ Regresi\'on a partir de Resumen Descriptivo}
+
+\noindent\sffamily\small Para estudiar la relaci\'on entre los a\~nos de experiencia ($X$) y el sueldo mensual en cientos de miles de pesos ($Y$) se dispone del siguiente resumen de una muestra de $n=12$ trabajadores:
+\[
+\bar{x}=8,\qquad \bar{y}=15,\qquad s_x^{2}=4,\qquad s_y^{2}=10,\qquad \mathrm{Cov}(X,Y)=6.
+\]
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Calcule el coeficiente de correlaci\'on $r$ e interpr\'etelo.
+  \item Determine la recta de regresi\'on $\hat{y}=\hat{\beta}_0+\hat{\beta}_1 x$.
+  \item Calcule el coeficiente de determinaci\'on $R^2$ e interpr\'etelo.
+  \item Prediga el sueldo de un trabajador con 10 a\~nos de experiencia.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} $r=\dfrac{\mathrm{Cov}(X,Y)}{s_x\,s_y}$;\quad
+$\hat{\beta}_1=\dfrac{\mathrm{Cov}(X,Y)}{s_x^{2}}$;\quad
+$\hat{\beta}_0=\bar{y}-\hat{\beta}_1\bar{x}$;\quad
+$R^2=r^2$ en regresi\'on lineal simple.%
+}
+
+%% ===== PROBLEMA 3 =====
+\seccion{Problema 3 \textendash\ Lectura de Salida en \textsf{R} (Modelo No Significativo)}
+
+\noindent\sffamily\small Se ajust\'o en \textsf{R} un modelo lineal para explicar el nivel de colesterol (mg/dL) en funci\'on del n\'umero de hijos, con $n=15$ personas. La salida entrega:
+\[
+\widehat{\text{colesterol}} = 195{,}60 + 1{,}80\cdot\text{hijos},\qquad
+R^{2}=0{,}0103,\qquad F=0{,}135 \ (p\text{-value}=0{,}719).
+\]
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Escriba la ecuaci\'on del modelo ajustado e interprete sus coeficientes.
+  \item Interprete el valor de $R^{2}$. ?`Es un buen ajuste?
+  \item Realice el test $F$ de significancia global del modelo con $\alpha=0{,}05$ (hip\'otesis, decisi\'on y conclusi\'on en contexto).
+\end{enumerate}
+
+%% ===== PROBLEMA 4 =====
+\seccion{Problema 4 \textendash\ Modelo Exponencial}
+
+\noindent\sffamily\small Se midi\'o el crecimiento de un cultivo de bacterias (millones de c\'elulas, $Y$) a lo largo del tiempo (horas, $X$):
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$x_i$ & 0 & 1 & 2 & 3 & 4 \\
+\hline
+$y_i$ & 2 & 3 & 5 & 9 & 15 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+Se propone el modelo exponencial $y=\alpha\,e^{\beta x}$.
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Estime $\alpha$ y $\beta$ linealizando el modelo con $z=\ln y$.
+  \item Prediga la cantidad de c\'elulas a las 5 horas.
+  \item ?`El modelo es creciente o decreciente? Justifique con el signo de $\hat{\beta}$.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} Si $y=\alpha e^{\beta x}$, entonces $\ln y = \ln\alpha + \beta x$: una recta en $(x,\ln y)$. Estime la pendiente y el intercepto sobre los datos transformados y luego destransforme: $\hat{\alpha}=e^{\widehat{\ln\alpha}}$.%
+}
+
+%% ===== PROBLEMA 5 =====
+\seccion{Problema 5 \textendash\ Comparaci\'on de Modelos en \textsf{R}}
+
+\noindent\sffamily\small Para modelar las ventas mensuales (miles de unidades, $Y$) en funci\'on del tiempo (meses, $X$), con $n=20$, se ajustaron dos modelos:
+
+\vspace{2pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|l|l|c|l|}
+\hline
+\textbf{Modelo} & \textbf{Ecuaci\'on ajustada} & $R^2$ & $p$-value de $\hat{\beta}_1$ \\
+\hline
+A (exponencial) & $\widehat{\ln Y}=1{,}6094+0{,}2231\,X$ & 0{,}9774 & $<2\times10^{-16}$ \\
+\hline
+B (lineal) & $\hat{Y}=-10{,}50+2{,}85\,X$ & 0{,}4720 & $8{,}1\times10^{-4}$ \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{2pt}
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item ?`Es $\hat{\beta}_1$ significativa en cada modelo? ($\alpha=0{,}05$).
+  \item Prediga las ventas para $X=10$ con cada modelo.
+  \item ?`Cu\'al modelo es preferible? Justifique con $R^2$.
+\end{enumerate}
+
+\newpage
+
+%% ================= RESPUESTAS =================
+\seccion{Respuestas}
+
+\small\sffamily
+\textbf{Problema 1.}
+\textbf{a)} $r\approx0{,}9995$, muy cercano a $+1$: asociaci\'on lineal positiva muy fuerte.
+\textbf{b)} $\hat{\beta}_1=\frac{246}{70}\approx3{,}514$; $\hat{\beta}_0=22{,}333-3{,}514\cdot6\approx1{,}25$; $\hat{y}=1{,}25+3{,}51x$.
+\textbf{c)} $\hat{y}(13)\approx1{,}25+3{,}51\cdot13\approx46{,}9\%$ de reducci\'on.
+
+\medskip
+\textbf{Problema 2.}
+\textbf{a)} $s_x=2$, $s_y\approx3{,}1623$; $r=\frac{6}{2\cdot3{,}1623}\approx0{,}9487$: asociaci\'on lineal positiva muy fuerte (a mayor experiencia, mayor sueldo).
+\textbf{b)} $\hat{\beta}_1=\frac{6}{4}=1{,}5$; $\hat{\beta}_0=15-1{,}5\cdot8=3$; $\hat{y}=3+1{,}5x$.
+\textbf{c)} $R^2=r^2\approx0{,}90$: el $90\%$ de la variabilidad del sueldo es explicada por los a\~nos de experiencia.
+\textbf{d)} $\hat{y}(10)=3+15=18$ cientos de miles $=\$1.800.000$.
+
+\medskip
+\textbf{Problema 3.}
+\textbf{a)} $\widehat{\text{col}}=195{,}60+1{,}80\cdot\text{hijos}$: por cada hijo adicional el colesterol estimado aumenta $1{,}80$ mg/dL; con 0 hijos se estima $195{,}60$ mg/dL.
+\textbf{b)} $R^2=0{,}0103$: el modelo explica solo el $1{,}03\%$ de la variabilidad; ajuste muy malo.
+\textbf{c)} $H_0:\beta_1=0$ vs $H_1:\beta_1\neq0$; $p=0{,}719>0{,}05$: no se rechaza $H_0$. El n\'umero de hijos no es un predictor significativo del colesterol.
+
+\medskip
+\textbf{Problema 4.}
+\textbf{a)} $z_i=\ln y_i$: $0{,}6931$, $1{,}0986$, $1{,}6094$, $2{,}1972$, $2{,}7081$. $\hat{\beta}\approx0{,}5128$; $\widehat{\ln\alpha}\approx0{,}6357$; $\hat{\alpha}\approx1{,}89$. Modelo: $\hat{y}=1{,}89\,e^{0{,}51x}$.
+\textbf{b)} $\hat{y}(5)=1{,}89\,e^{2{,}564}\approx24{,}5$ millones de c\'elulas.
+\textbf{c)} Creciente: $\hat{\beta}\approx0{,}51>0$ (crece $\approx67\%$ por hora).
+
+\medskip
+\textbf{Problema 5.}
+\textbf{a)} En ambos $p<0{,}05$: se rechaza $H_0:\beta_1=0$; $X$ es significativa en A y B.
+\textbf{b)} Modelo A: $\widehat{\ln Y}(10)=3{,}8404\Rightarrow\hat{Y}_A=e^{3{,}8404}\approx46{,}5$ miles. Modelo B: $\hat{Y}_B=-10{,}50+28{,}50=18{,}0$ miles.
+\textbf{c)} Preferible el Modelo A: $R^2_A=0{,}9774$ vs $R^2_B=0{,}4720$; la relaci\'on subyacente es de naturaleza exponencial.
+
+\end{document}

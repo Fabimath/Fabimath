@@ -1,0 +1,270 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage[top=0.8cm, bottom=0.6cm, left=1.2cm, right=1.2cm, includeheadfoot]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\tcbuselibrary{skins,breakable}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{0.9}
+
+\definecolor{applelightgray}{RGB}{180,180,180}
+\definecolor{fabiblue}{RGB}{21,80,224}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{\sffamily Ejercicios de Pr\'actica \textendash\ Probabilidad y Estad\'istica}}
+\fancyhead[R]{\small\sffamily Gu\'ia 1 \textendash\ Estad\'istica Descriptiva Univariada}
+\fancyfoot[C]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\textcolor{applelightgray}{\rule{\textwidth}{0.4pt}}}
+
+\newcommand{\seccion}[1]{%
+  \vspace{2pt}%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0pt,
+    leftrule=2pt,left=6pt,right=6pt,top=1pt,bottom=1pt]
+    {\normalsize\bfseries\sffamily #1}
+  \end{tcolorbox}%
+  \vspace{1pt}%
+}
+
+\newcommand{\reglacaja}[1]{%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0.5pt,
+    left=6pt,right=6pt,top=2pt,bottom=2pt,breakable]
+  \small\sffamily #1
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\fontsize{15}{17}\selectfont\bfseries\sffamily Gu\'ia 1 \textendash\ Estad\'istica Descriptiva Univariada\par}
+  \vspace{0.05cm}
+  {\small\sffamily Tablas de Frecuencia \textperiodcentered\ Medidas de Tendencia Central y Dispersi\'on \textperiodcentered\ Percentiles \textperiodcentered\ Gr\'aficos\par}
+  {\rule{3cm}{0.6pt}}
+\end{center}
+
+\vspace{0.15cm}
+
+%% ===== PROBLEMA 1 =====
+\seccion{Problema 1 \textendash\ Tabla de Frecuencias}
+
+\noindent\sffamily\small En un programa de promoci\'on de h\'abitos saludables, se registr\'o el n\'umero de porciones de frutas y verduras que consumieron diariamente los participantes durante una semana. Los datos se resumen en la siguiente tabla:
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Porciones diarias} & \textbf{Frecuencia absoluta} \\
+\hline
+3  & 5  \\
+\hline
+5  & 11 \\
+\hline
+7  & 16 \\
+\hline
+9  & 8  \\
+\hline
+11 & 4  \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item ?`Cu\'antos participantes consumieron menos de 7 porciones diarias?
+  \item Determine la \textbf{Moda} del conjunto de datos e interpr\'etela en el contexto del problema.
+  \item Realice un \textbf{gr\'afico adecuado} para representar el conjunto de datos.
+\end{enumerate}
+
+%% ===== PROBLEMA 2 =====
+\seccion{Problema 2 \textendash\ Medidas Descriptivas y Coeficiente de Variaci\'on}
+
+\noindent\sffamily\small Se estudi\'o el nivel de estr\'es percibido (escala de 1 a 10) en estudiantes de primer a\~no. De una muestra de la \textbf{Facultad AURORA} se obtuvo:
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\textbf{Moda} & \textbf{Mediana} & \textbf{Promedio} & \textbf{Desv.\ Est\'andar} & \textbf{Cuartil 1} & \textbf{Cuartil 2} & \textbf{Cuartil 3} \\
+\hline
+5{,}5 & 6{,}0 & 5{,}8 & 1{,}4 & 4{,}5 & 6{,}0 & 7{,}0 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Interprete el \textbf{Cuartil 1} en el contexto del problema.
+  \item Un psic\'ologo afirma que el $25\%$ de los estudiantes presenta un nivel de estr\'es superior a 7{,}0 puntos. ?`Los datos avalan esta afirmaci\'on? Justifique.
+  \item En la \textbf{Facultad RENACER} se obtuvo promedio $6{,}2$ y desviaci\'on est\'andar $0{,}8$. Determine el \textbf{coeficiente de variaci\'on} de cada facultad y concluya cu\'al muestra es m\'as variable.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} Coeficiente de Variaci\'on $= \dfrac{s}{\bar{x}} \times 100\%$.\quad
+El cuartil $Q_k$ indica que el $k\times25\%$ de los datos es menor o igual a ese valor.%
+}
+
+%% ===== PROBLEMA 3 =====
+\seccion{Problema 3 \textendash\ Tendencia Central, Dispersi\'on y Porcentajes}
+
+\noindent\sffamily\small En un taller de manejo del estr\'es se registr\'o la cantidad de minutos semanales que cada participante dedic\'o a pr\'acticas de meditaci\'on guiada:
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+45 & 50 & 60 & 60 & 70 & 75 & 75 & 75 & 85 & 95 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Determine el promedio, la mediana y la moda del conjunto de datos.
+  \item Determine la desviaci\'on est\'andar muestral e interpr\'etela.
+  \item Determine el porcentaje de participantes que dedic\'o menos de $75$ minutos semanales.
+\end{enumerate}
+
+%% ===== PROBLEMA 4 =====
+\seccion{Problema 4 \textendash\ Datos Agrupados: Moda y Percentiles}
+
+\noindent\sffamily\small En la unidad de neonatolog\'ia de un hospital se registr\'o el peso al nacer (kg) de 40 reci\'en nacidos:
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Peso al nacer (kg)} & $f_i$ & $F_i$ & $h_i(\%)$ & $H_i(\%)$ \\
+\hline
+2{,}0 -- 2{,}5 & 4  & 4  & 10    & 10    \\
+\hline
+2{,}5 -- 3{,}0 & 10 & 14 & 25    & 35    \\
+\hline
+3{,}0 -- 3{,}5 & 16 & 30 & 40    & 75    \\
+\hline
+3{,}5 -- 4{,}0 & 7  & 37 & 17{,}5  & 92{,}5  \\
+\hline
+4{,}0 -- 4{,}5 & 3  & 40 & 7{,}5   & 100   \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Identifique y clasifique la variable en estudio.
+  \item ?`Qu\'e porcentaje de reci\'en nacidos presenta un peso entre 2{,}5 y 3{,}5 kg?
+  \item ?`Cu\'antos reci\'en nacidos presentan un peso entre 3{,}0 y 4{,}5 kg?
+  \item Determine el peso m\'as frecuente entre los reci\'en nacidos (moda para datos agrupados).
+  \item Determine el peso m\'inimo que tiene el $20\%$ de los reci\'en nacidos con valores m\'as altos.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} Moda agrupada: $M_o = L_{inf} + \dfrac{f_i - f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i$.\quad
+Percentil: $P_k = L_{inf} + \dfrac{\frac{k\cdot n}{100}-F_{i-1}}{f_i}\cdot a_i$.%
+}
+
+%% ===== PROBLEMA 5 =====
+\seccion{Problema 5 \textendash\ Variable Cualitativa y Gr\'aficos}
+
+\noindent\sffamily\small En el servicio de urgencias de un hospital se registraron los tipos de lesi\'on atendidos durante una semana: Fracturas (45), Esguinces (30), Contusiones (55), Heridas (25) y Luxaciones (15).
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Identifique la variable involucrada y su clasificaci\'on.
+  \item Construya una tabla de frecuencias completa (use dos decimales en frecuencias porcentuales).
+  \item ?`Qu\'e porcentaje del total de casos representan las contusiones?
+  \item ?`Es posible determinar la mediana de esta distribuci\'on? Justifique.
+  \item ?`Se puede cambiar el gr\'afico de barras por un histograma? Justifique.
+\end{enumerate}
+
+%% ===== PROBLEMA 6 =====
+\seccion{Problema 6 \textendash\ Comparaci\'on con Box-Plots}
+
+\noindent\sffamily\small Un hospital compara los tiempos de espera (minutos) en cuatro servicios de atenci\'on mediante box-plots, con los siguientes res\'umenes:
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Servicio} & \textbf{M\'in} & $Q_1$ & \textbf{Mediana} & $Q_3$ & \textbf{M\'ax} \\
+\hline
+A & 10 & 20 & 30 & 40 & 50 \\
+\hline
+B & 15 & 25 & 35 & 45 & 60 \\
+\hline
+C & 20 & 30 & 45 & 55 & 70 \\
+\hline
+D & 5  & 15 & 25 & 35 & 45 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item ?`Cu\'al de los servicios presenta la mediana de tiempo de espera m\'as alta?
+  \item ?`Qu\'e diferencias importantes se observan entre los servicios? Justifique con indicadores adecuados (mediana, rango intercuart\'ilico).
+\end{enumerate}
+
+\newpage
+
+%% ================= RESPUESTAS =================
+\seccion{Respuestas}
+
+\small\sffamily
+\textbf{Problema 1.}
+\textbf{a)} $5+11=16$ participantes.
+\textbf{b)} Moda $=7$ porciones ($f=16$): la cantidad de porciones diarias m\'as frecuente fue 7.
+\textbf{c)} Gr\'afico de barras con ejes etiquetados (variable cuantitativa discreta).
+
+\medskip
+\textbf{Problema 2.}
+\textbf{a)} $Q_1=4{,}5$: el $25\%$ de los estudiantes presenta un nivel de estr\'es menor o igual a $4{,}5$ puntos.
+\textbf{b)} S\'i: $Q_3=7{,}0$ implica que el $25\%$ restante supera los $7{,}0$ puntos, por lo que la afirmaci\'on est\'a avalada.
+\textbf{c)} $CV_{AURORA}=\frac{1{,}4}{5{,}8}\times100\approx 24{,}14\%$; $CV_{RENACER}=\frac{0{,}8}{6{,}2}\times100\approx12{,}90\%$. La Facultad AURORA presenta una muestra m\'as variable.
+
+\medskip
+\textbf{Problema 3.}
+\textbf{a)} $\bar{x}=\frac{690}{10}=69{,}0$ min; mediana $=\frac{70+75}{2}=72{,}5$ min; moda $=75$ min.
+\textbf{b)} $s=\sqrt{\frac{\sum(x_i-69)^2}{9}}=\sqrt{\frac{2140}{9}}\approx 15{,}42$ min: los minutos se alejan en promedio $\approx15{,}42$ minutos del promedio.
+\textbf{c)} Valores $<75$: 45, 50, 60, 60, 70 $\Rightarrow \frac{5}{10}\times100=50\%$.
+
+\medskip
+\textbf{Problema 4.}
+\textbf{a)} Peso al nacer (kg); cuantitativa continua.
+\textbf{b)} $25\%+40\%=65\%$.
+\textbf{c)} $16+7+3=26$ reci\'en nacidos.
+\textbf{d)} $M_o = 3{,}0+\frac{16-10}{(16-10)+(16-7)}\cdot0{,}5 = 3{,}0+\frac{6}{15}\cdot0{,}5 = 3{,}20$ kg.
+\textbf{e)} $P_{80}=3{,}5+\frac{32-30}{7}\cdot0{,}5\approx 3{,}64$ kg: el $20\%$ m\'as pesado pesa al menos $3{,}64$ kg.
+
+\medskip
+\textbf{Problema 5.}
+\textbf{a)} Tipo de lesi\'on atendida; cualitativa nominal.
+\textbf{b)} Total $=170$; frecuencias porcentuales: Fracturas $26{,}47\%$, Esguinces $17{,}65\%$, Contusiones $32{,}35\%$, Heridas $14{,}71\%$, Luxaciones $8{,}82\%$.
+\textbf{c)} $32{,}35\%$.
+\textbf{d)} No: la variable es cualitativa nominal, no existe orden natural entre categor\'ias.
+\textbf{e)} No: el histograma es propio de variables cuantitativas continuas.
+
+\medskip
+\textbf{Problema 6.}
+\textbf{a)} Servicio C (mediana $=45$ min).
+\textbf{b)} El Servicio C presenta la mayor mediana (45 min) y mayor dispersi\'on (rango 20--70, $RIC=25$); el Servicio D tiene la menor mediana (25 min) y el menor m\'inimo (5 min), siendo el m\'as eficiente. A y B son intermedios con $RIC=20$.
+
+\end{document}

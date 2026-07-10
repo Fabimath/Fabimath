@@ -1,0 +1,185 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage[top=0.8cm, bottom=0.6cm, left=1.2cm, right=1.2cm, includeheadfoot]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\tcbuselibrary{skins,breakable}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{0.9}
+
+\definecolor{applelightgray}{RGB}{180,180,180}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{\sffamily Ejercicios de Pr\'actica \textendash\ Probabilidad y Estad\'istica}}
+\fancyhead[R]{\small\sffamily Gu\'ia 3 \textendash\ Probabilidad Cl\'asica y Condicional}
+\fancyfoot[C]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\textcolor{applelightgray}{\rule{\textwidth}{0.4pt}}}
+
+\newcommand{\seccion}[1]{%
+  \vspace{2pt}%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0pt,
+    leftrule=2pt,left=6pt,right=6pt,top=1pt,bottom=1pt]
+    {\normalsize\bfseries\sffamily #1}
+  \end{tcolorbox}%
+  \vspace{1pt}%
+}
+
+\newcommand{\reglacaja}[1]{%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0.5pt,
+    left=6pt,right=6pt,top=2pt,bottom=2pt,breakable]
+  \small\sffamily #1
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\fontsize{15}{17}\selectfont\bfseries\sffamily Gu\'ia 3 \textendash\ Probabilidad Cl\'asica y Condicional\par}
+  \vspace{0.05cm}
+  {\small\sffamily Probabilidad Condicional \textperiodcentered\ Probabilidad Total \textperiodcentered\ Teorema de Bayes \textperiodcentered\ Tablas de Contingencia\par}
+  {\rule{3cm}{0.6pt}}
+\end{center}
+
+\vspace{0.15cm}
+
+%% ===== PROBLEMA 1 =====
+\seccion{Problema 1 \textendash\ Probabilidad Total y Bayes}
+
+\noindent\sffamily\small Una cl\'inica analiz\'o la atenci\'on de pacientes durante la temporada de invierno. Los pacientes que ingresan a urgencias son derivados a dos \'areas: el $58\%$ a \textbf{Pediatr\'ia} y el $42\%$ a \textbf{Neumolog\'ia}. Del total atendido en Pediatr\'ia, un $18\%$ requiere hospitalizaci\'on; en Neumolog\'ia, un $63\%$ requiere hospitalizaci\'on.
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Defina los sucesos involucrados y traduzca los datos a notaci\'on de probabilidad.
+  \item Construya un \'arbol de probabilidades de la situaci\'on.
+  \item Calcule la probabilidad de que un paciente requiera hospitalizaci\'on.
+  \item Si un paciente \textbf{no} fue hospitalizado, ?`cu\'al es la probabilidad de que haya sido atendido en Pediatr\'ia?
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} Probabilidad Total: $P(H)=\sum_i P(A_i)\,P(H\mid A_i)$.\quad
+Bayes: $P(A_k\mid H)=\dfrac{P(A_k)\,P(H\mid A_k)}{P(H)}$.%
+}
+
+%% ===== PROBLEMA 2 =====
+\seccion{Problema 2 \textendash\ Test Diagn\'ostico y Probabilidades Conjuntas}
+
+\noindent\sffamily\small Un hospital evalu\'o la efectividad de una prueba r\'apida para la detecci\'on temprana de diabetes tipo 2, obteniendo las siguientes \textbf{probabilidades conjuntas}:
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|l|c|c|c|}
+\hline
+ & \textbf{Diabetes} & \textbf{No diabetes} & \textbf{Total} \\
+\hline
+\textbf{Test positivo} & 0{,}16 & 0{,}09 & 0{,}25 \\
+\hline
+\textbf{Test negativo} & 0{,}04 & 0{,}71 & 0{,}75 \\
+\hline
+\textbf{Total} & 0{,}20 & 0{,}80 & 1{,}00 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Calcule la \textbf{sensibilidad} del test: $P(\text{Test}+\mid\text{Diabetes})$.
+  \item Calcule la probabilidad de \textbf{falso negativo}: $P(\text{Test}-\mid\text{Diabetes})$.
+  \item Calcule el \textbf{valor predictivo negativo}: $P(\text{No diabetes}\mid\text{Test}-)$.
+\end{enumerate}
+
+%% ===== PROBLEMA 3 =====
+\seccion{Problema 3 \textendash\ Tabla de Contingencia}
+
+\noindent\sffamily\small En un estudio sobre factores de riesgo cardiovascular se clasific\'o a 400 pacientes seg\'un h\'abito tab\'aquico e hipertensi\'on:
+
+\vspace{4pt}
+\begin{center}
+\small\sffamily
+\begin{tabular}{|l|c|c|c|}
+\hline
+ & \textbf{Hipertenso} & \textbf{No hipertenso} & \textbf{Total} \\
+\hline
+\textbf{Fumador} & 60 & 90 & 150 \\
+\hline
+\textbf{No fumador} & 40 & 210 & 250 \\
+\hline
+\textbf{Total} & 100 & 300 & 400 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+Se selecciona un paciente al azar. Calcule:
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item La probabilidad de que sea fumador.
+  \item La probabilidad de que sea hipertenso \textbf{o} fumador.
+  \item La probabilidad de que sea hipertenso, \textbf{dado que} es fumador.
+  \item ?`Son independientes los sucesos ``ser fumador'' y ``ser hipertenso''? Justifique.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} $P(A\cup B)=P(A)+P(B)-P(A\cap B)$.\quad
+$P(A\mid B)=\dfrac{P(A\cap B)}{P(B)}$.\quad
+$A$ y $B$ independientes $\iff P(A\cap B)=P(A)\,P(B)$.%
+}
+
+%% ===== PROBLEMA 4 =====
+\seccion{Problema 4 \textendash\ Probabilidad Total y Bayes con Tres Or\'igenes}
+
+\noindent\sffamily\small Un centro de vacunaci\'on recibe dosis de tres laboratorios: el $50\%$ del \textbf{Laboratorio 1}, el $30\%$ del \textbf{Laboratorio 2} y el $20\%$ del \textbf{Laboratorio 3}. La proporci\'on de dosis con fallas de empaque es del $2\%$ en L1, $3\%$ en L2 y $5\%$ en L3.
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Calcule la probabilidad de que una dosis elegida al azar presente falla de empaque.
+  \item Si una dosis presenta falla, ?`cu\'al es la probabilidad de que provenga del Laboratorio 3?
+  \item ?`De cu\'al laboratorio es m\'as probable que provenga una dosis con falla? Justifique.
+\end{enumerate}
+
+\newpage
+
+%% ================= RESPUESTAS =================
+\seccion{Respuestas}
+
+\small\sffamily
+\textbf{Problema 1.}
+\textbf{a)} $P(Ped)=0{,}58$; $P(Neu)=0{,}42$; $P(H\mid Ped)=0{,}18$; $P(H\mid Neu)=0{,}63$, con $H$: requiere hospitalizaci\'on.
+\textbf{b)} \'Arbol con ramas Ped (0{,}58) / Neu (0{,}42) y sub-ramas $H$ / $\overline{H}$.
+\textbf{c)} $P(H)=(0{,}58)(0{,}18)+(0{,}42)(0{,}63)=0{,}1044+0{,}2646=\mathbf{0{,}369}$.
+\textbf{d)} $P(\overline{H})=0{,}631$; $P(Ped\mid\overline{H})=\dfrac{(0{,}58)(0{,}82)}{0{,}631}\approx\mathbf{0{,}7537}$ ($75{,}37\%$).
+
+\medskip
+\textbf{Problema 2.}
+\textbf{a)} Sensibilidad $=\frac{0{,}16}{0{,}20}=\mathbf{0{,}80}$.
+\textbf{b)} $P(\text{FN})=\frac{0{,}04}{0{,}20}=\mathbf{0{,}20}$.
+\textbf{c)} $VPN=\frac{0{,}71}{0{,}75}\approx\mathbf{0{,}9467}$ ($94{,}67\%$).
+
+\medskip
+\textbf{Problema 3.}
+\textbf{a)} $P(F)=\frac{150}{400}=\mathbf{0{,}375}$.
+\textbf{b)} $P(H\cup F)=0{,}25+0{,}375-0{,}15=\mathbf{0{,}475}$.
+\textbf{c)} $P(H\mid F)=\frac{60}{150}=\mathbf{0{,}40}$.
+\textbf{d)} No: $P(H)\cdot P(F)=0{,}25\cdot0{,}375=0{,}09375\neq P(H\cap F)=0{,}15$. Adem\'as $P(H\mid F)=0{,}40\neq P(H)=0{,}25$: fumar y ser hipertenso est\'an asociados.
+
+\medskip
+\textbf{Problema 4.}
+\textbf{a)} $P(D)=(0{,}5)(0{,}02)+(0{,}3)(0{,}03)+(0{,}2)(0{,}05)=0{,}010+0{,}009+0{,}010=\mathbf{0{,}029}$.
+\textbf{b)} $P(L_3\mid D)=\frac{0{,}010}{0{,}029}\approx\mathbf{0{,}3448}$.
+\textbf{c)} $P(L_1\mid D)\approx0{,}3448$; $P(L_2\mid D)\approx0{,}3103$; $P(L_3\mid D)\approx0{,}3448$. Los laboratorios 1 y 3 empatan como origen m\'as probable ($34{,}48\%$ cada uno), pese a que L3 tiene mayor tasa de falla, porque L1 aporta muchas m\'as dosis.
+
+\end{document}

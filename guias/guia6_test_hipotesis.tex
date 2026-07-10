@@ -1,0 +1,127 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage[top=0.8cm, bottom=0.6cm, left=1.2cm, right=1.2cm, includeheadfoot]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\tcbuselibrary{skins,breakable}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{0.9}
+
+\definecolor{applelightgray}{RGB}{180,180,180}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{\sffamily Ejercicios de Pr\'actica \textendash\ Probabilidad y Estad\'istica}}
+\fancyhead[R]{\small\sffamily Gu\'ia 6 \textendash\ Test de Hip\'otesis}
+\fancyfoot[C]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\textcolor{applelightgray}{\rule{\textwidth}{0.4pt}}}
+
+\newcommand{\seccion}[1]{%
+  \vspace{2pt}%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0pt,
+    leftrule=2pt,left=6pt,right=6pt,top=1pt,bottom=1pt]
+    {\normalsize\bfseries\sffamily #1}
+  \end{tcolorbox}%
+  \vspace{1pt}%
+}
+
+\newcommand{\reglacaja}[1]{%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0.5pt,
+    left=6pt,right=6pt,top=2pt,bottom=2pt,breakable]
+  \small\sffamily #1
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\fontsize{15}{17}\selectfont\bfseries\sffamily Gu\'ia 6 \textendash\ Test de Hip\'otesis\par}
+  \vspace{0.05cm}
+  {\small\sffamily Hip\'otesis Nula y Alternativa \textperiodcentered\ Estad\'istico de Prueba \textperiodcentered\ Valor Cr\'itico y p-valor \textperiodcentered\ Conclusi\'on en Contexto\par}
+  {\rule{3cm}{0.6pt}}
+\end{center}
+
+\vspace{0.15cm}
+
+%% ===== PROBLEMA 1 =====
+\seccion{Problema 1 \textendash\ Test Unilateral para la Media}
+
+\noindent\sffamily\small Una cl\'inica afirma que el tiempo promedio de espera en el laboratorio cl\'inico es de $30$ minutos. La administraci\'on sospecha que el tiempo real podr\'ia ser \textbf{mayor} por el aumento de demanda. Se seleccion\'o una muestra aleatoria de $64$ pacientes, con tiempo medio de espera de $33{,}2$ minutos y desviaci\'on est\'andar de $8{,}1$ minutos. Use $\alpha=0{,}05$.
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Plantee las hip\'otesis nula y alternativa.
+  \item Calcule el estad\'istico de prueba.
+  \item Determine el valor cr\'itico y la decisi\'on.
+  \item Concluya en el contexto del problema.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} Para $n\geq30$: $Z=\dfrac{\bar{x}-\mu_0}{s/\sqrt{n}}$. Prueba unilateral derecha: se rechaza $H_0$ si $Z_{calc}>z_{1-\alpha}$ (con $\alpha=0{,}05$: $z=1{,}645$).%
+}
+
+%% ===== PROBLEMA 2 =====
+\seccion{Problema 2 \textendash\ Test Bilateral para la Media}
+
+\noindent\sffamily\small Una planta envasadora declara que sus envases de suero fisiol\'ogico contienen $500$ ml en promedio. En una inspecci\'on se midi\'o una muestra aleatoria de $49$ envases, obteniendo un contenido medio de $497$ ml con desviaci\'on est\'andar de $7$ ml. Con $\alpha=0{,}05$, ?`existe evidencia de que el contenido promedio difiere de lo declarado?
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Plantee las hip\'otesis.
+  \item Calcule el estad\'istico de prueba y comp\'arelo con el valor cr\'itico.
+  \item Concluya en contexto.
+\end{enumerate}
+
+%% ===== PROBLEMA 3 =====
+\seccion{Problema 3 \textendash\ Test para una Proporci\'on}
+
+\noindent\sffamily\small Una campa\~na sanitaria se considera exitosa si m\'as del $60\%$ de la poblaci\'on objetivo completa su esquema de vacunaci\'on. En una muestra aleatoria de $200$ personas, $132$ completaron el esquema. Con $\alpha=0{,}05$, ?`hay evidencia de que la campa\~na fue exitosa?
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Plantee las hip\'otesis.
+  \item Calcule el estad\'istico de prueba.
+  \item Decida y concluya en contexto.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} Para proporciones: $Z=\dfrac{\hat{p}-p_0}{\sqrt{\dfrac{p_0(1-p_0)}{n}}}$. El error est\'andar se calcula con $p_0$ (valor bajo $H_0$), no con $\hat{p}$.%
+}
+
+\newpage
+
+%% ================= RESPUESTAS =================
+\seccion{Respuestas}
+
+\small\sffamily
+\textbf{Problema 1.}
+\textbf{a)} $H_0:\mu=30$ vs $H_1:\mu>30$ (unilateral derecha).
+\textbf{b)} $SE=\frac{8{,}1}{\sqrt{64}}=1{,}0125$; $Z_{calc}=\frac{33{,}2-30}{1{,}0125}\approx\mathbf{3{,}16}$.
+\textbf{c)} $Z_{crit}=1{,}645$; como $3{,}16>1{,}645$ (p-valor $\approx0{,}0008<0{,}05$), \textbf{se rechaza} $H_0$.
+\textbf{d)} Existe evidencia estad\'istica suficiente para afirmar que el tiempo promedio de espera es superior a $30$ minutos.
+
+\medskip
+\textbf{Problema 2.}
+\textbf{a)} $H_0:\mu=500$ vs $H_1:\mu\neq500$ (bilateral).
+\textbf{b)} $SE=\frac{7}{\sqrt{49}}=1$; $Z_{calc}=\frac{497-500}{1}=\mathbf{-3{,}0}$; $|{-3{,}0}|>1{,}96$ (p-valor $\approx0{,}0027$).
+\textbf{c)} Se rechaza $H_0$: existe evidencia de que el contenido promedio difiere de los $500$ ml declarados (los envases contienen, en promedio, menos).
+
+\medskip
+\textbf{Problema 3.}
+\textbf{a)} $H_0:p=0{,}60$ vs $H_1:p>0{,}60$.
+\textbf{b)} $\hat{p}=\frac{132}{200}=0{,}66$; $SE_0=\sqrt{\frac{(0{,}6)(0{,}4)}{200}}\approx0{,}0346$; $Z_{calc}=\frac{0{,}66-0{,}60}{0{,}0346}\approx\mathbf{1{,}73}$.
+\textbf{c)} $Z_{crit}=1{,}645$; como $1{,}73>1{,}645$ (p-valor $\approx0{,}042<0{,}05$), se rechaza $H_0$: hay evidencia de que m\'as del $60\%$ complet\'o el esquema; la campa\~na fue exitosa.
+
+\end{document}

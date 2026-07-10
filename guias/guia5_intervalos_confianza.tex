@@ -1,0 +1,123 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage[top=0.8cm, bottom=0.6cm, left=1.2cm, right=1.2cm, includeheadfoot]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\tcbuselibrary{skins,breakable}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{0.9}
+
+\definecolor{applelightgray}{RGB}{180,180,180}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{\sffamily Ejercicios de Pr\'actica \textendash\ Probabilidad y Estad\'istica}}
+\fancyhead[R]{\small\sffamily Gu\'ia 5 \textendash\ Intervalos de Confianza}
+\fancyfoot[C]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\textcolor{applelightgray}{\rule{\textwidth}{0.4pt}}}
+
+\newcommand{\seccion}[1]{%
+  \vspace{2pt}%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0pt,
+    leftrule=2pt,left=6pt,right=6pt,top=1pt,bottom=1pt]
+    {\normalsize\bfseries\sffamily #1}
+  \end{tcolorbox}%
+  \vspace{1pt}%
+}
+
+\newcommand{\reglacaja}[1]{%
+  \begin{tcolorbox}[enhanced,colback=white,colframe=black,arc=0pt,boxrule=0.5pt,
+    left=6pt,right=6pt,top=2pt,bottom=2pt,breakable]
+  \small\sffamily #1
+  \end{tcolorbox}%
+}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\fontsize{15}{17}\selectfont\bfseries\sffamily Gu\'ia 5 \textendash\ Intervalos de Confianza\par}
+  \vspace{0.05cm}
+  {\small\sffamily Estimaci\'on Puntual \textperiodcentered\ Margen de Error \textperiodcentered\ IC para Proporci\'on y Media\par}
+  {\rule{3cm}{0.6pt}}
+\end{center}
+
+\vspace{0.15cm}
+
+%% ===== PROBLEMA 1 =====
+\seccion{Problema 1 \textendash\ IC para una Proporci\'on}
+
+\noindent\sffamily\small Un centro de salud comunitario desea evaluar la proporci\'on de pacientes que consideran adecuada la atenci\'on m\'edica recibida. Se seleccion\'o una muestra aleatoria de $500$ pacientes; $415$ manifestaron estar conformes con la atenci\'on. Analice estad\'isticamente la proporci\'on de pacientes conformes usando una confianza del $95\%$:
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Determine la estimaci\'on puntual $\hat{p}$.
+  \item Calcule el error est\'andar y el margen de error.
+  \item Construya el intervalo de confianza del $95\%$ y concluya en contexto.
+\end{enumerate}
+
+\reglacaja{%
+\textbf{Recuerde:} $\hat{p}=\dfrac{x}{n}$;\quad
+$SE=\sqrt{\dfrac{\hat{p}(1-\hat{p})}{n}}$;\quad
+$IC = \hat{p} \pm z_{\alpha/2}\cdot SE$, con $z_{0{,}025}=1{,}96$ para el $95\%$.%
+}
+
+%% ===== PROBLEMA 2 =====
+\seccion{Problema 2 \textendash\ IC para una Media}
+
+\noindent\sffamily\small En un estudio sobre frecuencia card\'iaca en reposo, se midi\'o a una muestra aleatoria de $36$ pacientes adultos, obteniendo un promedio de $72$ latidos por minuto con desviaci\'on est\'andar muestral de $9$ latidos.
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Construya un intervalo de confianza del $95\%$ para la frecuencia card\'iaca media de la poblaci\'on.
+  \item Interprete el intervalo en contexto.
+  \item Si se quisiera un intervalo m\'as angosto manteniendo la confianza, ?`qu\'e se debe hacer con el tama\~no muestral?
+\end{enumerate}
+
+%% ===== PROBLEMA 3 =====
+\seccion{Problema 3 \textendash\ IC para Proporci\'on con Confianza del 90\%}
+
+\noindent\sffamily\small En un programa de adherencia a tratamiento farmacol\'ogico, de una muestra aleatoria de $300$ pacientes cr\'onicos, $180$ declararon tomar sus medicamentos seg\'un lo indicado.
+
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=2pt, topsep=2pt]
+  \item Construya un intervalo de confianza del $90\%$ para la proporci\'on de adherencia ($z_{0{,}05}=1{,}645$).
+  \item Interprete el intervalo en contexto.
+  \item ?`Puede afirmarse con esta confianza que la adherencia supera el $50\%$? Justifique con el intervalo.
+\end{enumerate}
+
+\newpage
+
+%% ================= RESPUESTAS =================
+\seccion{Respuestas}
+
+\small\sffamily
+\textbf{Problema 1.}
+\textbf{a)} $\hat{p}=\frac{415}{500}=\mathbf{0{,}83}$.
+\textbf{b)} $SE=\sqrt{\frac{(0{,}83)(0{,}17)}{500}}\approx0{,}0168$; $ME=1{,}96\cdot0{,}0168\approx\mathbf{0{,}0329}$.
+\textbf{c)} $IC_{95\%}=(0{,}7971\,;\,0{,}8629)$: con un $95\%$ de confianza, la verdadera proporci\'on de pacientes conformes est\'a entre $79{,}71\%$ y $86{,}29\%$.
+
+\medskip
+\textbf{Problema 2.}
+\textbf{a)} $SE=\frac{9}{\sqrt{36}}=1{,}5$; $ME=1{,}96\cdot1{,}5=2{,}94$; $IC_{95\%}=(72-2{,}94\,;\,72+2{,}94)=(\mathbf{69{,}06\,;\,74{,}94})$ latidos/min.
+\textbf{b)} Con un $95\%$ de confianza, la frecuencia card\'iaca media poblacional en reposo est\'a entre $69{,}06$ y $74{,}94$ latidos por minuto.
+\textbf{c)} Aumentar $n$: el margen de error decrece proporcionalmente a $1/\sqrt{n}$.
+
+\medskip
+\textbf{Problema 3.}
+\textbf{a)} $\hat{p}=\frac{180}{300}=0{,}60$; $SE=\sqrt{\frac{(0{,}6)(0{,}4)}{300}}\approx0{,}0283$; $ME=1{,}645\cdot0{,}0283\approx0{,}0465$; $IC_{90\%}=(\mathbf{0{,}5535\,;\,0{,}6465})$.
+\textbf{b)} Con un $90\%$ de confianza, la proporci\'on de adherencia est\'a entre $55{,}35\%$ y $64{,}65\%$.
+\textbf{c)} S\'i: todo el intervalo est\'a por sobre $0{,}50$, por lo que con esta confianza la adherencia supera el $50\%$.
+
+\end{document}
