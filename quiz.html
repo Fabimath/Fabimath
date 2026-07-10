@@ -12,6 +12,7 @@
 <script src="ic_questions.js"></script>
 <script src="th_questions.js"></script>
 <script src="nm_questions.js"></script>
+<script src="pc_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -97,7 +98,13 @@
   .quiz-q { flex: 1; width: 100%; }
   .qtype { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .04em; color: var(--royal); background: #dbe9ff; padding: 5px 12px; border-radius: 100px; margin-bottom: 6px; }
   .qctx { font-size: 12.5px; color: #8fa9d6; margin-bottom: 12px; }
-  .qenun { font-size: 15.5px; color: #eaf2ff; line-height: 1.65; margin-bottom: 16px; }
+  .qenun { font-size: 15.5px; color: #eaf2ff; line-height: 1.65; margin-bottom: 14px; }
+  .qtable { margin: 0 0 16px; overflow-x: auto; }
+  .qtable table { border-collapse: collapse; font-size: 13.5px; min-width: 240px; }
+  .qtable th, .qtable td { border: 1px solid #2c447e; padding: 8px 14px; text-align: center; }
+  .qtable thead th { background: #1a2c58; color: var(--sky); font-weight: 700; }
+  .qtable tbody th { background: #14264f; color: #cddcff; font-weight: 600; text-align: left; }
+  .qtable tbody td { color: #eaf2ff; }
   .qask { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 14px; }
 
   .alts { display: flex; flex-direction: column; gap: 11px; }
@@ -177,6 +184,7 @@
         <span class="qtype" id="qType"></span>
         <div class="qctx" id="qCtx"></div>
         <div class="qenun" id="qEnun"></div>
+        <div class="qtable" id="qTable"></div>
         <div class="qask" id="qAsk"></div>
         <div class="alts" id="alts"></div>
       </div>
@@ -266,6 +274,13 @@ const TOPICS = [
     bank: (typeof NM_QUESTIONS!=='undefined') ? NM_QUESTIONS : [],
     body:'#a78bfa', shade:'#7c5cf0', accent:'#c4b5fd',
     guide:'Guía 4 — Distribución Normal'
+  },
+  {
+    id:'pc', title:'Gato Condicional', name:'Probabilidad Condicional',
+    desc:'Tablas de contingencia: probabilidad conjunta P(A∩B), unión P(A∪B) y condicional P(A|B).',
+    bank: (typeof PC_QUESTIONS!=='undefined') ? PC_QUESTIONS : [],
+    body:'#f472b6', shade:'#db2f8f', accent:'#f9a8d4',
+    guide:'Guía de Probabilidad Condicional'
   }
 ];
 
@@ -331,6 +346,16 @@ function showQuestion() {
   document.getElementById('qType').textContent = q.tipo;
   document.getElementById('qCtx').textContent = q.ctx;
   document.getElementById('qEnun').textContent = q.enun;
+  const tEl = document.getElementById('qTable');
+  if (q.table) {
+    let html = '<table><thead><tr>' + q.table.head.map(h => `<th>${h}</th>`).join('') + '</tr></thead><tbody>';
+    q.table.rows.forEach(r => {
+      html += '<tr><th>' + r[0] + '</th>' + r.slice(1).map(c => `<td>${c}</td>`).join('') + '</tr>';
+    });
+    html += '</tbody></table>';
+    if (q.table.N) html += `<div style="font-size:12px;color:#8fa9d6;margin-top:6px">Total N = ${q.table.N}</div>`;
+    tEl.innerHTML = html;
+  } else { tEl.innerHTML = ''; }
   document.getElementById('qAsk').textContent = q.ask;
   order = shuffle([0,1,2,3]);
   const letters = ['A','B','C','D'];
