@@ -17,6 +17,7 @@
 <script src="bt_questions.js"></script>
 <script src="cn_questions.js"></script>
 <script src="cd_questions.js"></script>
+<script src="mv_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -345,6 +346,13 @@ const TOPICS = [
     bank: (typeof CD_QUESTIONS!=='undefined') ? CD_QUESTIONS : [],
     body:'#a3e635', shade:'#7bb418', accent:'#bef264',
     guide:'Guía — Tablas de Frecuencia (Datos Cuantitativos Discretos)'
+  },
+  {
+    id:'mv', title:'Gato Variable', name:'Medidas de Variabilidad',
+    desc:'Rango, varianza s², desviación estándar y coeficiente de variación; compara homogeneidad entre variables con el CV.',
+    bank: (typeof MV_QUESTIONS!=='undefined') ? MV_QUESTIONS : [],
+    body:'#fb923c', shade:'#d9701c', accent:'#fdba74',
+    guide:'Guía — Medidas de Variabilidad (Datos Cuantitativos Discretos)'
   }
 ];
 
