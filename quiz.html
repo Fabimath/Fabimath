@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gatos de Estadística — Fabimath</title>
-<meta name="description" content="Quiz interactivo de estadística: Clasificación de Variables, Intervalos de Confianza, Test de Hipótesis, Normal, Condicional y Bayes. 5 ejercicios al azar con alternativas y pauta completa.">
+<meta name="description" content="Quiz interactivo de estadística: Clasificación de Variables, Datos Cualitativos Nominales, Intervalos de Confianza, Test de Hipótesis, Normal, Condicional y Bayes. 5 ejercicios al azar con alternativas y pauta completa.">
 <link rel="icon" type="image/png" href="logo/fabimath_logo.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
@@ -15,6 +15,7 @@
 <script src="nm_questions.js"></script>
 <script src="pc_questions.js"></script>
 <script src="bt_questions.js"></script>
+<script src="cn_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -110,6 +111,21 @@
   .qtable thead th { background: #1a2c58; color: var(--sky); font-weight: 700; }
   .qtable tbody th { background: #14264f; color: #cddcff; font-weight: 600; text-align: left; }
   .qtable tbody td { color: #eaf2ff; }
+
+  /* ---------- CHART (barras / torta) ---------- */
+  .qchart { margin: 0 0 16px; }
+  .bar-chart { display: flex; align-items: flex-end; gap: 14px; height: 150px; padding: 6px 4px 0; overflow-x: auto; }
+  .bar-chart .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 1 0 auto; min-width: 44px; height: 100%; }
+  .bar-chart .bar-val { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+  .bar-chart .bar-rect { width: 30px; border-radius: 6px 6px 0 0; background: linear-gradient(180deg, var(--accent), var(--azure)); }
+  .bar-chart .bar-lbl { font-size: 11px; color: #9fb6de; margin-top: 6px; text-align: center; max-width: 64px; }
+  .pie-wrap { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  .pie-circle { width: 130px; height: 130px; border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 0 1px #2c447e; }
+  .pie-legend { display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; }
+  .pie-legend .pl-row { display: flex; align-items: center; gap: 8px; color: #eaf2ff; }
+  .pie-legend .pl-sw { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+  .pie-legend .pl-pct { color: #9fb6de; margin-left: auto; padding-left: 10px; }
+  .qchart-n { font-size: 12px; color: #8fa9d6; margin-top: 8px; }
   .qask { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 14px; }
 
   .alts { display: flex; flex-direction: column; gap: 11px; }
@@ -314,8 +330,41 @@ const TOPICS = [
     bank: (typeof BT_QUESTIONS!=='undefined') ? BT_QUESTIONS : [],
     body:'#34d399', shade:'#0ea371', accent:'#6ee7b7',
     guide:'Guía de Probabilidad Total y Bayes'
+  },
+  {
+    id:'cn', title:'Gato Nominal', name:'Datos Cualitativos Nominales',
+    desc:'Tablas de frecuencia (f_i, h_i, h_i%): constrúyelas desde datos crudos, léelas o interprétalas desde un gráfico.',
+    bank: (typeof CN_QUESTIONS!=='undefined') ? CN_QUESTIONS : [],
+    body:'#38bdf8', shade:'#0ea5c7', accent:'#7dd3fc',
+    guide:'Guía — Tablas de Frecuencia (Datos Cualitativos Nominales)'
   }
 ];
+
+/* ---------------- chart renderer (barras / torta) ---------------- */
+const CHART_PALETTE = ['#63b3ff','#4ade80','#ffd75e','#ff6b61','#a78bfa','#f472b6','#34d399','#f0883e'];
+function renderChart(chart) {
+  if (chart.type === 'bar') {
+    const max = Math.max(...chart.values) || 1;
+    const cols = chart.labels.map((lbl, i) => {
+      const v = chart.values[i];
+      const hpct = Math.max(6, Math.round(v / max * 88));
+      return `<div class="bar-col"><span class="bar-val">${v}</span><div class="bar-rect" style="height:${hpct}%;background:${CHART_PALETTE[i % CHART_PALETTE.length]}"></div><span class="bar-lbl">${lbl}</span></div>`;
+    }).join('');
+    return `<div class="bar-chart">${cols}</div><div class="qchart-n">${chart.unit || ''}</div>`;
+  }
+  if (chart.type === 'pie') {
+    let acc = 0;
+    const stops = chart.labels.map((lbl, i) => {
+      const start = acc; acc += chart.pct[i];
+      return `${CHART_PALETTE[i % CHART_PALETTE.length]} ${start}% ${acc}%`;
+    }).join(', ');
+    const legend = chart.labels.map((lbl, i) =>
+      `<div class="pl-row"><span class="pl-sw" style="background:${CHART_PALETTE[i % CHART_PALETTE.length]}"></span>${lbl}<span class="pl-pct">${chart.pct[i]}%</span></div>`
+    ).join('');
+    return `<div class="pie-wrap"><div class="pie-circle" style="background:conic-gradient(${stops})"></div><div class="pie-legend">${legend}</div></div><div class="qchart-n">Total N = ${chart.N}</div>`;
+  }
+  return '';
+}
 
 /* ---------------- KaTeX ---------------- */
 function renderMath(el) {
@@ -379,7 +428,11 @@ function showQuestion() {
   document.getElementById('qCtx').textContent = q.ctx;
   document.getElementById('qEnun').textContent = q.enun;
   const tEl = document.getElementById('qTable');
-  if (q.table) {
+  if (q.chart) {
+    tEl.innerHTML = renderChart(q.chart);
+    tEl.className = 'qchart';
+  } else if (q.table) {
+    tEl.className = 'qtable';
     let html = '<table><thead><tr>' + q.table.head.map(h => `<th>${h}</th>`).join('') + '</tr></thead><tbody>';
     q.table.rows.forEach(r => {
       html += '<tr><th>' + r[0] + '</th>' + r.slice(1).map(c => `<td>${c}</td>`).join('') + '</tr>';
@@ -387,7 +440,7 @@ function showQuestion() {
     html += '</tbody></table>';
     if (q.table.N) html += `<div style="font-size:12px;color:#8fa9d6;margin-top:6px">Total N = ${q.table.N}</div>`;
     tEl.innerHTML = html;
-  } else { tEl.innerHTML = ''; }
+  } else { tEl.className = 'qtable'; tEl.innerHTML = ''; }
   document.getElementById('qAsk').textContent = q.ask;
   order = shuffle([0,1,2,3]);
   const letters = ['A','B','C','D'];
@@ -399,7 +452,7 @@ function showQuestion() {
     b.addEventListener('click', () => answer(pos));
     altsEl.appendChild(b);
   });
-  renderMath(altsEl);
+  renderMath(document.querySelector('.quiz-q'));
   drawChar(document.getElementById('quizCatGrid'), 6, topic, 'neutro');
   quizCatBox.classList.add('talking');
   setTimeout(() => quizCatBox.classList.remove('talking'), 500);
