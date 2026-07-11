@@ -81,6 +81,9 @@
   .cat-box { position: relative; display: flex; justify-content: center; margin-bottom: 18px; animation: idle 3.4s ease-in-out infinite; }
   .cat-box.talking { animation: hop .4s steps(2) infinite; }
   @keyframes hop { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-6px);} }
+  .char-img { display: block; image-rendering: pixelated; }
+  .char-img.pop { animation: pop .38s ease; }
+  @keyframes pop { 0% { transform: scale(.9);} 55% { transform: scale(1.07);} 100% { transform: scale(1);} }
   .catgrid { display: grid; }
   .catgrid div { }
 
@@ -253,14 +256,28 @@ function drawCat(el, cell, pal) {
   }});
 }
 
+/* Draws the topic mascot: image sprite with mood (if the topic has one) or the pixel cat. */
+function drawChar(el, cell, t, mood) {
+  if (t.imgs) {
+    const size = cell * 22;
+    el.style.gridTemplateColumns = 'none';
+    el.innerHTML = `<img class="char-img pop" src="${t.imgs[mood] || t.imgs.neutro}" alt="${t.name}" width="${size}" height="${size}">`;
+    const img = el.firstChild;
+    img.addEventListener('animationend', () => img.classList.remove('pop'), { once: true });
+  } else {
+    drawCat(el, cell, palette(t.body, t.shade));
+  }
+}
+
 /* ---------------- topics (extensible) ---------------- */
 const TOPICS = [
   {
-    id:'ic', title:'Gato de Intervalos', name:'Intervalos de Confianza',
+    id:'ic', title:'Chica de Intervalos', name:'Intervalos de Confianza',
     desc:'Media (z y t) y proporción. Elige el intervalo correcto entre 4 alternativas.',
     bank: (typeof IC_QUESTIONS!=='undefined') ? IC_QUESTIONS : [],
     body:'#3b8bff', shade:'#2f6fe0', accent:'#63b3ff',
-    guide:'Guía 5 — Intervalos de Confianza'
+    guide:'Guía 5 — Intervalos de Confianza',
+    imgs:{ saludo:'chica/saludo.png', neutro:'chica/neutro.png', exito:'chica/exito.png', tristesa:'chica/tristesa.png' }
   },
   {
     id:'th', title:'Gato de Test', name:'Test de Hipótesis',
@@ -312,7 +329,7 @@ TOPICS.forEach((t, i) => {
     <div class="tc-count">${t.bank.length} ejercicios · 5 por ronda</div>`;
   card.addEventListener('click', () => startTopic(i));
   topicGrid.appendChild(card);
-  drawCat(card.querySelector(`#menuCat${i}`), 6, palette(t.body, t.shade));
+  drawChar(card.querySelector(`#menuCat${i}`), 6, t, 'saludo');
 });
 
 /* ---------------- game state ---------------- */
@@ -332,8 +349,7 @@ function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.rand
 function startTopic(i) {
   topic = TOPICS[i];
   document.documentElement.style.setProperty('--accent', topic.accent);
-  drawCat(document.getElementById('quizCatGrid'), 6, palette(topic.body, topic.shade));
-  drawCat(document.getElementById('finalCatGrid'), 6, palette(topic.body, topic.shade));
+  drawChar(document.getElementById('quizCatGrid'), 6, topic, 'neutro');
   const pool = shuffle([...Array(topic.bank.length).keys()]).slice(0, N_QUIZ);
   round = pool.map(k => topic.bank[k]);
   idx = 0; score = 0;
@@ -376,6 +392,7 @@ function showQuestion() {
     altsEl.appendChild(b);
   });
   renderMath(altsEl);
+  drawChar(document.getElementById('quizCatGrid'), 6, topic, 'neutro');
   quizCatBox.classList.add('talking');
   setTimeout(() => quizCatBox.classList.remove('talking'), 500);
 }
@@ -392,6 +409,7 @@ function answer(pos) {
   const good = chosenOrig === q.correct;
   if (good) { score++; document.getElementById('scoreLabel').textContent = `${score} correctas`; }
   else btns[pos].classList.add('wrong');
+  drawChar(document.getElementById('quizCatGrid'), 6, topic, good ? 'exito' : 'tristesa');
   pauta.classList.add(good ? 'good' : 'bad');
   document.getElementById('pFlag').textContent = good ? '✓ ¡Correcto, miau!' : '✗ Incorrecto — revisa la pauta:';
   document.getElementById('pHead').innerHTML = `$${q.pautaHead}$`;
@@ -419,6 +437,7 @@ function next() {
 function showFinal() {
   quizScreen.classList.add('hidden');
   finalScreen.classList.remove('hidden');
+  drawChar(document.getElementById('finalCatGrid'), 6, topic, (score / N_QUIZ >= 0.6) ? 'exito' : 'tristesa');
   document.getElementById('finalScore').textContent = `${score}/${N_QUIZ}`;
   document.getElementById('ring').style.setProperty('--deg', `${score/N_QUIZ*360}deg`);
   const pct = score / N_QUIZ;
