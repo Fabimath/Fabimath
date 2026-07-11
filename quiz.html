@@ -16,6 +16,7 @@
 <script src="pc_questions.js"></script>
 <script src="bt_questions.js"></script>
 <script src="cn_questions.js"></script>
+<script src="cd_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -337,6 +338,13 @@ const TOPICS = [
     bank: (typeof CN_QUESTIONS!=='undefined') ? CN_QUESTIONS : [],
     body:'#38bdf8', shade:'#0ea5c7', accent:'#7dd3fc',
     guide:'Guía — Tablas de Frecuencia (Datos Cualitativos Nominales)'
+  },
+  {
+    id:'cd', title:'Gato Discreto', name:'Datos Cuantitativos Discretos',
+    desc:'Tablas con acumuladas (F_i, H_i), lectura "a lo más / más de", y media, mediana y moda desde datos o tablas.',
+    bank: (typeof CD_QUESTIONS!=='undefined') ? CD_QUESTIONS : [],
+    body:'#a3e635', shade:'#7bb418', accent:'#bef264',
+    guide:'Guía — Tablas de Frecuencia (Datos Cuantitativos Discretos)'
   }
 ];
 
