@@ -135,7 +135,7 @@ const IC_QUESTIONS = [
 "pautaHead": "\\textbf{Datos:}\\ n=40,\\ \\bar{x}=93{,}40,\\ \\sigma=3{,}10,\\ 99\\%\\Rightarrow z_{1-\\alpha/2}=2{,}576.",
 "pautaSteps": [
 "IC_\\mu=\\bar{x}\\pm z_{1-\\alpha/2}\\dfrac{\\sigma}{\\sqrt{n}}",
-"ME=2{,}576\\cdot\\dfrac{3,10}{\\sqrt{40}}=1{,}263\\ \\text{%}",
+"ME=2{,}576\\cdot\\dfrac{3,10}{\\sqrt{40}}=1{,}263\\ \\%",
 "IC=93{,}40\\pm 1{,}263=\\left[\\,92{,}137\\;;\\;94{,}663\\,\\right]"
 ],
 "conc": "Con un 99% de confianza, la verdadera media se encuentra en 92,137 y 94,663 %."
@@ -195,7 +195,7 @@ const IC_QUESTIONS = [
 "pautaHead": "\\textbf{Datos:}\\ n=60,\\ \\bar{x}=7{,}80,\\ \\sigma=1{,}20,\\ 95\\%\\Rightarrow z_{1-\\alpha/2}=1{,}960.",
 "pautaSteps": [
 "IC_\\mu=\\bar{x}\\pm z_{1-\\alpha/2}\\dfrac{\\sigma}{\\sqrt{n}}",
-"ME=1{,}960\\cdot\\dfrac{1,20}{\\sqrt{60}}=0{,}304\\ \\text{%}",
+"ME=1{,}960\\cdot\\dfrac{1,20}{\\sqrt{60}}=0{,}304\\ \\%",
 "IC=7{,}80\\pm 0{,}304=\\left[\\,7{,}496\\;;\\;8{,}104\\,\\right]"
 ],
 "conc": "Con un 95% de confianza, la verdadera media se encuentra en 7,496 y 8,104 %."
@@ -395,7 +395,7 @@ const IC_QUESTIONS = [
 "pautaHead": "\\textbf{Datos:}\\ n=40,\\ \\bar{x}=68{,}20,\\ \\sigma=7{,}50,\\ 95\\%\\Rightarrow z_{1-\\alpha/2}=1{,}960.",
 "pautaSteps": [
 "IC_\\mu=\\bar{x}\\pm z_{1-\\alpha/2}\\dfrac{\\sigma}{\\sqrt{n}}",
-"ME=1{,}960\\cdot\\dfrac{7,50}{\\sqrt{40}}=2{,}324\\ \\text{%}",
+"ME=1{,}960\\cdot\\dfrac{7,50}{\\sqrt{40}}=2{,}324\\ \\%",
 "IC=68{,}20\\pm 2{,}324=\\left[\\,65{,}876\\;;\\;70{,}524\\,\\right]"
 ],
 "conc": "Con un 95% de confianza, la verdadera media se encuentra en 65,876 y 70,524 %."
