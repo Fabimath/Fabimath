@@ -74,10 +74,6 @@ para la prueba de transición universitaria en chile de manera gratuita y public
 * Dominio de <img src="latex_logo.svg" alt="drawing" width="35"/>
 * Dominio de <img src="moodle_logo.svg" alt="drawing" width="40"/>
 
-## Curriculum Vitae
-
-Puedes encontrar mi Curriculum Vitae [aquí](cv/main.pdf)
-
 ## Mi contenido
 
 Puedes encontrar mi material en las siguientes redes donde encontraras ejercicios resueltos de diversos tópicos, en particular se puede encontrar abundante contenido para la prueba de selección/transición universitaria.
