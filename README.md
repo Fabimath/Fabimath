@@ -4,50 +4,58 @@
 
 # Sobre mí
 
-**Hola soy claude**
-
-Mi nombre es Fabián Ramírez, soy estudiante de último año de Ingeniería Civil Matemática de la Universidad Técnica Féderico Santa María y actualmente soy estudiante del programa de Mágister en Ciencias Mención Matemática.
+Mi nombre es Fabián Ramírez, soy Magíster en Ciencias Mención Matemática e Ingeniero Civil Matemático con especialidad en Estadística, titulado de la Universidad Técnica Federico Santa María. Actualmente me desempeño como Académico Regular del IMFE en la Universidad de las Américas (Viña del Mar), donde soy encargado del área de estadística.
 
 ## Educación
 
-* [2016-2021] Ingeniería Civil Matemáticas, Memorista.
-* [2021] Magíster en Ciencias Mención Matemáticas, Memorista.
+* [2022] Magíster en Ciencias Mención Matemática, Universidad Técnica Federico Santa María (obtención Octubre 2022).
+* [2022] Ingeniería Civil Matemática, Universidad Técnica Federico Santa María (obtención Octubre 2022).
 * [2019] Programa de Intercambio CRUV en la PUCV.
 * [2018-2019] Técnicas de pedagogía para estudiantes de Ingeniería en PREUSM.
 
 ## Experiencia Laboral Educativa
 
-En mis años de estudiante en la **Universidad Técnica Féderico Santa María**, desempeñe como ayudante de catedra en los siguientes cursos:
+**Universidad de las Américas** (Viña del Mar), Académico Regular IMFE (2024 - 2026):
 
-* Álgebra y Geometría (MATE10).
-* Cálculo en varias variables y Ecuaciones Diferenciales (MAT023).
-* Ecuaciones Diferenciales para Ingeniería Civil Matemática.
-* Teoría de Probabilidades y Procesos Estocásticos para Ingeniería Civil Matemática.
-* Inferencia Estadística para Ingeniería Civil Matemática.
-* Probabilidad y Estadística para Ingenieria Civil.
-* Probabilidad y para Ingenieria Civil Electrónica.
+* Académico regular.
+* Encargado del área de estadística.
 
-Desde el año 2020 me desempeño como profesor de laboratorio y asistente en la **Universidad Adolfo Ibáñez**. Desde ese año hasta la fecha he realizado los siguientes cursos:
+**Universidad de las Américas** (Viña del Mar), Profesor Honorario (2023 - 2024):
 
-* Laboratorio de Probabilidad y Estadística para Ingeniería Civil.
-* Laboratorio de Estadística Aplicada.
-* Razonamento cuantitativo con Datos.
-* Estadística I.
-* Estadística II (Inferencia estadística).
+* Bioestadística para Enfermería e Inferencia Estadística para Ingeniería Comercial (2023-1).
+* Estadística para Construcción y Estadística para Psicología (2024-1).
 
-Desde el año 2020 me desempeño como profesor asistente en la **Universidad Gabriela Mistral**, donde he realizado los siguientes cursos:
+**Universidad Adolfo Ibáñez** (Viña del Mar), Profesor de Cátedra (2020 - 2024):
 
-* Álgebra Lineal
-* Introducción a la Matemática para la Ingeniería.
-* Estadística Multivariable.
-* Álgebra.
-* Física para Ingeniería Industrial.
+* Laboratorio de Probabilidades para ingenierías civiles y comercial (2020-1 a 2021-2).
+* Optimización (2022-1, 2022-2, 2023-2).
+* Estadística y Data Science (2022-1).
+* Razonamiento Cuantitativo con Datos I (2022-1).
+* Taller de Cálculo Diferencial y Matemáticas Avanzadas I (2023-1).
+
+**Universidad Técnica Federico Santa María** (Valparaíso), Profesor de Cátedra (2023 - 2024):
+
+* Curso de verano de MAT022.
+* Cálculo Integral y Álgebra Lineal (2023-1, 2023-2).
+* Probabilidad y Estadística para Ingeniería Industrial Vespertino MAT042 (2023-1).
+* Cálculo Diferencial MAT070 (2023-1).
+* Estadística y Matemáticas 1 (2023-2).
+* Métodos Cuantitativos para Negocios para Ingeniería Comercial Vespertino (2023-2, 2023-3).
+* Cálculo Diferencial, Cálculo Integral, Álgebra Lineal, Estadística y Análisis de Regresión (2024-1).
+
+**Universidad Gabriela Mistral** (Santiago), Profesor Asistente (2020 - 2024):
+
+* Profesor asistente de diversos cursos de ingeniería industrial, tales como control de costos, estadística multivariable, sistemas de información para la gestión y optimización.
 
 Desde el 2017 he trabajado en el voluntariado **Preuniversitario Solidario Santa María** como profesor de matemáticas en:
 
 * Plan Anual para 4° medio y egresados.
 * Plan Intensivo.
 * Plan 3° Medio.
+
+## Publicaciones
+
+* **Hybrid Parametric Classes of Isotropic Covariance Functions for Spatial Random Fields** (Enero 2024), Universidad Técnica Federico Santa María. [Ver publicación](https://link.springer.com/article/10.1007/s11004-023-10123-4)
 
 ## Proyectos
 
@@ -60,8 +68,9 @@ para la prueba de transición universitaria en chile de manera gratuita y public
 ## Habilidades
 
 * Manejo de Github <img src="git_logo.svg" alt="drawing" width="16"/>
-* Dominio de <img src="R_logo.svg" alt="drawing" width="18"/>
-* Dominio de Python <img src="py_logo.svg" alt="drawing" width="15"/>
+* Dominio de <img src="R_logo.svg" alt="drawing" width="18"/> (nivel avanzado)
+* Dominio de Python <img src="py_logo.svg" alt="drawing" width="15"/> (nivel avanzado)
+* Dominio de Excel <img src="excel_logo.svg" alt="drawing" width="16"/> (nivel avanzado)
 * Dominio de <img src="latex_logo.svg" alt="drawing" width="35"/>
 * Dominio de <img src="moodle_logo.svg" alt="drawing" width="40"/>
 
