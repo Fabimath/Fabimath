@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gatos de Estadística — Fabimath</title>
-<meta name="description" content="Quiz interactivo de estadística: elige un gato (Intervalos de Confianza o Test de Hipótesis), 5 ejercicios al azar con alternativas y pauta completa en LaTeX.">
+<meta name="description" content="Quiz interactivo de estadística: Clasificación de Variables, Intervalos de Confianza, Test de Hipótesis, Normal, Condicional y Bayes. 5 ejercicios al azar con alternativas y pauta completa.">
 <link rel="icon" type="image/png" href="logo/fabimath_logo.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script src="vc_questions.js"></script>
 <script src="ic_questions.js"></script>
 <script src="th_questions.js"></script>
 <script src="nm_questions.js"></script>
@@ -271,6 +272,13 @@ function drawChar(el, cell, t, mood) {
 
 /* ---------------- topics (extensible) ---------------- */
 const TOPICS = [
+  {
+    id:'vc', title:'Gato de las Variables', name:'Clasificación de Variables',
+    desc:'Identifica la variable de estudio y clasifícala: nominal, ordinal, discreta o continua.',
+    bank: (typeof VC_QUESTIONS!=='undefined') ? VC_QUESTIONS : [],
+    body:'#eab308', shade:'#b98a06', accent:'#fde047',
+    guide:'Guía 0 — Identificación y Clasificación de Variables'
+  },
   {
     id:'ic', title:'Chica de Intervalos', name:'Intervalos de Confianza',
     desc:'Media (z y t) y proporción. Elige el intervalo correcto entre 4 alternativas.',

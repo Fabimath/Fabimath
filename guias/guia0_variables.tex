@@ -1,0 +1,479 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage[top=0.8cm, bottom=0.6cm, left=1.2cm, right=1.2cm, includeheadfoot]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{sectsty}
+\usepackage{titling}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\tcbuselibrary{skins,breakable}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\headheight}{14pt}
+\addtolength{\topmargin}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\linespread{0.85}
+
+% ---- Colores ----
+\definecolor{applelightgray}{RGB}{180,180,180}
+
+% ---- Encabezado ----
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{\sffamily Estad\'istica Descriptiva}}
+\fancyhead[R]{\small\sffamily Gu\'ia \textendash\ Identificaci\'on y Clasificaci\'on de Variables}
+\fancyfoot[C]{\small\sffamily\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[C]{\textcolor{applelightgray}{\rule{\textwidth}{0.4pt}}}
+
+% ---- Comando de problema ----
+\newcommand{\problema}[1]{%
+  \vspace{2pt}%
+  \begin{tcolorbox}[
+    enhanced,
+    colback=white,
+    colframe=black,
+    arc=0pt,
+    boxrule=0pt,
+    leftrule=2pt,
+    left=6pt, right=6pt,
+    top=1pt, bottom=1pt,
+  ]
+    {\normalsize\bfseries\sffamily #1}
+  \end{tcolorbox}%
+  \vspace{1pt}%
+}
+
+% =====================================================
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  {\fontsize{15}{17}\selectfont\bfseries\sffamily Gu\'ia de Ejercicios \textendash\ Identificaci\'on y Clasificaci\'on de Variables\par}
+  \vspace{0.05cm}
+  {\small\sffamily Estad\'istica Descriptiva \textperiodcentered\ Variable de Estudio \textperiodcentered\ Tipos de Variable\par}
+  {\footnotesize\sffamily 50 Problemas\par}
+  {\rule{3cm}{0.6pt}}
+\end{center}
+
+\vspace{0.1cm}
+
+\noindent\sffamily\small\textit{Instrucciones:} Para cada situaci\'on propuesta, realice las siguientes tareas: \textbf{a)} Identifique la variable de estudio. \textbf{b)} Clasifique la variable seg\'un su naturaleza como \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+
+\vspace{4pt}
+
+%% ===== PROBLEMA 1 =====
+\problema{Problema 1}
+\noindent\sffamily\small Un hospital registra el \textbf{tipo de sangre} (A, B, AB u O) de cada paciente que ingresa a urgencias con el fin de planificar adecuadamente el banco de sangre.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 2 =====
+\problema{Problema 2}
+\noindent\sffamily\small Una prueba estandarizada clasifica el rendimiento de los estudiantes de ense\~nanza media en cuatro \textbf{niveles de logro}: Insuficiente, Elemental, Adecuado y Sobresaliente.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 3 =====
+\problema{Problema 3}
+\noindent\sffamily\small En una sala de maternidad, se registra el \textbf{peso de cada reci\'en nacido} (en gramos) al momento del parto, con el objetivo de detectar posibles casos de bajo peso al nacer.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 4 =====
+\problema{Problema 4}
+\noindent\sffamily\small En una encuesta sobre composici\'on del hogar, se pregunta a cada familia cu\'antos \textbf{hijos menores de 18 a\~nos} viven actualmente con ellos.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 5 =====
+\problema{Problema 5}
+\noindent\sffamily\small Una empresa de cosm\'eticos realiza una encuesta a sus clientes para conocer cu\'al de cinco opciones es la \textbf{marca de shampoo} que prefieren utilizar habitualmente.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 6 =====
+\problema{Problema 6}
+\noindent\sffamily\small En la sala de urgencias, el personal de triage registra el \textbf{nivel de dolor} reportado por cada paciente usando la escala: Sin dolor, Leve, Moderado o Severo.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 7 =====
+\problema{Problema 7}
+\noindent\sffamily\small Una estaci\'on meteorol\'ogica registra la \textbf{temperatura del aire} (en grados Celsius) cada hora durante un mes completo para estudiar las variaciones clim\'aticas estacionales.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 8 =====
+\problema{Problema 8}
+\noindent\sffamily\small Un docente contabiliza la \textbf{cantidad de errores ortogr\'aficos} presentes en cada redacci\'on entregada por sus estudiantes de primer a\~no de ense\~nanza media.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 9 =====
+\problema{Problema 9}
+\noindent\sffamily\small El Servicio Nacional de Turismo registra el \textbf{pa\'is de origen} de cada visitante extranjero que ingresa al pa\'is a trav\'es de los aeropuertos internacionales.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 10 =====
+\problema{Problema 10}
+\noindent\sffamily\small En una empresa se registra el \textbf{nivel educacional m\'aximo} alcanzado por cada trabajador al momento de su incorporaci\'on: Educaci\'on b\'asica, Media, T\'ecnica o Universitaria.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 11 =====
+\problema{Problema 11}
+\noindent\sffamily\small En un control preventivo de salud, se mide la \textbf{presi\'on arterial sist\'olica} (en mmHg) de cada participante adulto mayor inscrito en el programa de salud cardiovascular.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 12 =====
+\problema{Problema 12}
+\noindent\sffamily\small Una municipalidad lleva un registro del \textbf{n\'umero de accidentes de tr\'ansito} ocurridos en su territorio cada semana, con el fin de identificar per\'iodos de mayor riesgo vial.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 13 =====
+\problema{Problema 13}
+\noindent\sffamily\small En un estudio sociol\'ogico sobre identidad cultural, se registra la \textbf{religi\'on declarada} por cada uno de los participantes de la muestra.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 14 =====
+\problema{Problema 14}
+\noindent\sffamily\small Un programa gubernamental de vida sana clasifica el \textbf{nivel de actividad f\'isica} de los participantes en cuatro categor\'ias: Sedentario, Levemente activo, Moderadamente activo e Intensamente activo.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 15 =====
+\problema{Problema 15}
+\noindent\sffamily\small Una empresa de reparto a domicilio registra el \textbf{tiempo de entrega} (en minutos) transcurrido desde que se despacha cada pedido hasta que llega al domicilio del cliente.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 16 =====
+\problema{Problema 16}
+\noindent\sffamily\small En un estudio de movilidad urbana, se registra cu\'antos \textbf{autom\'oviles} posee cada hogar encuestado en una ciudad metropolitana.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 17 =====
+\problema{Problema 17}
+\noindent\sffamily\small En un censo del mercado del trabajo, se registra el \textbf{tipo de contrato} bajo el cual trabaja cada empleado encuestado: Indefinido, A plazo fijo u Honorarios.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 18 =====
+\problema{Problema 18}
+\noindent\sffamily\small Una agencia calificadora asigna a cada bono corporativo un \textbf{nivel de riesgo crediticio}: Bajo, Moderado, Alto o Muy alto, seg\'un la probabilidad de incumplimiento del emisor.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 19 =====
+\problema{Problema 19}
+\noindent\sffamily\small En un laboratorio cl\'inico, se mide la \textbf{concentraci\'on de glucosa en sangre} (en mg/dL) de pacientes en ayunas, con el fin de detectar posibles casos de diabetes mellitus.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 20 =====
+\problema{Problema 20}
+\noindent\sffamily\small Una biblioteca p\'ublica registra cu\'antos \textbf{libros ley\'o} cada usuario inscrito a lo largo del \'ultimo a\~no calendario, para evaluar el programa de fomento lector.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+\newpage
+
+%% ===== PROBLEMA 21 =====
+\problema{Problema 21}
+\noindent\sffamily\small En una encuesta de salud nacional, se registra la \textbf{macrozona de residencia} de cada participante: Norte, Centro o Sur del pa\'is.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 22 =====
+\problema{Problema 22}
+\noindent\sffamily\small Tras ser atendido en un consultorio de atenci\'on primaria, cada paciente eval\'ua la \textbf{calidad de la atenci\'on recibida}: Muy mala, Mala, Buena o Muy buena.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 23 =====
+\problema{Problema 23}
+\noindent\sffamily\small En un estudio hidrol\'ogico, se registra el \textbf{volumen de precipitaciones} acumulado (en mil\'imetros) durante cada mes del a\~no en distintas estaciones pluviom\'etricas del pa\'is.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 24 =====
+\problema{Problema 24}
+\noindent\sffamily\small Una central de emergencias registra el \textbf{n\'umero total de llamadas} recibidas cada d\'ia para optimizar la dotaci\'on de personal en los distintos turnos.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 25 =====
+\problema{Problema 25}
+\noindent\sffamily\small En un campeonato nacional de nataci\'on, se registra la \textbf{prueba} en que compite cada deportista: estilo libre, pecho, espalda o mariposa.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 26 =====
+\problema{Problema 26}
+\noindent\sffamily\small En un estudio de consumo, cada hogar participante es clasificado seg\'un su \textbf{nivel socioecon\'omico}: Bajo, Medio-bajo, Medio, Medio-alto o Alto.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 27 =====
+\problema{Problema 27}
+\noindent\sffamily\small En un ensayo agr\'icola, se mide el \textbf{rendimiento del trigo} cosechado en cada parcela experimental, expresado en toneladas por hect\'area.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 28 =====
+\problema{Problema 28}
+\noindent\sffamily\small En un catastro habitacional, se registra la \textbf{cantidad de dormitorios} que posee cada vivienda encuestada, para caracterizar la densidad de ocupaci\'on.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 29 =====
+\problema{Problema 29}
+\noindent\sffamily\small Un programa de inclusi\'on educativa registra el \textbf{idioma materno} de cada estudiante extranjero matriculado: espa\~nol, ingl\'es, portugu\'es, franc\'es u otro.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 30 =====
+\problema{Problema 30}
+\noindent\sffamily\small Una tienda en l\'inea pide a sus clientes que calif\'iquen su \textbf{experiencia de compra} tras recibir el pedido: Muy insatisfecho, Insatisfecho, Satisfecho o Muy satisfecho.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 31 =====
+\problema{Problema 31}
+\noindent\sffamily\small Una estaci\'on meteorol\'ogica costera mide la \textbf{velocidad del viento} (en km/h) cada 10 minutos durante una semana, para monitorear posibles condiciones adversas en el mar.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 32 =====
+\problema{Problema 32}
+\noindent\sffamily\small En un torneo de f\'utbol profesional, se registra el \textbf{n\'umero de goles marcados} por cada equipo participante a lo largo de toda la fase regular del campeonato.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 33 =====
+\problema{Problema 33}
+\noindent\sffamily\small En un hospital universitario, se registra la \textbf{especialidad m\'edica} del doctor que atendi\'o a cada paciente en su \'ultima consulta: Cardiolog\'ia, Neurolog\'ia, Traumatolog\'ia, Pediatr\'ia u otra.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 34 =====
+\problema{Problema 34}
+\noindent\sffamily\small Tras rendir un examen de matem\'aticas, cada estudiante responde una encuesta en la que indica la \textbf{dificultad percibida} de la prueba: Muy f\'acil, F\'acil, Dif\'icil o Muy dif\'icil.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 35 =====
+\problema{Problema 35}
+\noindent\sffamily\small En una auditor\'ia inform\'atica empresarial, se registra el \textbf{sistema operativo} instalado en cada equipo de la compa\~n\'ia: Windows, macOS, Linux u otro.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 36 =====
+\problema{Problema 36}
+\noindent\sffamily\small En un estudio de bienestar organizacional, los trabajadores de una empresa autoevalúan su \textbf{nivel de estr\'es laboral}: Sin estr\'es, Leve, Moderado o Severo.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 37 =====
+\problema{Problema 37}
+\noindent\sffamily\small En un estudio de fertilidad del suelo, se mide el \textbf{pH de muestras de suelo} extra\'idas de distintos sectores de un predio agr\'icola para evaluar su aptitud de cultivo.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 38 =====
+\problema{Problema 38}
+\noindent\sffamily\small Una empresa de telecomunicaciones contabiliza el \textbf{n\'umero de quejas formales} recibidas en cada una de sus sucursales durante el \'ultimo trimestre del a\~no.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 39 =====
+\problema{Problema 39}
+\noindent\sffamily\small Un oncólogo registra el \textbf{estadio de avance del c\'ancer} de cada paciente al momento del diagn\'ostico, seg\'un la clasificaci\'on TNM internacional: Estadio I, II, III o IV.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 40 =====
+\problema{Problema 40}
+\noindent\sffamily\small En un experimento de fisiolog\'ia vegetal, se mide la \textbf{concentraci\'on de di\'oxido de carbono} (en ppm) en el interior de distintas c\'amaras de cultivo de plantas a lo largo del d\'ia.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+\newpage
+
+%% ===== PROBLEMA 41 =====
+\problema{Problema 41}
+\noindent\sffamily\small El sistema de salud primaria registra cu\'antas veces \textbf{consult\'o cada paciente} a su m\'edico de cabecera durante el a\~no anterior, con el fin de estimar la demanda futura.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 42 =====
+\problema{Problema 42}
+\noindent\sffamily\small En un jard\'in bot\'anico, se registra el \textbf{color predominante de la flor} de cada ejemplar de una especie estudiada: blanco, amarillo, rojo, rosado o violeta.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 43 =====
+\problema{Problema 43}
+\noindent\sffamily\small En una encuesta sobre condiciones de vida, se registra el \textbf{ingreso mensual total del hogar} (en pesos), considerando todas las fuentes de ingreso declaradas por los miembros.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 44 =====
+\problema{Problema 44}
+\noindent\sffamily\small En un operativo de fiscalizaci\'on vial, la polic\'ia registra el \textbf{tipo de infracci\'on} cometida por cada conductor detenido: exceso de velocidad, no respetar se\~nal, uso del tel\'efono u otra.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 45 =====
+\problema{Problema 45}
+\noindent\sffamily\small En un programa de salud preventiva, se calcula el \textbf{\'indice de masa corporal} (IMC, en kg/m\textsuperscript{2}) de cada adulto participante para evaluar su estado nutricional.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 46 =====
+\problema{Problema 46}
+\noindent\sffamily\small El \'area de recursos humanos de una empresa registra cu\'antas \textbf{capacitaciones complet\'o} cada trabajador durante el a\~no, como parte del plan de desarrollo de competencias.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 47 =====
+\problema{Problema 47}
+\noindent\sffamily\small En un registro de egresados universitarios, se anota el \textbf{\'area de conocimiento} de la carrera cursada por cada titulado: Salud, Ingenier\'ia, Humanidades, Ciencias Sociales o Arte.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 48 =====
+\problema{Problema 48}
+\noindent\sffamily\small Una municipalidad clasifica las obras de infraestructura pendientes seg\'un su \textbf{nivel de urgencia}: Baja, Media, Alta o Cr\'itica, para priorizar la ejecuci\'on del presupuesto.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 49 =====
+\problema{Problema 49}
+\noindent\sffamily\small En un centro de salud mental, se registra cu\'antas \textbf{sesiones de psicoterapia complet\'o} cada paciente durante su tratamiento, para evaluar la adherencia al programa terap\'eutico.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+%% ===== PROBLEMA 50 =====
+\problema{Problema 50}
+\noindent\sffamily\small En una encuesta de convivencia ciudadana, cada residente eval\'ua su \textbf{percepci\'on de seguridad} en el barrio donde vive: Muy inseguro, Inseguro, Seguro o Muy seguro.
+\begin{enumerate}[leftmargin=1.2cm, label=\textbf{\alph*)}, itemsep=0pt, topsep=2pt]
+  \item Identifique la variable de estudio.
+  \item Clasifique la variable seg\'un su naturaleza: \textbf{cualitativa nominal}, \textbf{cualitativa ordinal}, \textbf{cuantitativa continua} o \textbf{cuantitativa discreta}.
+\end{enumerate}
+
+\end{document}
