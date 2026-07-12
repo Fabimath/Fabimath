@@ -18,6 +18,7 @@
 <script src="cn_questions.js"></script>
 <script src="cd_questions.js"></script>
 <script src="mv_questions.js"></script>
+<script src="pb_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -128,6 +129,14 @@
   .pie-legend .pl-sw { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
   .pie-legend .pl-pct { color: #9fb6de; margin-left: auto; padding-left: 10px; }
   .qchart-n { font-size: 12px; color: #8fa9d6; margin-top: 8px; }
+  .box-plot { padding: 18px 10px 4px; }
+  .box-track { position: relative; height: 44px; }
+  .box-whisker { position: absolute; top: 21px; height: 2px; background: var(--accent); }
+  .box-cap { position: absolute; top: 12px; width: 2px; height: 20px; background: var(--accent); }
+  .box-rect { position: absolute; top: 4px; height: 36px; background: rgba(99,179,255,.16); border: 2px solid var(--accent); border-radius: 4px; }
+  .box-med { position: absolute; top: 4px; width: 3px; height: 36px; background: var(--gold); }
+  .box-axis { position: relative; height: 20px; margin-top: 6px; }
+  .box-lbl { position: absolute; transform: translateX(-50%); font-size: 11.5px; color: #9fb6de; white-space: nowrap; }
   .qask { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 14px; }
 
   .alts { display: flex; flex-direction: column; gap: 11px; }
@@ -353,6 +362,13 @@ const TOPICS = [
     bank: (typeof MV_QUESTIONS!=='undefined') ? MV_QUESTIONS : [],
     body:'#fb923c', shade:'#d9701c', accent:'#fdba74',
     guide:'Guía — Medidas de Variabilidad (Datos Cuantitativos Discretos)'
+  },
+  {
+    id:'pb', title:'Gato de la Caja', name:'Percentiles y Boxplot',
+    desc:'Interpreta percentiles, cuartiles y deciles en contexto, y lee diagramas de caja: RIC, mediana, atípicos y el 50% central.',
+    bank: (typeof PB_QUESTIONS!=='undefined') ? PB_QUESTIONS : [],
+    body:'#e879f9', shade:'#c026d3', accent:'#f0abfc',
+    guide:'Guía — Interpretación de Percentiles y Diagrama de Caja'
   }
 ];
 
@@ -367,6 +383,25 @@ function renderChart(chart) {
       return `<div class="bar-col"><span class="bar-val">${v}</span><div class="bar-rect" style="height:${hpct}%;background:${CHART_PALETTE[i % CHART_PALETTE.length]}"></div><span class="bar-lbl">${lbl}</span></div>`;
     }).join('');
     return `<div class="bar-chart">${cols}</div><div class="qchart-n">${chart.unit || ''}</div>`;
+  }
+  if (chart.type === 'box') {
+    const span = chart.max - chart.min || 1;
+    const pad = span * 0.06;
+    const lo = chart.min - pad, hi = chart.max + pad;
+    const X = v => ((v - lo) / (hi - lo) * 100).toFixed(2) + '%';
+    const marks = [chart.min, chart.q1, chart.med, chart.q3, chart.max];
+    const labels = marks.map(v => `<span class="box-lbl" style="left:${X(v)}">${String(v).replace('.', ',')}</span>`).join('');
+    return `<div class="box-plot">
+      <div class="box-track">
+        <div class="box-whisker" style="left:${X(chart.min)};width:calc(${X(chart.q1)} - ${X(chart.min)})"></div>
+        <div class="box-whisker" style="left:${X(chart.q3)};width:calc(${X(chart.max)} - ${X(chart.q3)})"></div>
+        <div class="box-cap" style="left:${X(chart.min)}"></div>
+        <div class="box-cap" style="left:${X(chart.max)}"></div>
+        <div class="box-rect" style="left:${X(chart.q1)};width:calc(${X(chart.q3)} - ${X(chart.q1)})"></div>
+        <div class="box-med" style="left:${X(chart.med)}"></div>
+      </div>
+      <div class="box-axis">${labels}</div>
+    </div><div class="qchart-n">${chart.unit || ''}</div>`;
   }
   if (chart.type === 'pie') {
     let acc = 0;
