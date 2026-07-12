@@ -1117,17 +1117,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 15 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es la mediana menos $Q_1 = 7$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 30 - 15 = 15$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 50$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 50$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=15,\\ Me=22,\\ Q_3=30,\\ \\text{máx}=55.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 30 - 15 = 15"
   ],
-  "conc": "VERDADERA: el RIC real es <b>15</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>15</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1144,17 +1142,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 25 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana es la línea central de la caja, 22",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 30$",
-   "Verdadera: la línea central de la caja está en 25",
-   "Verdadera: la mediana es el punto medio del rango $= 30$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 0,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=15,\\ Me=22,\\ Q_3=30,\\ \\text{máx}=55.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 22"
   ],
-  "conc": "FALSA: la mediana real es <b>22</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>22</b>, no 25."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1171,18 +1167,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (55) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: 55 no supera la cerca de $52{,}5$",
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Falsa: la cerca es $Q_3 + RIC = 45$",
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 30 + 22{,}5 = 52{,}5$ y $55 > 52{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=15,\\ Me=22,\\ Q_3=30,\\ \\text{máx}=55.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 30 + 22{,}5 = 52{,}5",
    "\\text{Comparación: } 55 > 52{,}5 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>52,5</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>52,5</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1199,18 +1193,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 50% central de los datos está entre 15 y 30 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: la caja $Q_1$–$Q_3$ ($15$ a $30$) contiene al 50% central",
-   "Verdadera: cada bigote contiene el 10% de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=15,\\ Me=22,\\ Q_3=30,\\ \\text{máx}=55.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 15,\\ \\text{mediana} = 22,\\ Q_3 = 30"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: la caja $Q_1$–$Q_3$ (15 a 30) contiene al 50% central."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1227,17 +1219,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 13 cientos de miles de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 52$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 52$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 28 - 15 = 13$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=8,\\ Q_1=15,\\ Me=20,\\ Q_3=28,\\ \\text{máx}=60.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 28 - 15 = 13"
   ],
-  "conc": "VERDADERA: el RIC real es <b>13</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>13</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1254,17 +1244,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 22 cientos de miles de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 34$",
-   "Verdadera: la mediana es el punto medio del rango $= 34$",
-   "Verdadera: la línea central de la caja está en 22",
-   "Falsa: la mediana es la línea central de la caja, 20"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=8,\\ Q_1=15,\\ Me=20,\\ Q_3=28,\\ \\text{máx}=60.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 20"
   ],
-  "conc": "FALSA: la mediana real es <b>20</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>20</b>, no 22."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1281,18 +1269,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (60) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la cerca es $Q_3 + RIC = 41$",
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 28 + 19{,}5 = 47{,}5$ y $60 > 47{,}5$",
-   "Falsa: 60 no supera la cerca de $47{,}5$",
-   "Verdadera: todo valor fuera de la caja es atípico"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=8,\\ Q_1=15,\\ Me=20,\\ Q_3=28,\\ \\text{máx}=60.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 28 + 19{,}5 = 47{,}5",
    "\\text{Comparación: } 60 > 47{,}5 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>47,5</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>47,5</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1309,10 +1295,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos es menor que 15 cientos de miles de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $Q_1 = 15$ deja el 25% de los datos por debajo",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=8,\\ Q_1=15,\\ Me=20,\\ Q_3=28,\\ \\text{máx}=60.",
@@ -1320,7 +1304,7 @@ const PB_QUESTIONS = [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 15,\\ \\text{mediana} = 20,\\ Q_3 = 28"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_1 = 15$ deja el 25% de los datos por debajo."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1337,17 +1321,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 20 puntos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 65$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 10$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 75 - 55 = 20$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 65$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=30,\\ Q_1=55,\\ Me=65,\\ Q_3=75,\\ \\text{máx}=95.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 75 - 55 = 20"
   ],
-  "conc": "VERDADERA: el RIC real es <b>20</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>20</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1364,17 +1346,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 70 puntos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la mediana es el punto medio del rango $= 62{,}5$",
-   "Verdadera: la línea central de la caja está en 70",
-   "Falsa: la mediana es la línea central de la caja, 65",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 62{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=30,\\ Q_1=55,\\ Me=65,\\ Q_3=75,\\ \\text{máx}=95.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 65"
   ],
-  "conc": "FALSA: la mediana real es <b>65</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>65</b>, no 70."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1391,10 +1371,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor mínimo (30) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: todo valor fuera de la caja es atípico",
-   "Falsa: la cerca es $Q_1 - 1{,}5\\cdot RIC = 55 - 30 = 25$ y $30 \\ge 25$, no la supera",
-   "Verdadera: 30 supera la cerca de $25$",
-   "Verdadera: la cerca es $Q_1 - RIC = 35$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=30,\\ Q_1=55,\\ Me=65,\\ Q_3=75,\\ \\text{máx}=95.",
@@ -1402,7 +1380,7 @@ const PB_QUESTIONS = [
    "Q_1 - 1{,}5\\cdot RIC = 55 - 30 = 25",
    "\\text{Comparación: } 30 \\ge 25 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>25</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>25</b> y el valor mínimo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1419,10 +1397,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 75% de los datos es 75 puntos o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $Q_3 = 75$ acumula el 75% abajo y deja el 25% arriba",
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Falsa: la caja solo muestra el rango total de los datos"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=30,\\ Q_1=55,\\ Me=65,\\ Q_3=75,\\ \\text{máx}=95.",
@@ -1430,7 +1406,7 @@ const PB_QUESTIONS = [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 55,\\ \\text{mediana} = 65,\\ Q_3 = 75"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_3 = 75$ acumula el 75% abajo y deja el 25% arriba."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1447,17 +1423,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 30 años\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 75$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 55 - 25 = 30$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 15$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 75$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=25,\\ Me=40,\\ Q_3=55,\\ \\text{máx}=80.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 55 - 25 = 30"
   ],
-  "conc": "VERDADERA: el RIC real es <b>30</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>30</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1474,17 +1448,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 45 años\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 42{,}5$",
-   "Verdadera: la línea central de la caja está en 45",
-   "Falsa: la mediana es la línea central de la caja, 40",
-   "Verdadera: la mediana es el punto medio del rango $= 42{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=25,\\ Me=40,\\ Q_3=55,\\ \\text{máx}=80.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 40"
   ],
-  "conc": "FALSA: la mediana real es <b>40</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>40</b>, no 45."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1501,10 +1473,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (80) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la cerca es $Q_3 + RIC = 85$",
-   "Falsa: la cerca es $Q_3 + 1{,}5\\cdot RIC = 55 + 45 = 100$ y $80 \\le 100$, no la supera",
-   "Falsa: todo valor fuera de la caja es atípico",
-   "Verdadera: 80 supera la cerca de $100$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=25,\\ Me=40,\\ Q_3=55,\\ \\text{máx}=80.",
@@ -1512,7 +1482,7 @@ const PB_QUESTIONS = [
    "Q_3 + 1{,}5\\cdot RIC = 55 + 45 = 100",
    "\\text{Comparación: } 80 \\le 100 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>100</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>100</b> y el valor máximo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1529,18 +1499,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 50% central de los datos está entre 25 y 55 años\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: la caja $Q_1$–$Q_3$ ($25$ a $55$) contiene al 50% central"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=25,\\ Me=40,\\ Q_3=55,\\ \\text{máx}=80.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 25,\\ \\text{mediana} = 40,\\ Q_3 = 55"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: la caja $Q_1$–$Q_3$ (25 a 55) contiene al 50% central."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1557,17 +1525,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 20 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $RIC = Q_3 - Q_1 = 20$",
-   "Falsa: $RIC = Q_3 - Q_1 = 15$, no 20",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 40$",
-   "Verdadera: el RIC es la mediana menos $Q_1 = 8$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=10,\\ Q_1=20,\\ Me=28,\\ Q_3=35,\\ \\text{máx}=50.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 35 - 20 = 15"
   ],
-  "conc": "FALSA: el RIC real es <b>15</b>."
+  "conc": "<b>FALSA</b>: el RIC real es <b>15</b>, no 20."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1584,17 +1550,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 28 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la línea central de la caja está en 28",
-   "Verdadera: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 30$",
-   "Falsa: la mediana es el punto medio del rango $= 30$",
-   "Falsa: la mediana es el promedio de $Q_1$ y $Q_3 = 27{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=10,\\ Q_1=20,\\ Me=28,\\ Q_3=35,\\ \\text{máx}=50.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 28"
   ],
-  "conc": "VERDADERA: la mediana real es <b>28</b>."
+  "conc": "<b>VERDADERA</b>: la mediana real es <b>28</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1611,18 +1575,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (50) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la cerca es $Q_3 + RIC = 50$",
-   "Verdadera: 50 supera la cerca de $57{,}5$",
-   "Falsa: todo valor fuera de la caja es atípico",
-   "Falsa: la cerca es $Q_3 + 1{,}5\\cdot RIC = 35 + 22{,}5 = 57{,}5$ y $50 \\le 57{,}5$, no la supera"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=10,\\ Q_1=20,\\ Me=28,\\ Q_3=35,\\ \\text{máx}=50.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 35 + 22{,}5 = 57{,}5",
    "\\text{Comparación: } 50 \\le 57{,}5 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>57,5</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>57,5</b> y el valor máximo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1639,18 +1601,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos supera 35 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Verdadera: $Q_3 = 35$ acumula el 75% abajo y deja el 25% arriba",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=10,\\ Q_1=20,\\ Me=28,\\ Q_3=35,\\ \\text{máx}=50.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 20,\\ \\text{mediana} = 28,\\ Q_3 = 35"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_3 = 35$ acumula el 75% abajo y deja el 25% arriba."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1667,17 +1627,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 35 miles de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $RIC = Q_3 - Q_1 = 80 - 45 = 35$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 15$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 120$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 120$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=20,\\ Q_1=45,\\ Me=60,\\ Q_3=80,\\ \\text{máx}=140.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 80 - 45 = 35"
   ],
-  "conc": "VERDADERA: el RIC real es <b>35</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>35</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1694,17 +1652,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 65 miles de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la línea central de la caja está en 65",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 80$",
-   "Verdadera: la mediana es el punto medio del rango $= 80$",
-   "Falsa: la mediana es la línea central de la caja, 60"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=20,\\ Q_1=45,\\ Me=60,\\ Q_3=80,\\ \\text{máx}=140.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 60"
   ],
-  "conc": "FALSA: la mediana real es <b>60</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>60</b>, no 65."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1721,18 +1677,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (140) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Falsa: 140 no supera la cerca de $132{,}5$",
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 80 + 52{,}5 = 132{,}5$ y $140 > 132{,}5$",
-   "Falsa: la cerca es $Q_3 + RIC = 115$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=20,\\ Q_1=45,\\ Me=60,\\ Q_3=80,\\ \\text{máx}=140.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 80 + 52{,}5 = 132{,}5",
    "\\text{Comparación: } 140 > 132{,}5 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>132,5</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>132,5</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1749,18 +1703,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos es menor que 45 miles de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: $Q_1 = 45$ deja el 25% de los datos por debajo",
-   "Falsa: la caja solo muestra el rango total de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=20,\\ Q_1=45,\\ Me=60,\\ Q_3=80,\\ \\text{máx}=140.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 45,\\ \\text{mediana} = 60,\\ Q_3 = 80"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_1 = 45$ deja el 25% de los datos por debajo."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1777,17 +1729,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 5 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 19$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 2$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 19$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 8 - 3 = 5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=3,\\ Me=5,\\ Q_3=8,\\ \\text{máx}=20.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 8 - 3 = 5"
   ],
-  "conc": "VERDADERA: el RIC real es <b>5</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>5</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1804,17 +1754,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 6 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la mediana es el punto medio del rango $= 10{,}5$",
-   "Falsa: la mediana es la línea central de la caja, 5",
-   "Verdadera: la línea central de la caja está en 6",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 10{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=3,\\ Me=5,\\ Q_3=8,\\ \\text{máx}=20.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 5"
   ],
-  "conc": "FALSA: la mediana real es <b>5</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>5</b>, no 6."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1831,10 +1779,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (20) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 8 + 7{,}5 = 15{,}5$ y $20 > 15{,}5$",
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Falsa: la cerca es $Q_3 + RIC = 13$",
-   "Falsa: 20 no supera la cerca de $15{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=3,\\ Me=5,\\ Q_3=8,\\ \\text{máx}=20.",
@@ -1842,7 +1788,7 @@ const PB_QUESTIONS = [
    "Q_3 + 1{,}5\\cdot RIC = 8 + 7{,}5 = 15{,}5",
    "\\text{Comparación: } 20 > 15{,}5 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>15,5</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>15,5</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1859,18 +1805,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 50% central de los datos está entre 3 y 8 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Verdadera: la caja $Q_1$–$Q_3$ ($3$ a $8$) contiene al 50% central"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=3,\\ Me=5,\\ Q_3=8,\\ \\text{máx}=20.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 3,\\ \\text{mediana} = 5,\\ Q_3 = 8"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: la caja $Q_1$–$Q_3$ (3 a 8) contiene al 50% central."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1887,17 +1831,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 30 cientos de gramos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es la mediana menos $Q_1 = 15$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 95$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 50 - 20 = 30$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 95$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=20,\\ Me=35,\\ Q_3=50,\\ \\text{máx}=100.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 50 - 20 = 30"
   ],
-  "conc": "VERDADERA: el RIC real es <b>30</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>30</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1914,17 +1856,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 30 cientos de gramos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la mediana es el punto medio del rango $= 52{,}5$",
-   "Falsa: la mediana es la línea central de la caja, 35",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 52{,}5$",
-   "Verdadera: la línea central de la caja está en 30"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=20,\\ Me=35,\\ Q_3=50,\\ \\text{máx}=100.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 35"
   ],
-  "conc": "FALSA: la mediana real es <b>35</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>35</b>, no 30."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1941,18 +1881,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (100) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Falsa: 100 no supera la cerca de $95$",
-   "Falsa: la cerca es $Q_3 + RIC = 80$",
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 50 + 45 = 95$ y $100 > 95$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=20,\\ Me=35,\\ Q_3=50,\\ \\text{máx}=100.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 50 + 45 = 95",
    "\\text{Comparación: } 100 > 95 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>95</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>95</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1969,18 +1907,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 75% de los datos es 50 cientos de gramos o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: $Q_3 = 50$ acumula el 75% abajo y deja el 25% arriba",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=20,\\ Me=35,\\ Q_3=50,\\ \\text{máx}=100.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 20,\\ \\text{mediana} = 35,\\ Q_3 = 50"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_3 = 50$ acumula el 75% abajo y deja el 25% arriba."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -1997,17 +1933,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 200 puntos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 600$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 600$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 700 - 500 = 200$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 100$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=350,\\ Q_1=500,\\ Me=600,\\ Q_3=700,\\ \\text{máx}=950.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 700 - 500 = 200"
   ],
-  "conc": "VERDADERA: el RIC real es <b>200</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>200</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2024,17 +1958,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 650 puntos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la mediana es el punto medio del rango $= 650$",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 650$",
-   "Verdadera: la línea central de la caja está en 650",
-   "Falsa: la mediana es la línea central de la caja, 600"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=350,\\ Q_1=500,\\ Me=600,\\ Q_3=700,\\ \\text{máx}=950.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 600"
   ],
-  "conc": "FALSA: la mediana real es <b>600</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>600</b>, no 650."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2051,18 +1983,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor mínimo (350) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la cerca es $Q_1 - 1{,}5\\cdot RIC = 500 - 300 = 200$ y $350 \\ge 200$, no la supera",
-   "Verdadera: la cerca es $Q_1 - RIC = 300$",
-   "Verdadera: 350 supera la cerca de $200$",
-   "Falsa: todo valor fuera de la caja es atípico"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 0,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=350,\\ Q_1=500,\\ Me=600,\\ Q_3=700,\\ \\text{máx}=950.",
   "pautaSteps": [
    "Q_1 - 1{,}5\\cdot RIC = 500 - 300 = 200",
    "\\text{Comparación: } 350 \\ge 200 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>200</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>200</b> y el valor mínimo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2079,18 +2009,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos es igual o superior a 700 puntos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: $Q_3 = 700$ acumula el 75% abajo y deja el 25% arriba",
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=350,\\ Q_1=500,\\ Me=600,\\ Q_3=700,\\ \\text{máx}=950.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 500,\\ \\text{mediana} = 600,\\ Q_3 = 700"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_3 = 700$ acumula el 75% abajo y deja el 25% arriba."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2107,17 +2035,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 6 horas\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 19$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 6$",
-   "Verdadera: el RIC es la mediana menos $Q_1 = 2$",
-   "Falsa: $RIC = Q_3 - Q_1 = 5$, no 6"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=4,\\ Me=6,\\ Q_3=9,\\ \\text{máx}=20.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 9 - 4 = 5"
   ],
-  "conc": "FALSA: el RIC real es <b>5</b>."
+  "conc": "<b>FALSA</b>: el RIC real es <b>5</b>, no 6."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2134,17 +2060,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 6 horas\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana es el promedio de $Q_1$ y $Q_3 = 6{,}5$",
-   "Falsa: la mediana es el punto medio del rango $= 10{,}5$",
-   "Verdadera: la línea central de la caja está en 6",
-   "Verdadera: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 10{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=4,\\ Me=6,\\ Q_3=9,\\ \\text{máx}=20.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 6"
   ],
-  "conc": "VERDADERA: la mediana real es <b>6</b>."
+  "conc": "<b>VERDADERA</b>: la mediana real es <b>6</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2161,10 +2085,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (20) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 9 + 7{,}5 = 16{,}5$ y $20 > 16{,}5$",
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Falsa: 20 no supera la cerca de $16{,}5$",
-   "Falsa: la cerca es $Q_3 + RIC = 14$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=4,\\ Me=6,\\ Q_3=9,\\ \\text{máx}=20.",
@@ -2172,7 +2094,7 @@ const PB_QUESTIONS = [
    "Q_3 + 1{,}5\\cdot RIC = 9 + 7{,}5 = 16{,}5",
    "\\text{Comparación: } 20 > 16{,}5 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>16,5</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>16,5</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2189,10 +2111,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 50% central de los datos está entre 4 y 9 horas\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la caja $Q_1$–$Q_3$ ($4$ a $9$) contiene al 50% central",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: la caja solo muestra el rango total de los datos"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=4,\\ Me=6,\\ Q_3=9,\\ \\text{máx}=20.",
@@ -2200,7 +2120,7 @@ const PB_QUESTIONS = [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 4,\\ \\text{mediana} = 6,\\ Q_3 = 9"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: la caja $Q_1$–$Q_3$ (4 a 9) contiene al 50% central."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2217,17 +2137,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 110 kWh\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 320$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 260 - 150 = 110$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 50$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 320$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=80,\\ Q_1=150,\\ Me=200,\\ Q_3=260,\\ \\text{máx}=400.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 260 - 150 = 110"
   ],
-  "conc": "VERDADERA: el RIC real es <b>110</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>110</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2244,17 +2162,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 210 kWh\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 240$",
-   "Verdadera: la línea central de la caja está en 210",
-   "Falsa: la mediana es la línea central de la caja, 200",
-   "Verdadera: la mediana es el punto medio del rango $= 240$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=80,\\ Q_1=150,\\ Me=200,\\ Q_3=260,\\ \\text{máx}=400.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 200"
   ],
-  "conc": "FALSA: la mediana real es <b>200</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>200</b>, no 210."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2271,18 +2187,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (400) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: todo valor fuera de la caja es atípico",
-   "Verdadera: la cerca es $Q_3 + RIC = 370$",
-   "Falsa: la cerca es $Q_3 + 1{,}5\\cdot RIC = 260 + 165 = 425$ y $400 \\le 425$, no la supera",
-   "Verdadera: 400 supera la cerca de $425$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=80,\\ Q_1=150,\\ Me=200,\\ Q_3=260,\\ \\text{máx}=400.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 260 + 165 = 425",
    "\\text{Comparación: } 400 \\le 425 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>425</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>425</b> y el valor máximo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2299,10 +2213,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos es 150 kWh o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $Q_1 = 150$ deja el 25% de los datos por debajo",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=80,\\ Q_1=150,\\ Me=200,\\ Q_3=260,\\ \\text{máx}=400.",
@@ -2310,7 +2222,7 @@ const PB_QUESTIONS = [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 150,\\ \\text{mediana} = 200,\\ Q_3 = 260"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_1 = 150$ deja el 25% de los datos por debajo."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2327,17 +2239,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 10 miles\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 33$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 18 - 8 = 10$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 33$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 4$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=2,\\ Q_1=8,\\ Me=12,\\ Q_3=18,\\ \\text{máx}=35.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 18 - 8 = 10"
   ],
-  "conc": "VERDADERA: el RIC real es <b>10</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>10</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2354,17 +2264,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 14 miles\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana es la línea central de la caja, 12",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 18{,}5$",
-   "Verdadera: la mediana es el punto medio del rango $= 18{,}5$",
-   "Verdadera: la línea central de la caja está en 14"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 0,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=2,\\ Q_1=8,\\ Me=12,\\ Q_3=18,\\ \\text{máx}=35.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 12"
   ],
-  "conc": "FALSA: la mediana real es <b>12</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>12</b>, no 14."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2381,18 +2289,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (35) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: 35 no supera la cerca de $33$",
-   "Falsa: la cerca es $Q_3 + RIC = 28$",
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 18 + 15 = 33$ y $35 > 33$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=2,\\ Q_1=8,\\ Me=12,\\ Q_3=18,\\ \\text{máx}=35.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 18 + 15 = 33",
    "\\text{Comparación: } 35 > 33 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>33</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>33</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2409,18 +2315,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 75% de los datos es 18 miles o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: $Q_3 = 18$ acumula el 75% abajo y deja el 25% arriba",
-   "Falsa: los bigotes contienen al 50% central de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=2,\\ Q_1=8,\\ Me=12,\\ Q_3=18,\\ \\text{máx}=35.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 8,\\ \\text{mediana} = 12,\\ Q_3 = 18"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_3 = 18$ acumula el 75% abajo y deja el 25% arriba."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2437,17 +2341,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 9 horas\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es la mediana menos $Q_1 = 4$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 15 - 6 = 9$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 24$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 24$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=6,\\ Me=10,\\ Q_3=15,\\ \\text{máx}=25.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 15 - 6 = 9"
   ],
-  "conc": "VERDADERA: el RIC real es <b>9</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>9</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2464,17 +2366,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 10 horas\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 13$",
-   "Falsa: la mediana es el promedio de $Q_1$ y $Q_3 = 10{,}5$",
-   "Falsa: la mediana es el punto medio del rango $= 13$",
-   "Verdadera: la línea central de la caja está en 10"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=6,\\ Me=10,\\ Q_3=15,\\ \\text{máx}=25.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 10"
   ],
-  "conc": "VERDADERA: la mediana real es <b>10</b>."
+  "conc": "<b>VERDADERA</b>: la mediana real es <b>10</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2491,10 +2391,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (25) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: 25 supera la cerca de $28{,}5$",
-   "Falsa: la cerca es $Q_3 + 1{,}5\\cdot RIC = 15 + 13{,}5 = 28{,}5$ y $25 \\le 28{,}5$, no la supera",
-   "Falsa: todo valor fuera de la caja es atípico",
-   "Verdadera: la cerca es $Q_3 + RIC = 24$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=6,\\ Me=10,\\ Q_3=15,\\ \\text{máx}=25.",
@@ -2502,7 +2400,7 @@ const PB_QUESTIONS = [
    "Q_3 + 1{,}5\\cdot RIC = 15 + 13{,}5 = 28{,}5",
    "\\text{Comparación: } 25 \\le 28{,}5 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>28,5</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>28,5</b> y el valor máximo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2519,18 +2417,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 50% central de los datos está entre 6 y 20 horas\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: los bigotes contienen al 50% central de los datos",
-   "Falsa: cada bigote contiene el 10% de los datos",
-   "Falsa: la caja va de $Q_1=6$ a $Q_3=15$, no de 6 a 20",
-   "Verdadera: la caja $Q_1$–$Q_3$ ($6$ a $15$) contiene al 50% central"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=1,\\ Q_1=6,\\ Me=10,\\ Q_3=15,\\ \\text{máx}=25.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 6,\\ \\text{mediana} = 10,\\ Q_3 = 15"
   ],
-  "conc": "FALSA."
+  "conc": "<b>FALSA</b>: la caja va de $Q_1=6$ a $Q_3=15$, no de 6 a 20."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2547,17 +2443,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 90 millones de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es la mediana menos $Q_1 = 40$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 310$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 310$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 180 - 90 = 90$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=40,\\ Q_1=90,\\ Me=130,\\ Q_3=180,\\ \\text{máx}=350.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 180 - 90 = 90"
   ],
-  "conc": "VERDADERA: el RIC real es <b>90</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>90</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2574,17 +2468,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 140 millones de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana es la línea central de la caja, 130",
-   "Verdadera: la mediana es el punto medio del rango $= 195$",
-   "Verdadera: la línea central de la caja está en 140",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 195$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 0,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=40,\\ Q_1=90,\\ Me=130,\\ Q_3=180,\\ \\text{máx}=350.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 130"
   ],
-  "conc": "FALSA: la mediana real es <b>130</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>130</b>, no 140."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2601,18 +2493,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (350) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 180 + 135 = 315$ y $350 > 315$",
-   "Falsa: la cerca es $Q_3 + RIC = 270$",
-   "Falsa: 350 no supera la cerca de $315$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=40,\\ Q_1=90,\\ Me=130,\\ Q_3=180,\\ \\text{máx}=350.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 180 + 135 = 315",
    "\\text{Comparación: } 350 > 315 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>315</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>315</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2629,18 +2519,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos es 90 millones de $ o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: $Q_1 = 90$ deja el 25% de los datos por debajo"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=40,\\ Q_1=90,\\ Me=130,\\ Q_3=180,\\ \\text{máx}=350.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 90,\\ \\text{mediana} = 130,\\ Q_3 = 180"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_1 = 90$ deja el 25% de los datos por debajo."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2657,17 +2545,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 15 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 60$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 5$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 20 - 5 = 15$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 60$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=0,\\ Q_1=5,\\ Me=10,\\ Q_3=20,\\ \\text{máx}=60.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 20 - 5 = 15"
   ],
-  "conc": "VERDADERA: el RIC real es <b>15</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>15</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2684,17 +2570,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 12 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana es la línea central de la caja, 10",
-   "Verdadera: la mediana es el punto medio del rango $= 30$",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 30$",
-   "Verdadera: la línea central de la caja está en 12"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 0,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=0,\\ Q_1=5,\\ Me=10,\\ Q_3=20,\\ \\text{máx}=60.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 10"
   ],
-  "conc": "FALSA: la mediana real es <b>10</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>10</b>, no 12."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2711,18 +2595,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (60) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la cerca es $Q_3 + RIC = 35$",
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Falsa: 60 no supera la cerca de $42{,}5$",
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 20 + 22{,}5 = 42{,}5$ y $60 > 42{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=0,\\ Q_1=5,\\ Me=10,\\ Q_3=20,\\ \\text{máx}=60.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 20 + 22{,}5 = 42{,}5",
    "\\text{Comparación: } 60 > 42{,}5 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>42,5</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>42,5</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2739,10 +2621,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos es 5 minutos o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $Q_1 = 5$ deja el 25% de los datos por debajo",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=0,\\ Q_1=5,\\ Me=10,\\ Q_3=20,\\ \\text{máx}=60.",
@@ -2750,7 +2630,7 @@ const PB_QUESTIONS = [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 5,\\ \\text{mediana} = 10,\\ Q_3 = 20"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_1 = 5$ deja el 25% de los datos por debajo."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2767,17 +2647,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 20 puntos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 60$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 60$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 85 - 65 = 20$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 10$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=40,\\ Q_1=65,\\ Me=75,\\ Q_3=85,\\ \\text{máx}=100.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 85 - 65 = 20"
   ],
-  "conc": "VERDADERA: el RIC real es <b>20</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>20</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2794,17 +2672,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 80 puntos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la línea central de la caja está en 80",
-   "Verdadera: la mediana es el punto medio del rango $= 70$",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 70$",
-   "Falsa: la mediana es la línea central de la caja, 75"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=40,\\ Q_1=65,\\ Me=75,\\ Q_3=85,\\ \\text{máx}=100.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 75"
   ],
-  "conc": "FALSA: la mediana real es <b>75</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>75</b>, no 80."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2821,18 +2697,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor mínimo (40) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la cerca es $Q_1 - 1{,}5\\cdot RIC = 65 - 30 = 35$ y $40 \\ge 35$, no la supera",
-   "Verdadera: la cerca es $Q_1 - RIC = 45$",
-   "Verdadera: 40 supera la cerca de $35$",
-   "Falsa: todo valor fuera de la caja es atípico"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 0,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=40,\\ Q_1=65,\\ Me=75,\\ Q_3=85,\\ \\text{máx}=100.",
   "pautaSteps": [
    "Q_1 - 1{,}5\\cdot RIC = 65 - 30 = 35",
    "\\text{Comparación: } 40 \\ge 35 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>35</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>35</b> y el valor mínimo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2849,18 +2723,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 75% de los datos es 85 puntos o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Verdadera: $Q_3 = 85$ acumula el 75% abajo y deja el 25% arriba",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=40,\\ Q_1=65,\\ Me=75,\\ Q_3=85,\\ \\text{máx}=100.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 65,\\ \\text{mediana} = 75,\\ Q_3 = 85"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_3 = 85$ acumula el 75% abajo y deja el 25% arriba."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2877,17 +2749,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 8 cientos de gramos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 25$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 25$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 4$",
-   "Verdadera: $RIC = Q_3 - Q_1 = 36 - 28 = 8$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=20,\\ Q_1=28,\\ Me=32,\\ Q_3=36,\\ \\text{máx}=45.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 36 - 28 = 8"
   ],
-  "conc": "VERDADERA: el RIC real es <b>8</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>8</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2904,17 +2774,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 34 cientos de gramos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la línea central de la caja está en 34",
-   "Verdadera: la mediana es el punto medio del rango $= 32{,}5$",
-   "Falsa: la mediana es la línea central de la caja, 32",
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 32{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=20,\\ Q_1=28,\\ Me=32,\\ Q_3=36,\\ \\text{máx}=45.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 32"
   ],
-  "conc": "FALSA: la mediana real es <b>32</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>32</b>, no 34."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2931,18 +2799,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (45) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: todo valor fuera de la caja es atípico",
-   "Verdadera: 45 supera la cerca de $48$",
-   "Falsa: la cerca es $Q_3 + 1{,}5\\cdot RIC = 36 + 12 = 48$ y $45 \\le 48$, no la supera",
-   "Verdadera: la cerca es $Q_3 + RIC = 44$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=20,\\ Q_1=28,\\ Me=32,\\ Q_3=36,\\ \\text{máx}=45.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 36 + 12 = 48",
    "\\text{Comparación: } 45 \\le 48 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>48</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>48</b> y el valor máximo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2959,18 +2825,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 50% central de los datos está entre 28 y 36 cientos de gramos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: la caja $Q_1$–$Q_3$ ($28$ a $36$) contiene al 50% central"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=20,\\ Q_1=28,\\ Me=32,\\ Q_3=36,\\ \\text{máx}=45.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 28,\\ \\text{mediana} = 32,\\ Q_3 = 36"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: la caja $Q_1$–$Q_3$ (28 a 36) contiene al 50% central."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -2987,17 +2851,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 13 km\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $RIC = Q_3 - Q_1 = 28 - 15 = 13$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 37$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 6$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 37$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=15,\\ Me=21,\\ Q_3=28,\\ \\text{máx}=42.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 28 - 15 = 13"
   ],
-  "conc": "VERDADERA: el RIC real es <b>13</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>13</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3014,17 +2876,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 21 km\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana es el promedio de $Q_1$ y $Q_3 = 21{,}5$",
-   "Verdadera: la línea central de la caja está en 21",
-   "Verdadera: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 23{,}5$",
-   "Falsa: la mediana es el punto medio del rango $= 23{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=15,\\ Me=21,\\ Q_3=28,\\ \\text{máx}=42.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 21"
   ],
-  "conc": "VERDADERA: la mediana real es <b>21</b>."
+  "conc": "<b>VERDADERA</b>: la mediana real es <b>21</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3041,18 +2901,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (42) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la cerca es $Q_3 + RIC = 41$",
-   "Falsa: todo valor fuera de la caja es atípico",
-   "Falsa: la cerca es $Q_3 + 1{,}5\\cdot RIC = 28 + 19{,}5 = 47{,}5$ y $42 \\le 47{,}5$, no la supera",
-   "Verdadera: 42 supera la cerca de $47{,}5$"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=15,\\ Me=21,\\ Q_3=28,\\ \\text{máx}=42.",
   "pautaSteps": [
    "Q_3 + 1{,}5\\cdot RIC = 28 + 19{,}5 = 47{,}5",
    "\\text{Comparación: } 42 \\le 47{,}5 \\Rightarrow \\text{no atípico}"
   ],
-  "conc": "FALSA: la cerca vale <b>47,5</b>."
+  "conc": "<b>FALSA</b>: la cerca vale <b>47,5</b> y el valor máximo no la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3069,18 +2927,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos supera 28 km\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: $Q_3 = 28$ acumula el 75% abajo y deja el 25% arriba",
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 1,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=15,\\ Me=21,\\ Q_3=28,\\ \\text{máx}=42.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 15,\\ \\text{mediana} = 21,\\ Q_3 = 28"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_3 = 28$ acumula el 75% abajo y deja el 25% arriba."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3097,17 +2953,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 25 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $RIC = Q_3 - Q_1 = 40 - 15 = 25$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 88$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 88$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 10$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=2,\\ Q_1=15,\\ Me=25,\\ Q_3=40,\\ \\text{máx}=90.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 40 - 15 = 25"
   ],
-  "conc": "VERDADERA: el RIC real es <b>25</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>25</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3124,17 +2978,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 28 minutos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 46$",
-   "Falsa: la mediana es la línea central de la caja, 25",
-   "Verdadera: la mediana es el punto medio del rango $= 46$",
-   "Verdadera: la línea central de la caja está en 28"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 1,
   "pautaHead": "\\text{Boxplot: mín}=2,\\ Q_1=15,\\ Me=25,\\ Q_3=40,\\ \\text{máx}=90.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 25"
   ],
-  "conc": "FALSA: la mediana real es <b>25</b>."
+  "conc": "<b>FALSA</b>: la mediana real es <b>25</b>, no 28."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3151,10 +3003,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (90) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 40 + 37{,}5 = 77{,}5$ y $90 > 77{,}5$",
-   "Falsa: 90 no supera la cerca de $77{,}5$",
-   "Falsa: la cerca es $Q_3 + RIC = 65$",
-   "Verdadera: todo valor fuera de la caja es atípico"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=2,\\ Q_1=15,\\ Me=25,\\ Q_3=40,\\ \\text{máx}=90.",
@@ -3162,7 +3012,7 @@ const PB_QUESTIONS = [
    "Q_3 + 1{,}5\\cdot RIC = 40 + 37{,}5 = 77{,}5",
    "\\text{Comparación: } 90 > 77{,}5 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>77,5</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>77,5</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3179,18 +3029,16 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 25% de los datos es 15 minutos o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la caja solo muestra el rango total de los datos",
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Verdadera: $Q_1 = 15$ deja el 25% de los datos por debajo",
-   "Falsa: los bigotes contienen al 50% central de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=2,\\ Q_1=15,\\ Me=25,\\ Q_3=40,\\ \\text{máx}=90.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 15,\\ \\text{mediana} = 25,\\ Q_3 = 40"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_1 = 15$ deja el 25% de los datos por debajo."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3207,17 +3055,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El rango intercuartílico (RIC) es 30 miles de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: $RIC = Q_3 - Q_1 = 50 - 20 = 30$",
-   "Falsa: el RIC es la mediana menos $Q_1 = 12$",
-   "Verdadera: el RIC es $\\text{máx} - \\text{mín} = 95$",
-   "Falsa: el RIC es $\\text{máx} - \\text{mín} = 95$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=20,\\ Me=32,\\ Q_3=50,\\ \\text{máx}=100.",
   "pautaSteps": [
    "RIC = Q_3 - Q_1 = 50 - 20 = 30"
   ],
-  "conc": "VERDADERA: el RIC real es <b>30</b>."
+  "conc": "<b>VERDADERA</b>: el RIC real es <b>30</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3234,17 +3080,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"La mediana es 32 miles de $\". ¿Verdadera o falsa?",
   "alts": [
-   "Falsa: la mediana es el punto medio del rango $= 52{,}5$",
-   "Verdadera: la mediana se calcula como $(\\text{mín}+\\text{máx})/2 = 52{,}5$",
-   "Falsa: la mediana es el promedio de $Q_1$ y $Q_3 = 35$",
-   "Verdadera: la línea central de la caja está en 32"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 3,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=20,\\ Me=32,\\ Q_3=50,\\ \\text{máx}=100.",
   "pautaSteps": [
    "\\text{La mediana es la línea vertical dentro de la caja: } 32"
   ],
-  "conc": "VERDADERA: la mediana real es <b>32</b>."
+  "conc": "<b>VERDADERA</b>: la mediana real es <b>32</b>."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3261,10 +3105,8 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El valor máximo (100) es un dato atípico según la regla de $1{,}5\\times RIC$\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: la cerca es $Q_3 + 1{,}5\\cdot RIC = 50 + 45 = 95$ y $100 > 95$",
-   "Falsa: 100 no supera la cerca de $95$",
-   "Verdadera: todo valor fuera de la caja es atípico",
-   "Falsa: la cerca es $Q_3 + RIC = 80$"
+   "Verdadera",
+   "Falsa"
   ],
   "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=20,\\ Me=32,\\ Q_3=50,\\ \\text{máx}=100.",
@@ -3272,7 +3114,7 @@ const PB_QUESTIONS = [
    "Q_3 + 1{,}5\\cdot RIC = 50 + 45 = 95",
    "\\text{Comparación: } 100 > 95 \\Rightarrow \\text{atípico}"
   ],
-  "conc": "VERDADERA: la cerca vale <b>95</b>."
+  "conc": "<b>VERDADERA</b>: la cerca vale <b>95</b> y el valor máximo la supera."
  },
  {
   "tipo": "Lectura de boxplot · V/F",
@@ -3289,17 +3131,15 @@ const PB_QUESTIONS = [
   },
   "ask": "Afirmación: \"El 75% de los datos es 50 miles de $ o menos\". ¿Verdadera o falsa?",
   "alts": [
-   "Verdadera: cada bigote contiene el 10% de los datos",
-   "Falsa: los bigotes contienen al 50% central de los datos",
-   "Verdadera: $Q_3 = 50$ acumula el 75% abajo y deja el 25% arriba",
-   "Falsa: la caja solo muestra el rango total de los datos"
+   "Verdadera",
+   "Falsa"
   ],
-  "correct": 2,
+  "correct": 0,
   "pautaHead": "\\text{Boxplot: mín}=5,\\ Q_1=20,\\ Me=32,\\ Q_3=50,\\ \\text{máx}=100.",
   "pautaSteps": [
    "\\text{La caja } Q_1\\text{–}Q_3 \\text{ contiene el 50\\% central; cada sector externo acumula 25\\%}",
    "Q_1 = 20,\\ \\text{mediana} = 32,\\ Q_3 = 50"
   ],
-  "conc": "VERDADERA."
+  "conc": "<b>VERDADERA</b>: $Q_3 = 50$ acumula el 75% abajo y deja el 25% arriba."
  }
 ];

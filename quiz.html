@@ -493,7 +493,7 @@ function showQuestion() {
     tEl.innerHTML = html;
   } else { tEl.className = 'qtable'; tEl.innerHTML = ''; }
   document.getElementById('qAsk').textContent = q.ask;
-  order = shuffle([0,1,2,3]);
+  order = shuffle([...q.alts.keys()]);
   const letters = ['A','B','C','D'];
   altsEl.innerHTML = '';
   order.forEach((origIdx, pos) => {
@@ -576,7 +576,8 @@ document.addEventListener('keydown', e => {
   if (!quizScreen.classList.contains('hidden')) {
     const i = ['a','b','c','d'].indexOf(e.key.toLowerCase());
     const n = ['1','2','3','4'].indexOf(e.key);
-    if (!answered && (i>=0 || n>=0)) answer(i>=0 ? i : n);
+    const pos = i>=0 ? i : n;
+    if (!answered && pos>=0 && pos<order.length) answer(pos);
     else if (answered && e.key === 'Enter') next();
   }
 });
