@@ -18,6 +18,7 @@
 <script src="cn_questions.js"></script>
 <script src="cd_questions.js"></script>
 <script src="mv_questions.js"></script>
+<script src="cc_questions.js"></script>
 <style>
   :root {
     --royal: #1550e0;
@@ -352,6 +353,13 @@ const TOPICS = [
     bank: (typeof MV_QUESTIONS!=='undefined') ? MV_QUESTIONS : [],
     body:'#fb923c', shade:'#d9701c', accent:'#fdba74',
     guide:'Guía — Medidas de Variabilidad (Datos Cuantitativos Discretos)'
+  },
+  {
+    id:'cc', title:'Gato Continuo', name:'Datos Cuantitativos Continuos',
+    desc:'Tablas con clases $[L_i,L_s)$ y marca de clase: lectura, promedio, mediana y moda interpoladas, varianza y CV.',
+    bank: (typeof CC_QUESTIONS!=='undefined') ? CC_QUESTIONS : [],
+    body:'#2dd4bf', shade:'#0d9488', accent:'#5eead4',
+    guide:'Guía — Tablas de Frecuencia (Datos Cuantitativos Continuos)'
   }
 ];
 
