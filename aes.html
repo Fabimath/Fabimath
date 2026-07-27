@@ -399,6 +399,7 @@ const againBtn = document.getElementById('again');
 const pawsEl = document.getElementById('paws');
 
 const fmt = n => n.toFixed(2).replace('.', ',');
+const fmt1 = n => n.toFixed(1).replace('.', ',');
 function parseNota(s) {
   const v = parseFloat(s.trim().replace(',', '.'));
   if (isNaN(v) || v < 1.0 || v > 7.0) return null;
@@ -519,16 +520,17 @@ async function finish() {
     heart.style.display = 'block';
     await say("miré tus notas con mis ojitos de gato...\n\nMIAAAU!! TE EXIMES!! ★\n\nnota final: " + fmt(present) + "\nfelicidades!! (=^･ω･^=)ノ彡☆");
   } else {
-    const need = (3.95 - 0.2 * PE - 0.5 * PC) / 0.3;
+    /* las notas van de décima en décima: se sube al siguiente décimo alcanzable */
+    const need = Math.ceil((3.95 - 0.2 * PE - 0.5 * PC) / 0.3 * 10 - 1e-9) / 10;
     if (need <= 1.0) {
       html += '<div class="verdict fight">No te eximes, pero con un <span class="ok">1,0</span> en el examen ya apruebas (final ≥ 3,95) miau!</div>';
       await say("no te eximes miau... PERO tranqui:\nincluso con un 1,0 en el examen apruebas!\n\n(=^-ω-^=) relájate");
     } else if (need > 7.0) {
-      html += '<div class="verdict lose">No te eximes, y necesitarías un <span class="bad">' + fmt(need) + '</span> en el examen (más que 7,0).<br>No es posible aprobar (╥﹏╥)</div>';
+      html += '<div class="verdict lose">No te eximes, y necesitarías un <span class="bad">' + fmt1(need) + '</span> en el examen (más que 7,0).<br>No es posible aprobar (╥﹏╥)</div>';
       await say("miau... no te eximes y necesitarías\nmás de un 7,0 en el examen...\n\nno se puede aprobar (╥﹏╥) lo siento michi...");
     } else {
-      html += '<div class="verdict fight">No te eximes. Para aprobar (final ≥ 3,95) necesitas en el examen:<span class="big">' + fmt(need) + '</span>o más — tú puedes miau!! ᕙ(=^･ω･^=)ᕗ</div>';
-      await say("no te eximes miau...\n\npara aprobar necesitas un " + fmt(need) + " o más\nen el examen.\n\ntú puedes!! ᕙ(=^･ω･^=)ᕗ");
+      html += '<div class="verdict fight">No te eximes. Para aprobar (final ≥ 3,95) necesitas en el examen:<span class="big">' + fmt1(need) + '</span>o más — tú puedes miau!! ᕙ(=^･ω･^=)ᕗ</div>';
+      await say("no te eximes miau...\n\npara aprobar necesitas un " + fmt1(need) + " o más\nen el examen.\n\ntú puedes!! ᕙ(=^･ω･^=)ᕗ");
     }
   }
   resultEl.innerHTML = html;
