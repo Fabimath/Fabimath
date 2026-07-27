@@ -38,7 +38,6 @@
     padding: 22px 20px 60px;
     overflow-x: hidden;
   }
-  a { color: var(--royal); text-decoration: none; }
   h1, .display { font-family: 'Baloo 2', 'Inter', sans-serif; }
 
   /* mosaic blocks — signature from the logo */
@@ -57,20 +56,15 @@
 
   .topbar {
     width: 100%; max-width: 660px; z-index: 1;
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center; justify-content: center;
     margin-bottom: 34px;
   }
-  .topbar a {
+  .brand {
     display: flex; align-items: center; gap: 10px;
-    color: var(--ink-2); font-size: 13.5px; font-weight: 500;
+    font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 19px;
+    color: var(--ink); letter-spacing: -0.01em;
   }
-  .topbar a:hover { color: var(--royal); }
-  .topbar a img { width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
-  .topbar a.pill {
-    background: var(--ice); color: var(--royal); font-weight: 600;
-    padding: 7px 14px; border-radius: 100px;
-  }
-  .topbar a.pill:hover { background: var(--royal); color: #fff; }
+  .brand img { width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
 
   h1 {
     z-index: 1;
@@ -242,8 +236,7 @@
 </div>
 
 <div class="topbar">
-  <a href="index.html"><img src="logo/fabimath_logo.png" alt="">◀ Fabimath</a>
-  <a class="pill" href="quiz.html">Gatos Quiz ▶</a>
+  <span class="brand"><img src="logo/fabimath_logo.png" alt="">Fabimath</span>
 </div>
 
 <h1>Gatito <span class="grad">AES</span></h1>
