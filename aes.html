@@ -225,7 +225,7 @@
 </style>
 </head>
 <body>
-<span class="version">v1.00</span>
+<span class="version">v1.01</span>
 <div class="mosaic" aria-hidden="true">
   <i style="left:6%;  top:18%; width:38px; height:38px; background:#dce9ff; animation-delay:0s"></i>
   <i style="left:13%; top:58%; width:26px; height:26px; background:#c3dbff; animation-delay:-3s"></i>
@@ -518,8 +518,12 @@ async function finish() {
     /* las notas van de décima en décima: se sube al siguiente décimo alcanzable */
     const need = Math.ceil((3.95 - 0.2 * PE - 0.5 * PC) / 0.3 * 10 - 1e-9) / 10;
     if (need <= 1.0) {
-      html += '<div class="verdict fight">No te eximes, pero con un <span class="ok">1,0</span> en el examen ya apruebas (final ≥ 3,95) miau!</div>';
-      await say("no te eximes miau... PERO tranqui:\nincluso con un 1,0 en el examen apruebas!\n\n(=^-ω-^=) relájate");
+      /* ausente al examen se califica 1,0: igual aprueba, pero le baja el promedio */
+      const sinExamen = 0.2 * PE + 0.5 * PC + 0.3;
+      html += '<div class="verdict fight">No te eximes, pero apruebas pase lo que pase: incluso con un <span class="ok">1,0</span> en el examen quedas sobre 3,95 miau!'
+            + '<br><br>Si no te presentas al examen apruebas igual, con nota<span class="big">' + fmt(sinExamen) + '</span>'
+            + 'pero te baja el promedio: presentándote bien puedes llegar hasta <span class="ok">' + fmt(0.2 * PE + 0.5 * PC + 0.3 * 7) + '</span>.</div>';
+      await say("no te eximes miau... PERO tranqui:\nincluso con un 1,0 en el examen apruebas!\n\nsi no te presentas quedas con " + fmt(sinExamen) + ",\nasí que te bajaría el promedio.\n\n(=^-ω-^=) tú decides");
     } else if (need > 7.0) {
       html += '<div class="verdict lose">No te eximes, y necesitarías un <span class="bad">' + fmt1(need) + '</span> en el examen (más que 7,0).<br>No es posible aprobar (╥﹏╥)</div>';
       await say("miau... no te eximes y necesitarías\nmás de un 7,0 en el examen...\n\nno se puede aprobar (╥﹏╥) lo siento michi...");
